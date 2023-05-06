@@ -1,14 +1,11 @@
 .body{
-    height: 100vh;
     display:flex;
     flex-direction: column;
 }
 
 .header{
-    background-color: white;
     display:flex;
     flex-direction: column;
-    height:100px;
 }
 .content{
     background-color: beige;
