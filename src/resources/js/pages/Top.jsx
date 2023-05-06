@@ -19,12 +19,19 @@ import MenuItem from "@mui/material/MenuItem";
 const pages = ["閲覧履歴", "お気に入り", "検索条件"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const dummy = [
-  {id:1, title:"題材1", text:"内容1"},
-  {id:2, title:"題材2", text:"内容2"},
-  {id:3, title:"題材3", text:"内容3"},
-  {id:4, title:"題材4", text:"内容4"},
-  {id:5, title:"題材5", text:"内容5"},
-]
+    [
+        { id: 1, url:"/Search", title: "住まい", text: "00000件" },
+        { id: 2, url:"/Search", title: "店舗・事務所", text: "11111件" },
+        { id: 3, url:"/Search", title: "その他", text: "22222件" },
+        { id: 4, url:"/Search", title: "駐車場", text: "33333件" },
+    ],
+    [
+        { id: 5, url:"/Search", title: "戸建", text: "55555件" },
+        { id: 6, url:"/Search", title: "マンション", text: "66666件" },
+        { id: 7, url:"/Search", title: "土地", text: "777件" },
+        { id: 8, url:"/Search", title: "その他", text: "8件" },
+    ],
+];
 
 export const Top = () => {
     const [anchorElNav, setAnchorElNav] = useState(null)
@@ -232,7 +239,7 @@ export const Top = () => {
                   }}
               >
                   <Container
-                      maxWidth="sm"
+                      maxWidth="md"
                       sx={{ backgroundColor: "white", py: 4 }}
                   >
                       <Typography variant="h5">
@@ -247,31 +254,74 @@ export const Top = () => {
                       </Typography>
                   </Container>
                   <Container
-                      maxWidth="sm"
-                      sx={{ backgroundColor: "red", py: 4 }}
+                      maxWidth="md"
+                      sx={{
+                          backgroundColor: "red",
+                          py: 4,
+                          display: "flex",
+                          flexDirection: "column",
+                      }}
                   >
                       <Typography variant="h5">タイトル2</Typography>
-                      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-                          {dummy.map((i) => {
-                              return (
-                                  <Box
-                                      key={i.id}
-                                      sx={{
-                                          backgroundColor: "white",
-                                          width: 240,
-                                      }}
-                                  >
-                                      <Typography variant="h6" sx>
-                                          {i.title}
-                                      </Typography>
-                                      <Box>{i.text}</Box>
-                                  </Box>
-                              );
-                          })}
+                      <Box sx={{ display: "flex" }}>
+                          <Box
+                              sx={{
+                                  display: "flex",
+                                  flexWrap: "wrap",
+                                  gap: 2,
+                                  justifyContent: "center",
+                              }}
+                          >
+                            
+                              {dummy[0].map((i) => {
+                                  return (
+                                    <Box
+                                          key={i.id}
+                                          sx={{
+                                            backgroundColor: "white",
+                                            width: 160,
+                                          }}
+                                      >
+                                        <Link to={i.url}>
+                                          <Typography variant="h6">
+                                              {i.title}
+                                          </Typography>
+                                          <Box>{i.text}</Box>
+                                        </Link>
+                                      </Box>
+
+                                  );
+                              })}
+                          </Box>
+                          <Box
+                              sx={{
+                                  display: "flex",
+                                  flexWrap: "wrap",
+                                  gap: 2,
+                                  justifyContent: "center",
+                              }}
+                          >
+                              {dummy[1].map((i) => {
+                                  return (
+                                      <Box
+                                          key={i.id}
+                                          sx={{
+                                              backgroundColor: "white",
+                                              width: 160,
+                                          }}
+                                      >
+                                          <Typography variant="h6" >
+                                              {i.title}
+                                          </Typography>
+                                          <Box>{i.text}</Box>
+                                      </Box>
+                                  );
+                              })}
+                          </Box>
                       </Box>
                   </Container>
                   <Container
-                      maxWidth="sm"
+                      maxWidth="md"
                       sx={{ backgroundColor: "green", py: 4 }}
                   >
                       <Typography variant="h5">タイトル3</Typography>
@@ -284,7 +334,7 @@ export const Top = () => {
                       </Typography>
                   </Container>
                   <Container
-                      maxWidth="sm"
+                      maxWidth="md"
                       sx={{ backgroundColor: "blue", py: 4 }}
                   >
                       <Typography variant="h5">タイトル4</Typography>
@@ -298,9 +348,7 @@ export const Top = () => {
                   </Container>
               </Box>
           </div>
-          <div className={classes.footer}>
-            フッター要素
-          </div>
+          <div className={classes.footer}>フッター要素</div>
       </div>
   );
 };
