@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('event', 30)->comment('種目');
             $table->string('division', 30)->nullable()->comment('新築中古区分');
             $table->string('location_code', 30)->nullable()->comment('所在地コード');
-            $table->string('location1', 30)->comment('所在地名1');
-            $table->string('location2', 30)->comment('所在地名2');
-            $table->string('address', 30)->comment('所在地コード');
+            $table->string('location1', 255)->comment('所在地名1');
+            $table->string('location2', 255)->comment('所在地名2');
+            $table->string('address', 255)->comment('所在地コード');
             $table->string('es_name', 30)->nullable()->comment('建物名');
             $table->string('room_number', 30)->nullable()->comment('部屋番号');
             $table->string('nearest_line', 30)->nullable()->comment('最寄沿線');
@@ -116,7 +116,9 @@ return new class extends Migration
             $table->string('commission_price', 30)->nullable()->comment('手数料(金額)');
             $table->string('contract_period', 30)->nullable()->comment('契約期間');
             $table->timestamp('closing_date')->nullable()->comment('成約日');
-            $table->string('closing_price', 30)->nullable()->comment('成約価格');            
+            $table->string('closing_price', 30)->nullable()->comment('成約価格');
+            
+            $table->timestamps();
         });
     }
 
