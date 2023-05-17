@@ -16,6 +16,12 @@ class estateInfoFactory extends Factory
      */
     public function definition()
     {
+        $location1 = [
+            "福岡市　東区",
+            "福岡市　西区",
+            "福岡市　南区",
+            "福岡市　城南区"
+        ];
         return [
             'id'=>fake()->numberBetween($min=90000000,$max=99999999),
             'register_at'=>fake()->dateTime,
@@ -35,7 +41,7 @@ class estateInfoFactory extends Factory
             'price'=>fake()->numberBetween($min=100,$max=1000),
             'child_school'=>"小学校",
             'middle_school'=>"中学校",
-            'location1'=>fake()->address,
+            'location1'=>fake()->randomElement($location1),
             'location2'=>fake()->address,
             'address'=>fake()->address,
         ];

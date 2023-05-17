@@ -36,7 +36,7 @@ class estateSeeder extends Seeder
         //     'location1'=>"福岡市　東区",
         //     'location2'=>"若宮１丁目",
         //     'address'=>"14-9"
-        \App\Models\estateInfo::factory(3)->create();
+        \App\Models\estateInfo::factory(10)->create();
         // ]);
     }
 }
