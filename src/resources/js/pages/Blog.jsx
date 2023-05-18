@@ -118,8 +118,14 @@ export default function Blog() {
         <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-        <Table />
-
+          <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Table />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Table />
+              </Grid>
+          </Grid>
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
