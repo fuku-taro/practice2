@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+import Table from '../components/Table';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -12,9 +14,7 @@ import FeaturedPost from '../components/FeaturedPost';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import post1 from '../components/blog-post.1.md';
-import post2 from '../components/blog-post.2.md';
-import post3 from '../components/blog-post.3.md';
+
 
 const sections = [
   { title: 'Technology', url: '#' },
@@ -57,7 +57,31 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
+const posts = [
+  {
+    title: 'Post title 1',
+    date: 'May 18, 2023',
+    description: 'This is the first post.',
+    image: 'https://example.com/image1.jpg',
+    imageLabel: 'Image 1',
+  },
+  {
+    title: 'Post title 2',
+    date: 'May 19, 2023',
+    description: 'This is the second post.',
+    image: 'https://example.com/image2.jpg',
+    imageLabel: 'Image 2',
+  },
+  {
+    title: 'Post title 3',
+    date: 'May 19, 2023',
+    description: 'This is the second post.',
+    image: 'https://example.com/image2.jpg',
+    imageLabel: 'Image 2',
+  }
+  // 追加の投稿データをここに続けて追加します
+];
+
 
 const sidebar = {
   title: 'About',
@@ -94,6 +118,8 @@ export default function Blog() {
         <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
+        <Table />
+
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
