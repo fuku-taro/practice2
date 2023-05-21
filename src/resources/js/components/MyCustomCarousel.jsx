@@ -65,7 +65,7 @@ export default function MyCustomCarousel() {
         </div>
       </Grid>
       <Grid item xs={12}>
-        <ImageList cols={2} gap={8} sx={{ width: '100%', height: 450 }}>
+        <ImageList cols={2} gap={8} sx={{ width: '100%'}}>
           {images.map((image) => (
             <ImageListItem key={image.id}>
               <img src={image.img} alt={`Thumbnail ${image.id}`} />
