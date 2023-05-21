@@ -3,24 +3,15 @@ import { IconButton, ImageList, ImageListItem, Grid } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-// Import individual images
-import image000 from "../../images/image000.jpg";
-import image001 from "../../images/image001.jpg";
-import image002 from "../../images/image002.jpg";
-import image003 from "../../images/image003.jpg";
-import image004 from "../../images/image004.jpg";
-import image005 from "../../images/image005.jpg";
-import image006 from "../../images/image006.jpg";
-
 export default function MyCustomCarousel() {
   const images = [
-    { id: 0, img: image000 },
-    { id: 1, img: image001 },
-    { id: 2, img: image002 },
-    { id: 3, img: image003 },
-    { id: 4, img: image004 },
-    { id: 5, img: image005 },
-    { id: 6, img: image006 },
+    { id: 0, img: '/images/image000.jpg' },
+    { id: 1, img: '/images/image001.jpg' },
+    { id: 2, img: '/images/image002.jpg' },
+    { id: 3, img: '/images/image003.jpg' },
+    { id: 4, img: '/images/image004.jpg' },
+    { id: 5, img: '/images/image005.jpg' },
+    { id: 6, img: '/images/image006.jpg' },
   ];
 
   const [active, setActive] = useState(0);

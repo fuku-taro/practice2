@@ -14,6 +14,7 @@ import FeaturedPost from '../components/FeaturedPost';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import InfoCard from "../components/InfoCard";
 
 const sections = [
   { title: 'Technology', url: '#' },
@@ -116,9 +117,8 @@ export default function Reselt() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
-        <MyCustomCarousel />
         <main>
-
+        <InfoCard />
         </main>
       </Container>
       <Footer
