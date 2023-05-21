@@ -1,5 +1,5 @@
-import * as React from 'react';
-
+import React from "react";
+import MyCustomCarousel from '../components/MyCustomCarousel';
 import Table from '../components/Table';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
@@ -14,7 +14,6 @@ import FeaturedPost from '../components/FeaturedPost';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-
 
 const sections = [
   { title: 'Technology', url: '#' },
@@ -75,12 +74,13 @@ const posts = [
   {
     title: 'Post title 3',
     date: 'May 19, 2023',
-    description: 'This is the second post.',
-    image: 'https://example.com/image2.jpg',
-    imageLabel: 'Image 2',
+    description: 'This is the third post.',
+    image: 'https://example.com/image3.jpg',
+    imageLabel: 'Image 3',
   }
   // 追加の投稿データをここに続けて追加します
 ];
+
 
 
 const sidebar = {
@@ -109,13 +109,14 @@ const sidebar = {
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
-
 export default function Blog() {
   return (
     <ThemeProvider theme={defaultTheme}>
+      
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
+        <MyCustomCarousel />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={2}>
@@ -126,7 +127,7 @@ export default function Blog() {
                 <Table />
               </Grid>
           </Grid>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} sx={{ mt: 3 }}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
             ))}
@@ -148,4 +149,4 @@ export default function Blog() {
       />
     </ThemeProvider>
   );
-}
+            }
