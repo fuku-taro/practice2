@@ -19,9 +19,19 @@ services:
     working_dir: /data
 
   db:
-    build: ./infra/mysql
+    build: infra/mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: netview
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: on-failure
     volumes:
       - db-store:/var/lib/mysql
+      - ./docker/mysql/sql:/docker-entrypoint-initdb.d:cached
+    ports:
+      - 3306:3306
 
 volumes:
   db-store:
