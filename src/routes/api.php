@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\estateInfo; // 使用するモデルをインポート
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +17,36 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+// データの取得
+Route::get('/data', function () {
+    $data = estateInfo::all();
+    return response()->json($data);
+});
+
+// データの作成
+Route::post('/data', function (Request $request) {
+    $data = new estateInfo;
+    $data->column1 = $request->input('column1');
+    $data->column2 = $request->input('column2');
+    // 他のカラムも追加
+    $data->save();
+    return response()->json(['message' => 'Data created successfully']);
+});
+
+// データの更新
+Route::put('/data/{id}', function (Request $request, $id) {
+    $data = estateInfo::find($id);
+    $data->column1 = $request->input('column1');
+    $data->column2 = $request->input('column2');
+    // 他のカラムも更新
+    $data->save();
+    return response()->json(['message' => 'Data updated successfully']);
+});
+
+// データの削除
+Route::delete('/data/{id}', function ($id) {
+    $data = estateInfo::find($id);
+    $data->delete();
+    return response()->json(['message' => 'Data deleted successfully']);
+});
+
