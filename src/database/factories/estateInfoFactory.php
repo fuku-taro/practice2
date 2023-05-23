@@ -23,7 +23,7 @@ class estateInfoFactory extends Factory
             "福岡市　城南区"
         ];
         return [
-            'id'=>fake()->numberBetween($min=90000000,$max=99999999),
+            'estate_id'=>fake()->unique()->numberBetween($min=90000000,$max=99999999),
             'register_at'=>fake()->dateTime,
             'corp_tel'=>fake()->phoneNumber(),
             'event'=>"売一戸建て住宅等　中古一戸建",

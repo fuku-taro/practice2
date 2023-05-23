@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('estate_infos', function (Blueprint $table) {
             $table->id();
+            $table->string('estate_id', 30)->comment('物件番号');
             $table->timestamp('register_at')->comment('登録日');
             $table->string('corporation', 30)->nullable()->comment('会員商号');
             $table->string('corp_tel', 30)->unique()->comment('会員電話番号');
