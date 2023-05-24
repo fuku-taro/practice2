@@ -60,12 +60,17 @@ function DBtest() {
       console.error(error);
     }
   };
-   console.log(...data);
+
+    const filteredData = data.filter(item => item.location1 === "福岡市　東区");
+  
+  // filteredDataを使って表示などの操作を行う
+  
+   console.log(filteredData);
   return (
     <div>
       {/* データの表示 */}
       <ul>
-        {data.map(item => (
+        {filteredData.map(item => (
           <li key={item.id}>{item.estate_id} - {item.location1} <button onClick={() => updateData(item.id)}>更新</button> <button onClick={() => deleteData(item.id)}>削除</button></li>
         ))}
       </ul>

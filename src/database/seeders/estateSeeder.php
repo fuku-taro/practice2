@@ -14,7 +14,7 @@ class estateSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\estateInfo::factory(10)->create();
+        \App\Models\estateInfo::factory(100)->create();
         // \App\Models\estateInfo::create([
         //     'id' => 1,
         //     'register_at'=>now(),
