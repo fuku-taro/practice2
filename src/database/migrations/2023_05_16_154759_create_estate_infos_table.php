@@ -119,7 +119,7 @@ return new class extends Migration
             $table->timestamp('closing_date')->nullable()->comment('成約日');
             $table->string('closing_price', 30)->nullable()->comment('成約価格');
             
-            $table->string('images', 255)->nullable()->comment('画像');
+            $table->json('images', 255)->nullable()->comment('画像');
             $table->timestamps();
         });
     }
