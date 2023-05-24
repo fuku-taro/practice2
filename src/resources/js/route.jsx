@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import { Top } from './pages/Top';
-import { Search } from './pages/Search';
+import  Top from './pages/Top';
+import  Search from './pages/Search';
 import  Blog  from './pages/Blog.jsx';
 import Result from './pages/Result.jsx';
 

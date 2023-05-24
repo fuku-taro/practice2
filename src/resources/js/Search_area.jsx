@@ -43,7 +43,7 @@ const dummy = [
 ];
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
-export default function Search() {
+export default function Search_area() {
   return (
 
     <ThemeProvider theme={defaultTheme}>

@@ -60,13 +60,13 @@ function DBtest() {
       console.error(error);
     }
   };
-   console.log(fetchData);
+   console.log(...data);
   return (
     <div>
       {/* データの表示 */}
       <ul>
         {data.map(item => (
-          <li key={item.id}>{item.column1} - {item.column2} <button onClick={() => updateData(item.id)}>更新</button> <button onClick={() => deleteData(item.id)}>削除</button></li>
+          <li key={item.id}>{item.estate_id} - {item.location1} <button onClick={() => updateData(item.id)}>更新</button> <button onClick={() => deleteData(item.id)}>削除</button></li>
         ))}
       </ul>
 

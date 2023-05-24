@@ -22,6 +22,32 @@ class estateInfoFactory extends Factory
             "福岡市　南区",
             "福岡市　城南区"
         ];
+        $location2 = [
+            "若宮５丁目",
+            "大字脇山",
+            "大楠１丁目",
+            "東油山５丁目",
+            "姪の浜２丁目",
+            "和白４丁目",
+            "六本松１丁目",
+        ];
+        $address = [
+            "24-1",
+            "13-10",
+            "36-5",
+            "4-3",
+        ];
+        $images = [
+            "image000.jpg",
+            "image001.jpg",
+            "image002.jpg",
+            "image003.jpg",
+            "image004.jpg",
+            "image005.jpg",
+            "image006.jpg"
+        ];
+        shuffle($images);
+        
         return [
             'estate_id'=>fake()->unique()->numberBetween($min=90000000,$max=99999999),
             'register_at'=>fake()->dateTime,
@@ -42,8 +68,9 @@ class estateInfoFactory extends Factory
             'child_school'=>"小学校",
             'middle_school'=>"中学校",
             'location1'=>fake()->randomElement($location1),
-            'location2'=>fake()->address,
-            'address'=>fake()->address,
+            'location2'=>fake()->randomElement($location2),
+            'address'=>fake()->randomElement($address),
+            'images'=>json_encode($images)
         ];
     }
 }

@@ -28,59 +28,6 @@ const sections = [
   { title: 'Travel', url: '#' },
 ];
 
-const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
-  description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random?wallpapers',
-  imageText: 'main image description',
-  linkText: 'Continue reading…',
-};
-
-const featuredPosts = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-  },
-];
-
-const posts = [
-  {
-    title: 'Post title 1',
-    date: 'May 18, 2023',
-    description: 'This is the first post.',
-    image: 'https://example.com/image1.jpg',
-    imageLabel: 'Image 1',
-  },
-  {
-    title: 'Post title 2',
-    date: 'May 19, 2023',
-    description: 'This is the second post.',
-    image: 'https://example.com/image2.jpg',
-    imageLabel: 'Image 2',
-  },
-  {
-    title: 'Post title 3',
-    date: 'May 19, 2023',
-    description: 'This is the third post.',
-    image: 'https://example.com/image3.jpg',
-    imageLabel: 'Image 3',
-  }
-  // 追加の投稿データをここに続けて追加します
-];
-
 
 
 const sidebar = {
@@ -116,9 +63,9 @@ export default function Blog() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
-        <MyCustomCarousel />
+        
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
+        <MyCustomCarousel />
           <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <Table />
@@ -127,13 +74,7 @@ export default function Blog() {
                 <Table />
               </Grid>
           </Grid>
-          <Grid container spacing={4} sx={{ mt: 3 }}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
