@@ -32,7 +32,7 @@ export default function Reselt() {
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
         <main>
-          <DBtest />
+          {/* <DBtest /> */}
         <InfoCard />
         </main>
       </Container>

@@ -12,14 +12,6 @@ import DBtest from '../api/DBtest';
 export default function InfoCard() {
   const [data, setData] = useState([]);
 
-  const [ location2, setLocation2 ] = useState(null);
-  const [ station, setStation ] = useState(null);
-  const [ land_area, setLand_area] = useState(null);
-  const [ build_ex_area, setBuild_ex_area] = useState(null);
-  const [ price, setPrice] = useState(null);
-  const [ use_area, setUse_area] = useState(null);
-
-
   // データの取得
   useEffect(() => {
     fetchData();
