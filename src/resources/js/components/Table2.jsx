@@ -94,7 +94,7 @@ export default function CustomizedTables() {
 
         </TableBody>
       </Table>
-                            ))}
+                            ))}{/* mapの終わりタグ */}
     </TableContainer>
   );
 }
