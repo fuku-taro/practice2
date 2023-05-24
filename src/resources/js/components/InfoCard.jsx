@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, CardActionArea, Container, Grid } from '@mui/material';
+import { Link } from "react-router-dom";
 import Table from './Table2';
 import DBtest from '../api/DBtest';
 
@@ -44,48 +45,56 @@ export default function InfoCard() {
           <Grid container justifyContent="center">
               <Grid item xs={12}>
                   {filteredData.map((item) => (
-                      <Card
-                          sx={{
-                              display: { xs: "block", sm: "flex" },
-                              height: { xs: "auto", sm: "270px" },
-                              mb: 3,
-                              bgcolor: "aliceblue",
-                          }}
+                      <Link
                           key={item.id}
+                          to={`/Blog?uid=${item.id}`}
                       >
-                          <CardActionArea sx={{ flexBasis: "35%" }}>
-                              <CardMedia
-                                  component="img"
-                                  height="140"
-                                  src={`/images/${item.images[0]}`}
-                                  alt="green iguana"
-                              />
-                          </CardActionArea>
-                          <Box sx={{ flex: 1 }}>
-                              <CardContent>
-                                  <Typography
-                                      gutterBottom
-                                      variant="h5"
-                                      component="div"
-                                  >
-                                      {item.event}
-                                  </Typography>
-                                  <Typography
-                                      variant="body2"
-                                      color="text.secondary"
-                                      sx={{
-                                          display: { xs: "block", sm: "none" },
-                                      }}
-                                  >
-                                      Lizards are a widespread group of squamate
-                                      reptiles, with over 6,000 species, ranging
-                                      across all continents except Antarctica
-                                  </Typography>
+                          <Card
+                              sx={{
+                                  display: { xs: "block", sm: "flex" },
+                                  height: { xs: "auto", sm: "270px" },
+                                  mb: 3,
+                                  bgcolor: "aliceblue",
+                              }}
+                          >
+                              <CardActionArea sx={{ flexBasis: "35%" }}>
+                                  <CardMedia
+                                      component="img"
+                                      height="140"
+                                      src={`/images/${item.images[0]}`}
+                                      alt="green iguana"
+                                  />
+                              </CardActionArea>
+                              <Box sx={{ flex: 1 }}>
+                                  <CardContent>
+                                      <Typography
+                                          gutterBottom
+                                          variant="h5"
+                                          component="div"
+                                      >
+                                          {item.event}
+                                      </Typography>
+                                      <Typography
+                                          variant="body2"
+                                          color="text.secondary"
+                                          sx={{
+                                              display: {
+                                                  xs: "block",
+                                                  sm: "none",
+                                              },
+                                          }}
+                                      >
+                                          Lizards are a widespread group of
+                                          squamate reptiles, with over 6,000
+                                          species, ranging across all continents
+                                          except Antarctica
+                                      </Typography>
 
-                                  <Table item={item} />
-                              </CardContent>
-                          </Box>
-                      </Card>
+                                      <Table item={item} />
+                                  </CardContent>
+                              </Box>
+                          </Card>
+                      </Link>
                   ))}
               </Grid>
           </Grid>
