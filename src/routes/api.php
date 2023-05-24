@@ -20,6 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // データの取得
 Route::get('/data', function () {
     $data = estateInfo::all();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
     return response()->json($data);
 });
 

@@ -51,13 +51,13 @@ export default function InfoCard() {
                               mb: 3,
                               bgcolor: "aliceblue",
                           }}
-                          key = {item.id}
+                          key={item.id}
                       >
                           <CardActionArea sx={{ flexBasis: "35%" }}>
                               <CardMedia
                                   component="img"
                                   height="140"
-                                  src="/images/image000.jpg"
+                                  src={`/images/${item.images[0]}`}
                                   alt="green iguana"
                               />
                           </CardActionArea>
@@ -82,9 +82,7 @@ export default function InfoCard() {
                                       across all continents except Antarctica
                                   </Typography>
 
-                                  <Table
-                                      item={item}
-                                  />
+                                  <Table item={item} />
                               </CardContent>
                           </Box>
                       </Card>
