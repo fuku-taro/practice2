@@ -10,7 +10,7 @@ import DBtest from '../api/DBtest';
 
 
 
-export default function CustomizedTables() {
+export default function CustomizedTables({item}) {
   const [data, setData] = useState([]);
 
   const [ location2, setLocation2 ] = useState(null);
@@ -32,10 +32,9 @@ export default function CustomizedTables() {
         console.error(error);
       }
     };
-    const filteredData = data.filter(item => item.location1 === "福岡市　東区");
-  return (
+
+    return (
     <TableContainer component={Paper} sx={{ width:'100%' }}>
-              {filteredData.map(item => (
       <Table size="small" aria-label="a dense table">
         <TableBody>
 
@@ -94,7 +93,6 @@ export default function CustomizedTables() {
 
         </TableBody>
       </Table>
-                            ))}{/* mapの終わりタグ */}
     </TableContainer>
   );
 }

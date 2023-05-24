@@ -34,64 +34,63 @@ export default function InfoCard() {
   };
   const filteredData = data.filter(item => item.location1 === "福岡市　東区");
   return (
-    <Container
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Grid container  justifyContent="center">
-        <Grid item xs={12}>
-        {filteredData.map(item => (
-          <Card sx={{ 
-            display: { xs: 'block', sm: 'flex' },
-            height:  { xs: 'auto',sm:"270px"},
-            mb: 3,
-            bgcolor: "aliceblue"
-                     }}>
+      <Container
+          sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+          }}
+      >
+          <Grid container justifyContent="center">
+              <Grid item xs={12}>
+                  {filteredData.map((item) => (
+                      <Card
+                          sx={{
+                              display: { xs: "block", sm: "flex" },
+                              height: { xs: "auto", sm: "270px" },
+                              mb: 3,
+                              bgcolor: "aliceblue",
+                          }}
+                          key = {item.id}
+                      >
+                          <CardActionArea sx={{ flexBasis: "35%" }}>
+                              <CardMedia
+                                  component="img"
+                                  height="140"
+                                  src="/images/image000.jpg"
+                                  alt="green iguana"
+                              />
+                          </CardActionArea>
+                          <Box sx={{ flex: 1 }}>
+                              <CardContent>
+                                  <Typography
+                                      gutterBottom
+                                      variant="h5"
+                                      component="div"
+                                  >
+                                      {item.event}
+                                  </Typography>
+                                  <Typography
+                                      variant="body2"
+                                      color="text.secondary"
+                                      sx={{
+                                          display: { xs: "block", sm: "none" },
+                                      }}
+                                  >
+                                      Lizards are a widespread group of squamate
+                                      reptiles, with over 6,000 species, ranging
+                                      across all continents except Antarctica
+                                  </Typography>
 
-            <CardActionArea sx={{ flexBasis: '35%' }}>
-              
-              <CardMedia
-                component="img"
-                height="140"
-                src="/images/image000.jpg"
-                alt="green iguana"
-              />
-            </CardActionArea>
-            <Box sx={{ flex:1 }}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {item.event}
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ display:{ xs: 'block', sm: 'none' } }}>
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
-              </Typography>
-              
-              <Table 
-                location2={location2}
-                station={station}
-                land_area={land_area}
-                build_ex_areaa={build_ex_area}
-                price={price}
-                use_area={use_area}
-              
-              />
-            </CardContent>
-            
-            </Box>
-
-
-
-
-
-
-
-          </Card>
-                      ))}
-        </Grid>
-      </Grid>
-    </Container>
+                                  <Table
+                                      item={item}
+                                  />
+                              </CardContent>
+                          </Box>
+                      </Card>
+                  ))}
+              </Grid>
+          </Grid>
+      </Container>
   );
 }
