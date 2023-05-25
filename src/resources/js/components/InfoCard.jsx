@@ -64,7 +64,7 @@ export default function InfoCard() {
                                           variant="h5"
                                           component="div"
                                       >
-                                          {item.event}
+                                          {item.location2}
                                       </Typography>
                                       <Typography
                                           variant="body2"
