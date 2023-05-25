@@ -64,7 +64,8 @@ const [data, setData] = useState([]);
                   {filteredData.map((item) => (
                       <Link
                           key={item.id}
-                          to={`/Estate?uid=${item.id}`}
+                        //   to={`/Estate?uid=${item.id}`}
+                        to={`/Estate/${item.id}`}
                           style={{ textDecoration: 'none' }} // 下線を消すスタイルを追加
                       >
                           <Card

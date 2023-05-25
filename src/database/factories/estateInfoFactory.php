@@ -77,7 +77,7 @@ class estateInfoFactory extends Factory
             'delivery_time'=>"相談",
             'build_year'=>fake()->numberBetween($min=1900,$max=2023),
             'build_mounth'=>fake()->numberBetween($min=0,$max=80),
-            'floor_plan'=>"市街化区域",
+            'floor_plan'=>"2SDK",
             'building_const'=>"木造", 
             'leasehold'=>"所有権",
             'building_ex_area'=>fake()->numberBetween($min=4.0000,$max=100.0000),

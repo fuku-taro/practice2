@@ -6,19 +6,19 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-  createData('Frozen yoghurt', 15),
-  createData('Ice cream sandwich', 23),
-  createData('Eclair', 262),
-  createData('Cupcake', 30),
-  createData('Gingerbread', 356),
-];
-
-export default function CustomizedTables() {
+export default function CustomizedTables({item}) {
+  function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+  }
+  
+  const rows = [
+    createData('物件番号', `${item.estate_id}`),
+    createData('情報更新日', `${item.created_at}`),
+    createData('次回更新予定日', `${item.created_at}`),
+    createData('所在地', `${item.location1}${item.location2}${item.address}`),
+    createData('間取り', `${item.floor_plan}`),
+  ];
   return (
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">

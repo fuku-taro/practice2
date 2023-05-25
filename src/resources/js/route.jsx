@@ -16,6 +16,7 @@ function App() {
       <Route path="/Result" element={<Result />} />
       {/* <Route path="/Result/:label" component={InfoCard} /> */}
       <Route path="/Result/:label" element={<Result />} />
+      <Route path="/Estate/:uid" element={<Estate />} />
 
     </Routes>
   );

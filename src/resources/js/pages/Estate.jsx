@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import MyCustomCarousel from '../components/MyCustomCarousel';
 import Table from '../components/Table';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -46,6 +47,26 @@ const sidebar = {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 export default function Estate() {
+  const [data, setData] = useState([]);
+  const { uid } = useParams(); // uidパラメーターを取得
+  console.log(uid);
+  
+  useEffect(() => {
+    fetchData();
+  }, [uid]); // パラメーターの変更時に再度データを取得
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('/api/data');
+      setData(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  // const uids = uid.split('&'); // パラメーターを&で分割して配列にする
+  console.log(data);
+  const filteredData = data.filter(item => item.id === parseInt(uid));
+  console.log(filteredData);
   return (
     <ThemeProvider theme={defaultTheme}>
       
@@ -54,15 +75,19 @@ export default function Estate() {
         <Header />
         
         <main>
-        <MyCustomCarousel />
+        {filteredData.map((item) => (
+          <div key={item.id}>
+        <MyCustomCarousel item={item}/>
           <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
-                <Table />
+                <Table item={item}/>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Table />
+                <Table item={item}/>
               </Grid>
           </Grid>
+          </div>
+                           ))}
           <Grid container spacing={5} sx={{ mt: 3 }}>
             <Sidebar
               title={sidebar.title}
