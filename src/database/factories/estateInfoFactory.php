@@ -37,6 +37,26 @@ class estateInfoFactory extends Factory
             "36-5",
             "4-3",
         ];
+        $nearest_line = [
+            "福岡市空港線",
+            "西日本鉄道貝塚線",
+            "福岡市七隈線",
+            "西鉄天神大牟田線",
+        ];
+        $station = [
+            "姪浜",
+            "唐の原",
+            "六本松",
+            "三苫",
+            "西鉄平尾",
+            "金山",
+        ];
+        $use_area = [
+            "一種住居",
+            "一種中高層",
+            "一種低層",
+            "",
+        ];
         $images = [
             "image000.jpg",
             "image001.jpg",
@@ -70,6 +90,11 @@ class estateInfoFactory extends Factory
             'location1'=>fake()->randomElement($location1),
             'location2'=>fake()->randomElement($location2),
             'address'=>fake()->randomElement($address),
+            'nearest_line'=>fake()->randomElement($nearest_line),
+            'station'=>fake()->randomElement($station),
+            'use_area'=>fake()->randomElement($use_area),
+            'walk_time'=>fake()->numberBetween($min=1,$max=30),
+
             'images'=>json_encode($images)
         ];
     }

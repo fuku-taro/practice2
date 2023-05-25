@@ -28,7 +28,7 @@ export default function CustomizedTables({item}) {
               <TableCell component="th" scope="row" sx={{ bgcolor: 'whitesmoke', width: '30%' }}>
                 交通
               </TableCell>
-              <TableCell align="left" sx={{ width: '70%' }}>{item.station}</TableCell>
+              <TableCell align="left" sx={{ width: '70%' }}>{`${item.nearest_line}　${item.station}駅　徒歩${item.walk_time}(分)`}</TableCell>
             </TableRow>
             <TableRow
               sx={{ '&:last-child td, &:last-child th': { border: 0 } ,display:{ xs: 'none', sm: 'flex' }}}
