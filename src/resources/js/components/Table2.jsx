@@ -41,7 +41,7 @@ export default function CustomizedTables({item}) {
                   <TableCell component="th" scope="row" sx={{ bgcolor: 'whitesmoke', width: '40%' }}>
                     建物面積
                   </TableCell>
-                  <TableCell align="left" sx={{ width: '70%' }}>{item.build_ex_area}</TableCell>
+                  <TableCell align="left" sx={{ width: '70%' }}>{item.building_ex_area}</TableCell>
                   <TableCell component="th" scope="row" sx={{ bgcolor: 'whitesmoke', width: '40%' }}>
                     建物構造
                   </TableCell>
