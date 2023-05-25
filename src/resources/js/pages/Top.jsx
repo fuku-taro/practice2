@@ -49,7 +49,7 @@ export default function Top() {
     <ThemeProvider theme={defaultTheme}>
       
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container >
         <Header title="Blog" sections={sections} />
         <main>
           {/* <DBtest /> */}
@@ -58,16 +58,16 @@ export default function Top() {
                   sx={{
                       display: "flex",
                       flexDirection: "column",
-                      my: 10,
-                      gap: 10,
+                    //   my: 10,
+                    //   gap: 10,
                   }}
               >
                   <Container
                       maxWidth="md"
-                      sx={{ backgroundColor: "white", py: 4 }}
+                      sx={{ backgroundColor: "aliceblue", py: 4 }}
                   >
                       <Typography variant="h5">
-                          福岡の住まい探しは。。。
+                          Welcome to eBuye!
                       </Typography>
                       <Typography>
                           Lorem ipsum dolor sit amet consectetur adipisicing
@@ -80,13 +80,13 @@ export default function Top() {
                   <Container
                       maxWidth="md"
                       sx={{
-                          backgroundColor: "red",
+                          backgroundColor: "aliceblue",
                           py: 4,
                           display: "flex",
                           flexDirection: "column",
                       }}
                   >
-                      <Typography variant="h5">タイトル2</Typography>
+                      <Typography variant="h5">Estates</Typography>
                       <Box sx={{ display: "flex" }}>
                           <Box
                               sx={{
@@ -134,42 +134,19 @@ export default function Top() {
                                               width: 160,
                                           }}
                                       >
-                                          <Typography variant="h6" >
+                                        <Link to={i.url}>
+                                          <Typography variant="h6">
                                               {i.title}
                                           </Typography>
                                           <Box>{i.text}</Box>
+                                        </Link>
                                       </Box>
                                   );
                               })}
                           </Box>
                       </Box>
                   </Container>
-                  <Container
-                      maxWidth="md"
-                      sx={{ backgroundColor: "green", py: 4 }}
-                  >
-                      <Typography variant="h5">タイトル3</Typography>
-                      <Typography>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quia corrupti quos reiciendis error nulla veniam
-                          repellendus aut temporibus sapiente itaque dolore
-                          molestiae quas debitis dolores cupiditate, voluptatem
-                          tempora. Veritatis, voluptate!
-                      </Typography>
-                  </Container>
-                  <Container
-                      maxWidth="md"
-                      sx={{ backgroundColor: "blue", py: 4 }}
-                  >
-                      <Typography variant="h5">タイトル4</Typography>
-                      <Typography>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quia corrupti quos reiciendis error nulla veniam
-                          repellendus aut temporibus sapiente itaque dolore
-                          molestiae quas debitis dolores cupiditate, voluptatem
-                          tempora. Veritatis, voluptate!
-                      </Typography>
-                  </Container>
+                  
               </Box>
           </div>
 

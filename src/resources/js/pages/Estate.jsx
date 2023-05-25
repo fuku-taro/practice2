@@ -56,13 +56,13 @@ const sidebar = {
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
-export default function Blog() {
+export default function Estate() {
   return (
     <ThemeProvider theme={defaultTheme}>
       
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+        <Header title="Estate" sections={sections} />
         
         <main>
         <MyCustomCarousel />

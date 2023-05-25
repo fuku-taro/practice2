@@ -20,7 +20,7 @@ export default function CustomizedTables({item}) {
               <TableCell component="th" scope="row" sx={{ bgcolor: 'whitesmoke', width: '30%' }}>
                 所在地
               </TableCell>
-              <TableCell align="left" sx={{ width: '70%' }}>{item.location2}</TableCell>
+              <TableCell align="left" sx={{ width: '70%' }}>{`${item.location1}　${item.location2}`}</TableCell>
             </TableRow>
             <TableRow
               sx={{ '&:last-child td, &:last-child th': { border: 0 } ,display:{ xs: 'none', sm: 'flex' }}}

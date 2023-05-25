@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import classes from "../../sass/top.module.scss";
 
 
@@ -30,7 +34,7 @@ const sections = [
 ];
 const dummy = [
     
-        { id: 1, url:"/Search_area", title: "エリアから探す"},
+        { id: 1, url:"/Search_area", title: <Checkbox>福岡市</Checkbox>},
         { id: 2, url:"/Search_area", title: "地図から探す"},
         { id: 3, url:"/Search_area", title: "路線・駅から探す"},
         // { id: 4, url:"/Search_area", title: "駐車場", text: "33333件" },
@@ -38,7 +42,28 @@ const dummy = [
 ];
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
-export default function Top() {
+export default function Search_area() {
+    const handleSearch = () => {
+        // チェックされたアイテムの処理を行う
+        // ...
+    
+        // 別のページに遷移する
+      };
+    const [label, setLabel] = useState(""); // labelの初期値を設定
+
+  // const handleCheckboxChange = (event) => {
+  //   setLabel(event.target.name); // チェックボックスのname属性をlabelに設定
+  // };
+  const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    if (checked) {
+      setLabels((prevLabels) => [...prevLabels, name]); // ラベルを追加
+    } else {
+      setLabels((prevLabels) => prevLabels.filter((label) => label !== name)); // ラベルを削除
+    }
+  };
   return (
 
     <ThemeProvider theme={defaultTheme}>
@@ -66,7 +91,7 @@ export default function Top() {
                           flexDirection: "column",
                       }}
                   >
-                      <Typography variant="h5">Search for</Typography>
+                      <Typography variant="h5">エリアを選んで下さい</Typography>
 <Box sx={{ display: "flex" }}>
 
   <Box
@@ -77,48 +102,64 @@ export default function Top() {
       justifyContent: "center",
     }}
   >
-        <Grid container spacing={2}>
 
-    {dummy.map((i) => {
-      return (
-        <Grid item xs={6}          key={i.id}>
+    {/* {dummy.map((i) => {
+      return ( */}
+        <Grid item xs={12}>
         <Box
 
           sx={{
             backgroundColor: "white",
-            width: 350,
-            height: 70,
+            width: "530px",
+            height: "100%",
             textAlign:"center"
           }}
         >
             
-          <Link to={i.url}>
-            <Typography variant="h6" sx={{ pt:2 }}>
-              {i.title}
-            </Typography>
-          </Link>
-          
-        </Box>
+
+    <FormGroup>
+    <FormControlLabel
+  control={<Checkbox name="福岡市　東区" />}
+  label="福岡市　東区"
+  onChange={handleCheckboxChange}
+/>
+<FormControlLabel
+  control={<Checkbox name="福岡市　西区" />}
+  label="福岡市　西区"
+  onChange={handleCheckboxChange}
+/>
+<FormControlLabel
+  control={<Checkbox name="福岡市　南区" />}
+  label="福岡市　南区"
+  onChange={handleCheckboxChange}
+/>
+<FormControlLabel
+  control={<Checkbox name="福岡市　城南区" />}
+  label="福岡市　城南区"
+  onChange={handleCheckboxChange}
+/>
+
+    </FormGroup>
+
+    </Box>
+
         </Grid>
 
-      );
-    })}
-    </Grid>
   </Box>
-  <Box
-    sx={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 2,
-      justifyContent: "center",
-    }}
-  >
-  </Box>
-  
-</Box>
 
+</Box>
+<Button
+      variant="contained"
+      component={Link}
+      to={`/Result/${labels.join('&')}`} // 複数のラベルを&で繋げてURLに追加
+      onClick={handleSearch}
+      sx={{ margin: '0 auto', mt: 2 }}
+    >
+      検索する
+    </Button>
 
                   </Container>
+                  
                   
               </Box>
           </div>
