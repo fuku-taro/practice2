@@ -6,34 +6,25 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-
-
 
 function Header(props) {
-  const { sections, title } = props;
-  const [data, setData] = useState([]);
-  const uniqueOptions = Array.from(new Set(data.map((film) => film.location1)));
-  // データの取得
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const sections = [
+    { title: 'Topページへ', url: '/' },
+    { title: 'エリアから探す', url: '/Search' },
+    { title: '地図から探す', url: '/Search' },
+    { title: '駅・路線から探す', url: '/Search' },
+    // { title: 'Politics', url: '#' },
+    // { title: 'Opinion', url: '#' },
+    // { title: 'Science', url: '#' },
+    // { title: 'Health', url: '#' },
+    // { title: 'Style', url: '#' },
+    // { title: 'Travel', url: '#' },
+  ];
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('/api/data');
-      setData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="small"><a href='/'>Subscribe</a></Button>
+        <Button size="small">Subscribe</Button>
         <Typography
           component="h2"
           variant="h5"
@@ -44,29 +35,12 @@ function Header(props) {
         >
           eBuye!
         </Typography>
-        <Autocomplete
-          freeSolo
-          options={uniqueOptions}
-          getOptionLabel={(option) => option.location1}
-          sx={{width: '200px',
-            padding: 0 }}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              variant="outlined"
-              placeholder="Search"
-              InputProps={{
-                ...params.InputProps,
-                endAdornment: (
-                  <IconButton>
-                    <SearchIcon />
-                  </IconButton>
-                ),
-              }}
-            />
-          )}
-        />
-
+        <IconButton onClick={()=>('/Search')} >
+          <SearchIcon />
+        </IconButton>
+        <Button variant="outlined" size="small">
+          Sign up
+        </Button>
       </Toolbar>
       <Toolbar
         component="nav"
@@ -90,18 +64,14 @@ function Header(props) {
   );
 }
 
-Header.propTypes = {
-  sections: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  title: PropTypes.string.isRequired,
-};
-const top100Films = [
-  { label: 'The Shawshank Redemption', year: 1994 },
-  { label: 'The Godfather', year: 1972 },
-  { label: 'The Godfather: Part II', year: 1974 },
-]
+// Header.propTypes = {
+//   sections: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       title: PropTypes.string.isRequired,
+//       url: PropTypes.string.isRequired,
+//     }),
+//   ).isRequired,
+//   title: PropTypes.string.isRequired,
+// };
+
 export default Header;

@@ -19,19 +19,6 @@ import Typography from "@mui/material/Typography";
 
 import DBtest from '../api/DBtest';
 
-
-const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
 const dummy = [
     
         { id: 1, url:"/Search_area", title: <Checkbox>福岡市</Checkbox>},
@@ -70,7 +57,7 @@ export default function Search_area() {
       
       <CssBaseline />
       <Container >
-        <Header title="Blog" sections={sections} />
+        <Header  />
         <main>
           {/* <DBtest /> */}
           <div className={classes.content}>

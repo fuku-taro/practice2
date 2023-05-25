@@ -65,6 +65,7 @@ const [data, setData] = useState([]);
                       <Link
                           key={item.id}
                           to={`/Estate?uid=${item.id}`}
+                          style={{ textDecoration: 'none' }} // 下線を消すスタイルを追加
                       >
                           <Card
                               sx={{

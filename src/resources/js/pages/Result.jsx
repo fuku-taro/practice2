@@ -8,20 +8,6 @@ import InfoCard from "../components/InfoCard";
 import DBtest from '../api/DBtest';
 
 
-
-const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
-
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 export default function Reselt() {
@@ -39,7 +25,7 @@ export default function Reselt() {
       
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Estate" sections={sections} />
+        <Header />
         <main>
           {/* <DBtest /> */}
           {/* <InfoCard data={currentData} /> ページネーションで表示するデータを渡す */}
