@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use App\Models\estateInfo;
 class estateSeeder extends Seeder
 {
     /**
@@ -14,7 +14,11 @@ class estateSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\estateInfo::factory(100)->create();
+                // Address テーブルのデータを先に生成するため、AddressSeeder を呼び出す
+                $this->call(AddressSeeder::class);
+
+        // EstateInfo テーブルのデータを生成する
+        estateInfo::factory(100)->create();
         // \App\Models\estateInfo::create([
         //     'id' => 1,
         //     'register_at'=>now(),

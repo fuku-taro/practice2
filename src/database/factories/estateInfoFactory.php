@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use App\Models\Address;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\estateInfo>
  */
@@ -16,27 +16,7 @@ class estateInfoFactory extends Factory
      */
     public function definition()
     {
-        $location1 = [
-            "福岡市　東区",
-            "福岡市　西区",
-            "福岡市　南区",
-            "福岡市　城南区"
-        ];
-        $location2 = [
-            "若宮５丁目",
-            "大字脇山",
-            "大楠１丁目",
-            "東油山５丁目",
-            "姪の浜２丁目",
-            "和白４丁目",
-            "六本松１丁目",
-        ];
-        $address = [
-            "24-1",
-            "13-10",
-            "36-5",
-            "4-3",
-        ];
+
         $nearest_line = [
             "福岡市空港線",
             "西日本鉄道貝塚線",
@@ -67,7 +47,8 @@ class estateInfoFactory extends Factory
             "image006.jpg"
         ];
         shuffle($images);
-        
+        // Create a new Address record and get its ID
+        $addressId = Address::factory()->create()->id;
         return [
             'estate_id'=>fake()->unique()->numberBetween($min=90000000,$max=99999999),
             'register_at'=>fake()->dateTime,
@@ -87,15 +68,14 @@ class estateInfoFactory extends Factory
             'price'=>fake()->numberBetween($min=100,$max=1000),
             'child_school'=>"小学校",
             'middle_school'=>"中学校",
-            'location1'=>fake()->randomElement($location1),
-            'location2'=>fake()->randomElement($location2),
-            'address'=>fake()->randomElement($address),
             'nearest_line'=>fake()->randomElement($nearest_line),
             'station'=>fake()->randomElement($station),
             'use_area'=>fake()->randomElement($use_area),
             'walk_time'=>fake()->numberBetween($min=1,$max=30),
 
-            'images'=>json_encode($images)
+            'images'=>json_encode($images),
+
+            'address_id' => $addressId
         ];
     }
 }
