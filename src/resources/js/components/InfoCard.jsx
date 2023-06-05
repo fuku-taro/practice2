@@ -37,12 +37,27 @@ const [data, setData] = useState([]);
   
   useEffect(() => {
     fetchData();
-  }, [label]); // パラメーターの変更時に再度データを取得
+    const a = fetchData2();
 
+  }, [label]); // パラメーターの変更時に再度データを取得
+console.log(data)
   const fetchData = async () => {
     try {
-      const response = await axios.get('/api/data');
+      const response = await axios.get("/api/data");
       setData(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const fetchData2 = async () => {
+    try {
+      const response = await axios.get("/api/getAddresses", {
+          params: {
+              location1: "福岡市　西区",
+          },
+      });
+console.log(response);
+    //   setData(response.data);
     } catch (error) {
       console.error(error);
     }

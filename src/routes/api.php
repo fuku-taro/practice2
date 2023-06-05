@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\estateInfo; // 使用するモデルをインポート
+use App\Http\Controllers\AddressController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +27,8 @@ Route::get('/data', function () {
     }
     return response()->json($data);
 });
+
+Route::get('/getAddresses', [AddressController::class, 'getAddresses']);
 
 // データの作成
 Route::post('/data', function (Request $request) {

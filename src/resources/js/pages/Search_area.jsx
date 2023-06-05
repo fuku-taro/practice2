@@ -120,11 +120,11 @@ export default function Search_area() {
   label="福岡市　南区"
   onChange={handleCheckboxChange}
 />
-  <FormControlLabel
+  {/* <FormControlLabel
     control={<Checkbox name={location1} />}
     label={location1}
     onChange={handleCheckboxChange}
-  />
+  /> */}
 
 
     </FormGroup>
