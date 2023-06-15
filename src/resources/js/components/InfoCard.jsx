@@ -37,7 +37,7 @@ const [data, setData] = useState([]);
   
   useEffect(() => {
     fetchData();
-    const a = fetchData2();
+    // const a = fetchData2();
 
   }, [label]); // パラメーターの変更時に再度データを取得
 console.log(data)
@@ -49,19 +49,19 @@ console.log(data)
       console.error(error);
     }
   };
-  const fetchData2 = async () => {
-    try {
-      const response = await axios.get("/api/getAddresses", {
-          params: {
-              location1: "福岡市　西区",
-          },
-      });
-console.log(response);
-    //   setData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+//   const fetchData2 = async () => {
+//     try {
+//       const response = await axios.get("/api/getEstateInfos", {
+//           params: {
+//               location1: "福岡市　西区",
+//           },
+//       });
+// console.log(response);
+//     //   setData(response.data);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   };
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
 
   const filteredData = data.filter(item => labels.includes(item.location1));
