@@ -34,6 +34,21 @@ export default function Search_area() {
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
 
+  // useEffect(() => {
+  //   fetchData();
+  //   // const a = fetchData2();
+
+  // }, [label]); // パラメーターの変更時に再度データを取得
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get("/api/data");
+  //     setData(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
     const handleSearch = () => {
         // チェックされたアイテムの処理を行う
         // ...
@@ -41,25 +56,6 @@ export default function Search_area() {
         // 別のページに遷移する
       };
 
-  // const handleCheckboxChange = (event) => {
-  //   setLabel(event.target.name); // チェックボックスのname属性をlabelに設定
-  // };
-
-  // const handleCheckboxChange = (event) => {
-  //   const { name, checked } = event.target;
-  //   if (checked) {
-  //     setLabels((prevLabels) => [...prevLabels, name]); // ラベルを追加
-  //   } else {
-  //     setLabels((prevLabels) => prevLabels.filter((label) => label !== name)); // ラベルを削除
-  //   }
-
-  //   // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
-  //   if (labels.length === 0 && !checked) {
-  //     setButtonDisabled(true);
-  //   } else {
-  //     setButtonDisabled(false);
-  //   }
-  // };
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
     let updatedLabels = [];
@@ -156,6 +152,7 @@ export default function Search_area() {
   <LocationModal
     handleCheckboxChange={handleCheckboxChange}
     isButtonDisabled={isButtonDisabled}
+    labels={labels}
   />
 
     </Box>

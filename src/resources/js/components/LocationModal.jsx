@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -10,10 +10,12 @@ import { Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { Link } from 'react-router-dom';
 import classes from '../../sass/LocationModal.scss';
 const LocationModal = (props) => {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
+  const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
 
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
@@ -34,6 +36,22 @@ const LocationModal = (props) => {
     }
   }, [open]);
 
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    let updatedLabels = [];
+  
+    if (checked) {
+      updatedLabels = [...labels, name];
+    } else {
+      updatedLabels = labels.filter((label) => label !== name);
+    }
+  
+    setLabels(updatedLabels);
+  
+    // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
+    setButtonDisabled(updatedLabels.length === 0);
+  };
+  
   return (
     <div>
       <Button
@@ -41,7 +59,7 @@ const LocationModal = (props) => {
       variant="contained"
       size='small'
       onClick={handleClickOpen('paper')}
-      onChange={props.handleCheckboxChange}
+      onChange={handleCheckboxChange}
       sx={{ mb:2 }}
       disabled={props.isButtonDisabled}
       >
@@ -56,6 +74,7 @@ const LocationModal = (props) => {
         PaperProps={{
           style: {
             maxWidth: '900px',
+            width: '90%'
           },
         }}
       >
@@ -78,19 +97,19 @@ const LocationModal = (props) => {
             </Typography>
             <FormGroup>
     <FormControlLabel
-  control={<Checkbox name="福岡市　東区" />}
-  label="福岡市　東区"
-  onChange={props.handleCheckboxChange}
+  control={<Checkbox name="若宮５丁目" />}
+  label="若宮５丁目"
+  onChange={handleCheckboxChange}
 />
 <FormControlLabel
-  control={<Checkbox name="福岡市　西区" />}
-  label="福岡市　西区"
-  onChange={props.handleCheckboxChange}
+  control={<Checkbox name="大字脇山" />}
+  label="大字脇山"
+  onChange={handleCheckboxChange}
 />
 <FormControlLabel
-  control={<Checkbox name="福岡市　南区" />}
-  label="福岡市　南区"
-  onChange={props.handleCheckboxChange}
+  control={<Checkbox name="大楠１丁目" />}
+  label="大楠１丁目"
+  onChange={handleCheckboxChange}
 />
   {/* <FormControlLabel
     control={<Checkbox name={location1} />}
@@ -100,21 +119,16 @@ const LocationModal = (props) => {
 
 
     </FormGroup>
-            {[...new Array(50)]
-              .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                )
-                .join('\n')}
+
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>キャンセル</Button>
           <Button
            variant="contained"
-           onClick={handleClose}
+           component={Link}
+           to={`/Result/${labels.join('&')}`} // 複数のラベルを&で繋げてURLに追加
+          //  onClick={handleClose}
            startIcon={<SearchIcon />}
            >
             検索する

@@ -11,61 +11,8 @@ import DBtest from '../api/DBtest';
 import { useParams } from 'react-router-dom';
 
 
-export default function InfoCard() {
-//   const [data, setData] = useState([]);
-//   const { label } = useParams(); // パラメーターを取得
-//   console.log(label);
-//   // データの取得
-//   useEffect(() => {
-//     fetchData();
-//   }, [lavel]);
+export default function InfoCard(props) {
 
-//   const fetchData = async () => {
-//     try {
-//       const response = await axios.get('/api/data');
-//       setData(response.data);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
-  
-//   const filteredData = data.filter(item => item.location1 === label);
-//   console.log(filteredData);
-const [data, setData] = useState([]);
-  const { label } = useParams(); // パラメーターを取得
-  console.log(label);
-  
-  useEffect(() => {
-    fetchData();
-    // const a = fetchData2();
-
-  }, [label]); // パラメーターの変更時に再度データを取得
-console.log(data)
-  const fetchData = async () => {
-    try {
-      const response = await axios.get("/api/data");
-      setData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-//   const fetchData2 = async () => {
-//     try {
-//       const response = await axios.get("/api/getEstateInfos", {
-//           params: {
-//               location1: "福岡市　西区",
-//           },
-//       });
-// console.log(response);
-//     //   setData(response.data);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
-  const labels = label.split('&'); // パラメーターを&で分割して配列にする
-
-  const filteredData = data.filter(item => labels.includes(item.location1));
-  console.log(filteredData);
   return (
       <Container
           sx={{
@@ -76,7 +23,7 @@ console.log(data)
       >
           <Grid container justifyContent="center">
               <Grid item xs={12}>
-                  {filteredData.map((item) => (
+                  {props.filteredData.map((item) => (
                       <Link
                           key={item.id}
                         //   to={`/Estate?uid=${item.id}`}
