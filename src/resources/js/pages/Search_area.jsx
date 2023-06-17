@@ -11,8 +11,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import classes from "../../sass/top.module.scss";
-
-
+import LocationModal from "../components/LocationModal";
+import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
@@ -30,26 +30,50 @@ const dummy = [
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 export default function Search_area() {
+  const [label, setLabel] = useState(""); // labelの初期値を設定
+  const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
+  const [isButtonDisabled, setButtonDisabled] = useState(true);
+
     const handleSearch = () => {
         // チェックされたアイテムの処理を行う
         // ...
     
         // 別のページに遷移する
       };
-    const [label, setLabel] = useState(""); // labelの初期値を設定
 
   // const handleCheckboxChange = (event) => {
   //   setLabel(event.target.name); // チェックボックスのname属性をlabelに設定
   // };
-  const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
 
+  // const handleCheckboxChange = (event) => {
+  //   const { name, checked } = event.target;
+  //   if (checked) {
+  //     setLabels((prevLabels) => [...prevLabels, name]); // ラベルを追加
+  //   } else {
+  //     setLabels((prevLabels) => prevLabels.filter((label) => label !== name)); // ラベルを削除
+  //   }
+
+  //   // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
+  //   if (labels.length === 0 && !checked) {
+  //     setButtonDisabled(true);
+  //   } else {
+  //     setButtonDisabled(false);
+  //   }
+  // };
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
+    let updatedLabels = [];
+  
     if (checked) {
-      setLabels((prevLabels) => [...prevLabels, name]); // ラベルを追加
+      updatedLabels = [...labels, name];
     } else {
-      setLabels((prevLabels) => prevLabels.filter((label) => label !== name)); // ラベルを削除
+      updatedLabels = labels.filter((label) => label !== name);
     }
+  
+    setLabels(updatedLabels);
+  
+    // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
+    setButtonDisabled(updatedLabels.length === 0);
   };
   return (
 
@@ -128,6 +152,7 @@ export default function Search_area() {
 
 
     </FormGroup>
+  <LocationModal/>
 
     </Box>
 
@@ -141,7 +166,9 @@ export default function Search_area() {
       component={Link}
       to={`/Result/${labels.join('&')}`} // 複数のラベルを&で繋げてURLに追加
       onClick={handleSearch}
+      startIcon={<SearchIcon />}
       sx={{ margin: '0 auto', mt: 2 }}
+      disabled={isButtonDisabled}
     >
       検索する
     </Button>
