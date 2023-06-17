@@ -152,7 +152,11 @@ export default function Search_area() {
 
 
     </FormGroup>
-  <LocationModal/>
+
+  <LocationModal
+    handleCheckboxChange={handleCheckboxChange}
+    isButtonDisabled={isButtonDisabled}
+  />
 
     </Box>
 
