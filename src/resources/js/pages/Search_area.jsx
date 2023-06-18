@@ -10,12 +10,12 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import classes from "../../sass/top.module.scss";
 import LocationModal from "../components/LocationModal";
 import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
+import classes from '../../sass/Search_area.scss';
 
 import DBtest from '../api/DBtest';
 
@@ -33,6 +33,7 @@ export default function Search_area() {
   const [label, setLabel] = useState(""); // labelの初期値を設定
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -79,7 +80,6 @@ export default function Search_area() {
       <Container >
         <Header  />
         <main>
-          {/* <DBtest /> */}
           <div className={classes.content}>
               <Box
                   sx={{
@@ -98,8 +98,8 @@ export default function Search_area() {
                           flexDirection: "column",
                       }}
                   >
-                      <Typography variant="h5">エリアを選んで下さい</Typography>
-<Box sx={{ display: "flex" }}>
+                      {/* <Typography variant="h5">エリアを選んで下さい</Typography> */}
+{/* <Box sx={{ display: "flex" }}> */}
 
   <Box
     sx={{
@@ -107,23 +107,24 @@ export default function Search_area() {
       flexWrap: "wrap",
       gap: 2,
       justifyContent: "center",
+      flexDirection: "column"
     }}
   >
+            <Typography variant="h5">エリアを選んで下さい</Typography>
 
     {/* {dummy.map((i) => {
       return ( */}
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}> */}
         <Box
-
+// className={classes.a}
           sx={{
             backgroundColor: "white",
-            width: "530px",
-            height: "100%",
+            // width: "530px",
+            // height: "100%",
             textAlign:"center"
           }}
         >
             
-
     <FormGroup>
     <FormControlLabel
   control={<Checkbox name="福岡市　東区" />}
@@ -141,8 +142,8 @@ export default function Search_area() {
   onChange={handleCheckboxChange}
 />
 <FormControlLabel
-  control={<Checkbox name="岐阜県" />}
-  label="岐阜県"
+  control={<Checkbox name="検索０件のテスト" />}
+  label="検索０件のテスト"
   onChange={handleCheckboxChange}
 />
   {/* <FormControlLabel
@@ -161,10 +162,6 @@ export default function Search_area() {
   />
 
     </Box>
-
-        </Grid>
-
-  </Box>
 
 </Box>
 <Button

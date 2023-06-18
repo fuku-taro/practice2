@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,8 +6,6 @@ import Typography from '@mui/material/Typography';
 import { Box, CardActionArea, Container, Grid } from '@mui/material';
 import { Link } from "react-router-dom";
 import Table from './Table2';
-import DBtest from '../api/DBtest';
-import { useParams } from 'react-router-dom';
 
 
 export default function InfoCard(props) {
@@ -23,7 +20,7 @@ export default function InfoCard(props) {
       >
           <Grid container justifyContent="center">
               <Grid item xs={12}>
-                  {props.filteredData.map((item) => (
+                  {props.currentData.map((item) => (
                       <Link
                           key={item.id}
                         //   to={`/Estate?uid=${item.id}`}

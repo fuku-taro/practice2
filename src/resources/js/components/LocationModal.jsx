@@ -125,11 +125,12 @@ const LocationModal = (props) => {
         <DialogActions>
           <Button onClick={handleClose}>キャンセル</Button>
           <Button
+          size="small"
            variant="contained"
            component={Link}
            to={`/Result/${labels.join('&')}`} // 複数のラベルを&で繋げてURLに追加
-          //  onClick={handleClose}
            startIcon={<SearchIcon />}
+           sx={{ ml:2 }}
            >
             検索する
           </Button>

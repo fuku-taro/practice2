@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 import InfoCard from "../components/InfoCard";
 import Typography from "@mui/material/Typography";
 import DBtest from '../api/DBtest';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -17,12 +19,9 @@ export default function Reselt() {
   const { label } = useParams(); // パラメーターを取得
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
   const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
-  console.log(label);
 
   useEffect(() => {
     fetchData();
-    // const a = fetchData2();
-
   }, [label]); // パラメーターの変更時に再度データを取得
 
 console.log(data)
@@ -41,16 +40,20 @@ if (filteredData.length === 0) {
   filteredData = data.filter(item => labels.includes(item.location1));
 }
 const dataCount = filteredData.length;
+
   console.log(labels);
   console.log(filteredData);
-//   const [currentPage, setCurrentPage] = useState(1); // 現在のページ番号を管理
-//   const itemsPerPage = 20; // 1ページに表示するアイテム数
 
-//   // ページネーションで表示するデータを計算する
-//   const indexOfLastItem = currentPage * itemsPerPage;
-//   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-//   const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
-  
+  // ページネーション
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 5; // 1ページに表示するアイテム数
+  const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+  const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+  const handlePageChange = (event, page) => {
+    setCurrentPage(page);
+  };
+  const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
   return (
 
     <ThemeProvider theme={defaultTheme}>
@@ -59,16 +62,6 @@ const dataCount = filteredData.length;
       <Container maxWidth="lg">
         <Header />
           <Typography variant='h4' style={{ whiteSpace: 'pre-line' }}>
-          {/* 検索結果：{dataCount} 件 */}
-          {/* {filteredData.length === 0
-          ? `検索結果：${dataCount} 件<p>該当する物件情報は見つかりませんでした</p>`
-          : `検索結果：${dataCount} 件`} */}
-              {/* {isLoading 
-              ? "検索結果を取得中..." 
-              : `検索結果：${dataCount} 件`}
-              {filteredData.length === 0 && (
-                <p>該当する物件情報は見つかりませんでした</p>
-              )} */}
                 {isLoading
     ? "検索結果を取得中..."
     : filteredData.length === 0
@@ -77,12 +70,34 @@ const dataCount = filteredData.length;
 
           </Typography>
         <main>
-          {/* <DBtest /> */}
-          {/* <InfoCard data={currentData} /> ページネーションで表示するデータを渡す */}
-          {/* <InfoCard filteredData={filteredData}/> */}
-          {/* {filteredData.length > 0 && <InfoCard filteredData={filteredData} />} */}
           {!isLoading && (
-            <InfoCard filteredData={filteredData} />
+            <div>
+          <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Pagination
+              shape="rounded"
+              size='small'
+              count={Math.ceil(filteredData.length / ITEMS_PER_PAGE)}
+              onChange={handlePageChange}
+              page={currentPage} // currentPageを指定
+              sx={{ marginLeft: 'auto' , mb: 1}}
+              color="primary"
+            />
+          </Stack>
+
+              <InfoCard currentData={currentData}/>
+
+            <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Pagination
+              shape="rounded"
+              size='small'
+              count={Math.ceil(filteredData.length / ITEMS_PER_PAGE)}
+              onChange={handlePageChange}
+              page={currentPage} // currentPageを指定
+              sx={{ marginLeft: 'auto' }}
+              color="primary"
+            />
+          </Stack>
+          </div>
           )}
         </main>
       </Container>
