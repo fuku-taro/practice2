@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -34,20 +34,20 @@ export default function Search_area() {
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
 
-  // useEffect(() => {
-  //   fetchData();
-  //   // const a = fetchData2();
+  useEffect(() => {
+    fetchData();
+    // const a = fetchData2();
 
-  // }, [label]); // パラメーターの変更時に再度データを取得
-
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get("/api/data");
-  //     setData(response.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  }, [label]); // パラメーターの変更時に再度データを取得
+  
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("/api/data");
+      setData(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
     const handleSearch = () => {
         // チェックされたアイテムの処理を行う
@@ -138,6 +138,11 @@ export default function Search_area() {
 <FormControlLabel
   control={<Checkbox name="福岡市　南区" />}
   label="福岡市　南区"
+  onChange={handleCheckboxChange}
+/>
+<FormControlLabel
+  control={<Checkbox name="岐阜県" />}
+  label="岐阜県"
   onChange={handleCheckboxChange}
 />
   {/* <FormControlLabel

@@ -16,7 +16,9 @@ export default function Reselt() {
   const [data, setData] = useState([]);
   const { label } = useParams(); // パラメーターを取得
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
+  const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
   console.log(label);
+
   useEffect(() => {
     fetchData();
     // const a = fetchData2();
@@ -28,6 +30,7 @@ console.log(data)
     try {
       const response = await axios.get("/api/data");
       setData(response.data);
+      setIsLoading(false); // データの取得が完了したらローディング状態を解除
     } catch (error) {
       console.error(error);
     }
@@ -37,6 +40,7 @@ console.log(data)
 if (filteredData.length === 0) {
   filteredData = data.filter(item => labels.includes(item.location1));
 }
+const dataCount = filteredData.length;
   console.log(labels);
   console.log(filteredData);
 //   const [currentPage, setCurrentPage] = useState(1); // 現在のページ番号を管理
@@ -54,13 +58,32 @@ if (filteredData.length === 0) {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header />
-        <Typography variant='h4'>
-        検索結果：
-    </Typography>
+          <Typography variant='h4' style={{ whiteSpace: 'pre-line' }}>
+          {/* 検索結果：{dataCount} 件 */}
+          {/* {filteredData.length === 0
+          ? `検索結果：${dataCount} 件<p>該当する物件情報は見つかりませんでした</p>`
+          : `検索結果：${dataCount} 件`} */}
+              {/* {isLoading 
+              ? "検索結果を取得中..." 
+              : `検索結果：${dataCount} 件`}
+              {filteredData.length === 0 && (
+                <p>該当する物件情報は見つかりませんでした</p>
+              )} */}
+                {isLoading
+    ? "検索結果を取得中..."
+    : filteredData.length === 0
+    ? `検索結果：${dataCount} 件\n該当する物件情報は見つかりませんでした`
+    : `検索結果：${dataCount} 件`}
+
+          </Typography>
         <main>
           {/* <DBtest /> */}
           {/* <InfoCard data={currentData} /> ページネーションで表示するデータを渡す */}
-          <InfoCard filteredData={filteredData}/>
+          {/* <InfoCard filteredData={filteredData}/> */}
+          {/* {filteredData.length > 0 && <InfoCard filteredData={filteredData} />} */}
+          {!isLoading && (
+            <InfoCard filteredData={filteredData} />
+          )}
         </main>
       </Container>
       <Footer
