@@ -43,4 +43,11 @@ class AddressController extends Controller
     }
 
     // 他のアクションやメソッドを追加することもできます
+    // $result = DB::table('estate_infos')
+    // ->join('ad_address', function ($join) {
+    //     $join->on(DB::raw("REPLACE(`estate_infos`.`location1`, '　', '')"), '=', 'ad_address.city_name');
+    // })
+    // ->where('ad_address.city_id', '=', 40131)
+    // ->get();
+
 }
