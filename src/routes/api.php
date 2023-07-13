@@ -28,6 +28,7 @@ Route::get('/data', function () {
     return response()->json($data);
 });
 
+Route::get('/getEstateInfos', [AddressController::class, 'getEstateInfos']);
 Route::get('/getAddresses', [AddressController::class, 'getAddresses']);
 
 // データの作成

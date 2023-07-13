@@ -37,6 +37,27 @@ class estateInfoFactory extends Factory
             "一種低層",
             "",
         ];
+        $location1 = [
+            "福岡市　東区",
+            "福岡市　西区",
+            "福岡市　南区",
+            "福岡市　城南区"
+        ];
+        $location2 = [
+            "若宮５丁目",
+            "大字脇山",
+            "大楠１丁目",
+            "東油山５丁目",
+            "姪の浜２丁目",
+            "和白４丁目",
+            "六本松１丁目",
+        ];
+        $address = [
+            "24-1",
+            "13-10",
+            "36-5",
+            "4-3",
+        ];
         $images = [
             "image000.jpg",
             "image001.jpg",
@@ -72,10 +93,13 @@ class estateInfoFactory extends Factory
             'station'=>fake()->randomElement($station),
             'use_area'=>fake()->randomElement($use_area),
             'walk_time'=>fake()->numberBetween($min=1,$max=30),
+            'location1'=>fake()->randomElement($location1),
+            'location2'=>fake()->randomElement($location2),
+            'address'=>fake()->randomElement($address),
 
             'images'=>json_encode($images),
 
-            'address_id' => $addressId
+            // 'address_id' => $addressId
         ];
     }
 }

@@ -15,7 +15,7 @@ class estateSeeder extends Seeder
     public function run()
     {
                 // Address テーブルのデータを先に生成するため、AddressSeeder を呼び出す
-                $this->call(AddressSeeder::class);
+                // $this->call(AddressSeeder::class);
 
         // EstateInfo テーブルのデータを生成する
         estateInfo::factory(100)->create();

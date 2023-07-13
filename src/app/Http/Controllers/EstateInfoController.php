@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Address;
+use App\Models\estateInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
-
-class AddressController extends Controller
+class EstateInfoController extends Controller
 {
-    public function getAddresses(Request $request)
+    public function getEstateInfos(Request $request)
     {
         $params = $request->all();
 
         Log::debug($params);
         
-        $data = DB::table("addresses")
+        $data = DB::table("estate_infos")
             ->join("estate_infos","addresses.id","=","estate_infos.address_id")
             ->where("addresses.location1","=",$params["location1"])
             ->select("addresses.location1","addresses.location2","estate_infos.nearest_line")
@@ -28,26 +27,17 @@ class AddressController extends Controller
             ]);
             
         // すべての住所データを取得する例
-        $addresses = Address::all();
+        $estateInfo = estateInfo::all();
         // 住所データをビューに渡して表示する例
         // return view('Result', compact('addresses'));
     }
 
-    public function showAddresses($id)
+    public function showEstateInfos($id)
     {
         // 特定の住所データを取得する例
-        $address = Address::find($id);
+        $address = estateInfo::find($id);
 
         // 住所データをビューに渡して表示する例
-        return view('Estate', compact('address'));
+        return view('Estate', compact('estateInfo'));
     }
-
-    // 他のアクションやメソッドを追加することもできます
-    // $result = DB::table('estate_infos')
-    // ->join('ad_address', function ($join) {
-    //     $join->on(DB::raw("REPLACE(`estate_infos`.`location1`, '　', '')"), '=', 'ad_address.city_name');
-    // })
-    // ->where('ad_address.city_id', '=', 40131)
-    // ->get();
-
 }
