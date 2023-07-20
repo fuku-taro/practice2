@@ -11,7 +11,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Link } from 'react-router-dom';
-import classes from '../../sass/LocationModal.scss';
+import LocationModalStyle from '../../sass/LocationModal.module.scss';
 const LocationModal = (props) => {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
@@ -53,7 +53,7 @@ const LocationModal = (props) => {
   };
   
   return (
-    <div>
+    <div className={LocationModalStyle.a}>
       <Button
       // className={classes.button}
       variant="contained"

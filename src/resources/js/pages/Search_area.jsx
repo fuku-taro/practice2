@@ -72,6 +72,7 @@ export default function Search_area() {
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
     setButtonDisabled(updatedLabels.length === 0);
   };
+  console.log(data);
   return (
 
     <ThemeProvider theme={defaultTheme}>
@@ -98,9 +99,6 @@ export default function Search_area() {
                           flexDirection: "column",
                       }}
                   >
-                      {/* <Typography variant="h5">エリアを選んで下さい</Typography> */}
-{/* <Box sx={{ display: "flex" }}> */}
-
   <Box
     sx={{
       display: "flex",
@@ -110,51 +108,21 @@ export default function Search_area() {
       flexDirection: "column"
     }}
   >
-            <Typography variant="h5">エリアを選んで下さい</Typography>
-
-    {/* {dummy.map((i) => {
-      return ( */}
-        {/* <Grid item xs={12}> */}
-        <Box
-// className={classes.a}
-          sx={{
-            backgroundColor: "white",
-            // width: "530px",
-            // height: "100%",
-            textAlign:"center"
-          }}
-        >
-            
-    <FormGroup>
-    <FormControlLabel
-  control={<Checkbox name="福岡市　東区" />}
-  label="福岡市　東区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="福岡市　西区" />}
-  label="福岡市　西区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="福岡市　南区" />}
-  label="福岡市　南区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="検索０件のテスト" />}
-  label="検索０件のテスト"
-  onChange={handleCheckboxChange}
-/>
-  {/* <FormControlLabel
-    control={<Checkbox name={location1} />}
-    label={location1}
-    onChange={handleCheckboxChange}
-  /> */}
-
-
-    </FormGroup>
-
+    <Typography variant="h5">エリアを選んで下さい</Typography>
+      <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
+        <FormGroup>
+          <Grid container>
+            {data.map((item, index) => (
+              <Grid item xs={6} md={3}key={index}>
+                <FormControlLabel
+                  control={<Checkbox name={item.location1} />}
+                  label={item.location1}
+                  onChange={handleCheckboxChange}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </FormGroup>
   <LocationModal
     handleCheckboxChange={handleCheckboxChange}
     isButtonDisabled={isButtonDisabled}

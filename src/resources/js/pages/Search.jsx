@@ -55,20 +55,11 @@ export default function Search() {
                   >
                       <Typography variant="h5">Search for</Typography>
 <Box sx={{ display: "flex" }}>
-
-  <Box
-    sx={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 2,
-      justifyContent: "center",
-    }}
-  >
         <Grid container spacing={2}>
 
     {dummy.map((i) => {
       return (
-        <Grid item xs={12}          key={i.id}>
+        <Grid item xs={12} md={6}         key={i.id}>
         <Box
 
           sx={{
@@ -91,7 +82,6 @@ export default function Search() {
       );
     })}
     </Grid>
-  </Box>
   <Box
     sx={{
       display: "flex",
