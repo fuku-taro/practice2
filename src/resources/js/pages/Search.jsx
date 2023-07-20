@@ -68,12 +68,12 @@ export default function Search() {
 
     {dummy.map((i) => {
       return (
-        <Grid item xs={6}          key={i.id}>
+        <Grid item xs={12}          key={i.id}>
         <Box
 
           sx={{
             backgroundColor: "white",
-            width: 350,
+            width: '100%',
             height: 70,
             textAlign:"center"
           }}
