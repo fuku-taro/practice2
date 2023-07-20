@@ -6,17 +6,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import Checkbox from '@mui/material/Checkbox';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import LocationModal from "../components/LocationModal";
 import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
-import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 import classes from '../../sass/Search_area.scss';
-
+import BasicAccordion from '../components/BasicAccordion';
 import DBtest from '../api/DBtest';
 
 const dummy = [
@@ -84,21 +79,21 @@ export default function Search_area() {
           <div className={classes.content}>
               <Box
                   sx={{
-                      display: "flex",
-                      flexDirection: "column",
+                    display: "flex",
+                    flexDirection: "column",
                     //   my: 10,
                     //   gap: 10,
                   }}
-              >
+                  >
                   <Container
                       maxWidth="md"
                       sx={{
-                          backgroundColor: "aliceblue",
-                          py: 4,
-                          display: "flex",
-                          flexDirection: "column",
+                        backgroundColor: "aliceblue",
+                        py: 4,
+                        display: "flex",
+                        flexDirection: "column",
                       }}
-                  >
+                      >
   <Box
     sx={{
       display: "flex",
@@ -107,29 +102,14 @@ export default function Search_area() {
       justifyContent: "center",
       flexDirection: "column"
     }}
-  >
+    >
     <Typography variant="h5">エリアを選んで下さい</Typography>
-      <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
-        <FormGroup>
-          <Grid container>
-            {data.map((item, index) => (
-              <Grid item xs={6} md={3}key={index}>
-                <FormControlLabel
-                  control={<Checkbox name={item.location1} />}
-                  label={item.location1}
-                  onChange={handleCheckboxChange}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </FormGroup>
-  <LocationModal
-    handleCheckboxChange={handleCheckboxChange}
-    isButtonDisabled={isButtonDisabled}
-    labels={labels}
-  />
-
-    </Box>
+    <BasicAccordion
+       data={data}
+       handleCheckboxChange={handleCheckboxChange}
+       labels={labels}
+       isButtonDisabled={isButtonDisabled}
+    />
 
 </Box>
 <Button
