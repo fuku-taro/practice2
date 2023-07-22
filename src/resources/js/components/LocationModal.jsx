@@ -60,7 +60,7 @@ const LocationModal = (props) => {
       size='small'
       onClick={handleClickOpen('paper')}
       onChange={handleCheckboxChange}
-      sx={{ mb:2 }}
+      sx={{ my:2 }}
       disabled={props.isButtonDisabled}
       >
         詳しいエリアを選択
