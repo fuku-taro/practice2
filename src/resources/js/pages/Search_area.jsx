@@ -62,6 +62,7 @@ export default function Search_area() {
       updatedLabels = labels.filter((label) => label !== name);
     }
   
+    setLabel(event.target.name);
     setLabels(updatedLabels);
   
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
@@ -107,6 +108,7 @@ export default function Search_area() {
     <AreaAccordion
        data={data}
        handleCheckboxChange={handleCheckboxChange}
+       label={label}
        labels={labels}
        isButtonDisabled={isButtonDisabled}
     />

@@ -8,14 +8,22 @@ import DialogTitle from '@mui/material/DialogTitle';
 import SearchIcon from '@mui/icons-material/Search';
 import { Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
+import Grid from '@mui/material/Grid';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Link } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles'; // ThemeProviderをインポート
 import LocationModalStyle from '../../sass/LocationModal.module.scss';
+import theme from "./theme";
+import chikuhouArea from './SearchChikuhouArea';
+
 const LocationModal = (props) => {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
+  const [isButtonDisabled, setButtonDisabled] = useState(true);
+  console.log(labels)
+
 
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
@@ -23,6 +31,7 @@ const LocationModal = (props) => {
   };
 
   const handleClose = () => {
+    setLabels([]);
     setOpen(false);
   };
 
@@ -36,7 +45,7 @@ const LocationModal = (props) => {
     }
   }, [open]);
 
-  const handleCheckboxChange = (event) => {
+  const LMhandleCheckboxChange = (event) => {
     const { name, checked } = event.target;
     let updatedLabels = [];
   
@@ -45,7 +54,6 @@ const LocationModal = (props) => {
     } else {
       updatedLabels = labels.filter((label) => label !== name);
     }
-  
     setLabels(updatedLabels);
   
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
@@ -53,15 +61,16 @@ const LocationModal = (props) => {
   };
   
   return (
+    <ThemeProvider theme={theme}>
     <div className={LocationModalStyle.a}>
       <Button
-      // className={classes.button}
       variant="contained"
       size='small'
       onClick={handleClickOpen('paper')}
-      onChange={handleCheckboxChange}
+      onChange={LMhandleCheckboxChange}
       sx={{ my:2 }}
       disabled={props.isButtonDisabled}
+      color="success"
       >
         詳しいエリアを選択
         </Button>
@@ -85,40 +94,30 @@ const LocationModal = (props) => {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            {/* <h3 className={classes.h3}>福岡市内</h3> */}
-            <Typography
-             variant="h4"
-             sx={{ 
-              bgcolor: 'primary.main',
-              color: '#fff'
-            }}
-            >
-              福岡市内
-            </Typography>
             <FormGroup>
-    <FormControlLabel
-  control={<Checkbox name="若宮５丁目" />}
-  label="若宮５丁目"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="大字脇山" />}
-  label="大字脇山"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="大楠１丁目" />}
-  label="大楠１丁目"
-  onChange={handleCheckboxChange}
-/>
-  {/* <FormControlLabel
-    control={<Checkbox name={location1} />}
-    label={location1}
-    onChange={handleCheckboxChange}
-  /> */}
-
-
-    </FormGroup>
+              {props.labels.map((item)=>(
+            <>
+            <Typography
+                  variant="h4"
+                  sx={{
+                    bgcolor: 'primary.main',
+                    color: '#fff'
+                  }}
+                >
+                  {item}
+                </Typography><Grid container>
+                    {chikuhouArea[0].chikuhouCity.map((item, cityIndex) => (
+                      <Grid item xs={12} md={4} key={cityIndex}>
+                        <FormControlLabel
+                          control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
+                          label={item.cityName}
+                          onChange={LMhandleCheckboxChange} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                  </>
+                  ))}
+              </FormGroup>
 
           </DialogContentText>
         </DialogContent>
@@ -131,12 +130,14 @@ const LocationModal = (props) => {
            to={`/Result/${labels.join('&')}`} // 複数のラベルを&で繋げてURLに追加
            startIcon={<SearchIcon />}
            sx={{ ml:2 }}
+           disabled={isButtonDisabled}
            >
             検索する
           </Button>
         </DialogActions>
       </Dialog>
     </div>
+    </ThemeProvider>
   );
 }
 export default LocationModal;

@@ -14,10 +14,6 @@ import fukuokaArea from './SearchFukuokaArea';
 import kitakyusyuArea from './SearchKitaKyusyuArea';
 import chikuhouArea from './SearchChikuhouArea';
 import chikugoArea from './SearchChikugoArea';
-console.log("fukuokaArea",fukuokaArea);
-console.log("kitakyusyuArea",kitakyusyuArea);
-console.log("chikuhouArea",chikuhouArea);
-console.log("chikugoArea",chikugoArea);
 
 
 export default function AreaAccordion(props) {
@@ -60,6 +56,7 @@ export default function AreaAccordion(props) {
               <LocationModal
                 handleCheckboxChange={props.handleCheckboxChange}
                 isButtonDisabled={props.isButtonDisabled}
+                label={props.label}
                 labels={props.labels}
               />
             </Box>
