@@ -11,7 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import classes from '../../sass/Search_area.scss';
-import BasicAccordion from '../components/BasicAccordion';
+import AreaAccordion from '../components/AreaAccordion';
 import DBtest from '../api/DBtest';
 
 const dummy = [
@@ -104,7 +104,7 @@ export default function Search_area() {
     }}
     >
     <Typography variant="h5">エリアを選んで下さい</Typography>
-    <BasicAccordion
+    <AreaAccordion
        data={data}
        handleCheckboxChange={handleCheckboxChange}
        labels={labels}
