@@ -12,14 +12,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import classes from '../../sass/Search_area.scss';
 import AreaAccordion from '../components/AreaAccordion';
-import DBtest from '../api/DBtest';
+import fukuokaArea from '../components/SearchFukuokaArea';
+import kitakyusyuArea from '../components/SearchKitaKyusyuArea';
+import chikuhouArea from '../components/SearchChikuhouArea';
+import chikugoArea from '../components/SearchChikugoArea';
 
 const dummy = [
     
         { id: 1, url:"/Search_area", title: <Checkbox>福岡市</Checkbox>},
         { id: 2, url:"/Search_area", title: "地図から探す"},
         { id: 3, url:"/Search_area", title: "路線・駅から探す"},
-        // { id: 4, url:"/Search_area", title: "駐車場", text: "33333件" },
     
 ];
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -28,18 +30,32 @@ export default function Search_area() {
   const [label, setLabel] = useState(""); // labelの初期値を設定
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
-  const [data, setData] = useState([]);
+  const [fukuokaAreaData, setFukuokaAreaData] = useState([]);
+  const [kitakyusyuAreaData, setKitakyusyuAreaData] = useState([]);
+  const [chikuhouAreaData, setChikuhouAreaData] = useState([]);
+  const [chikugoAreaData, setChikugoAreaData] = useState([]);
 
   useEffect(() => {
-    fetchData();
-    // const a = fetchData2();
-
-  }, [label]); // パラメーターの変更時に再度データを取得
-  
-  const fetchData = async () => {
+    postData();
+  }, []); // パラメーターの変更時に再度データを取得
+  // console.log(fukuokaAreaData);
+  // console.log(kitakyusyuAreaData);
+  // console.log(chikuhouAreaData);
+  // console.log(chikugoAreaData);
+  const postData = async () => {
     try {
-      const response = await axios.get("/api/data");
-      setData(response.data);
+      const fukuokaAreaJson = JSON.stringify(fukuokaArea);
+      const kitakyusyuAreaJson = JSON.stringify(kitakyusyuArea);
+      const chikuhouAreaJson = JSON.stringify(chikuhouArea);
+      const chikugoAreaJson = JSON.stringify(chikugoArea);
+      const FukuokaAreaAddresses = await axios.post("/api/getFukuokaAreaAddresses" , {fukuokaAreaJson});
+      const KitakyusyuAreaAddresses = await axios.post("/api/getKitakyusyuAreaAddresses" , {kitakyusyuAreaJson});
+      const ChikuhouAreaAddresses = await axios.post("/api/getChikuhouAreaAddresses" , {chikuhouAreaJson});
+      const ChikugoAreaAddresses = await axios.post("/api/getChikugoAreaAddresses" , {chikugoAreaJson});
+      setFukuokaAreaData(FukuokaAreaAddresses.data.data);
+      setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
+      setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
+      setChikugoAreaData(ChikugoAreaAddresses.data.data);
     } catch (error) {
       console.error(error);
     }
@@ -68,7 +84,6 @@ export default function Search_area() {
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
     setButtonDisabled(updatedLabels.length === 0);
   };
-  console.log(data);
   return (
 
     <ThemeProvider theme={defaultTheme}>
@@ -106,11 +121,14 @@ export default function Search_area() {
     >
     <Typography variant="h5">エリアを選んで下さい</Typography>
     <AreaAccordion
-       data={data}
-       handleCheckboxChange={handleCheckboxChange}
-       label={label}
-       labels={labels}
-       isButtonDisabled={isButtonDisabled}
+      fukuokaAreaData={fukuokaAreaData}
+      kitakyusyuAreaData={kitakyusyuAreaData}
+      chikuhouAreaData={chikuhouAreaData}
+      chikugoAreaData={chikugoAreaData}
+      handleCheckboxChange={handleCheckboxChange}
+      label={label}
+      labels={labels}
+      isButtonDisabled={isButtonDisabled}
     />
 
 </Box>

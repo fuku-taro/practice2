@@ -17,6 +17,7 @@ import chikugoArea from './SearchChikugoArea';
 
 
 export default function AreaAccordion(props) {
+  console.log(props.kitakyusyuAreaData);
   return (
     <div>
         <Accordion sx={{ mb:2 }}>
@@ -31,7 +32,7 @@ export default function AreaAccordion(props) {
             <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {fukuokaArea[0].fukuokaCity.map((item, cityIndex) => (
+                  {props.fukuokaAreaData.slice(0,7).map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -41,8 +42,8 @@ export default function AreaAccordion(props) {
                     </Grid>
                   ))}
                   </Grid>
-                  <Grid container>
-                  {fukuokaArea[1].otherCity.map((item, cityIndex) => (
+                <Grid container>
+                  {props.fukuokaAreaData.slice(7).map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -51,9 +52,13 @@ export default function AreaAccordion(props) {
                       />
                     </Grid>
                   ))}
-                </Grid>
+                  </Grid>
               </FormGroup>
               <LocationModal
+                fukuokaAreaData={props.fukuokaAreaData}
+                kitakyusyuAreaData={props.kitakyusyuAreaData}
+                chikuhouAreaData={props.chikugoAreaData}
+                chikugoAreaData={props.chikugoAreaData}
                 handleCheckboxChange={props.handleCheckboxChange}
                 isButtonDisabled={props.isButtonDisabled}
                 label={props.label}
@@ -74,7 +79,7 @@ export default function AreaAccordion(props) {
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {kitakyusyuArea[0].kitakyusyuCity.map((item, cityIndex) => (
+                  {props.kitakyusyuAreaData.slice(0,7).map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -85,7 +90,7 @@ export default function AreaAccordion(props) {
                   ))}
                   </Grid>
                   <Grid container>
-                  {kitakyusyuArea[1].otherCity.map((item, cityIndex) => (
+                  {props.kitakyusyuAreaData.slice(7).map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -97,6 +102,10 @@ export default function AreaAccordion(props) {
                 </Grid>
               </FormGroup>
               <LocationModal
+              fukuokaAreaData={props.fukuokaAreaData}
+              kitakyusyuAreaData={props.kitakyusyuAreaData}
+              chikuhouAreaData={props.chikugoAreaData}
+              chikugoAreaData={props.chikugoAreaData}
                 handleCheckboxChange={props.handleCheckboxChange}
                 isButtonDisabled={props.isButtonDisabled}
                 labels={props.labels}
@@ -116,7 +125,7 @@ export default function AreaAccordion(props) {
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {chikuhouArea[0].chikuhouCity.map((item, cityIndex) => (
+                  {props.chikuhouAreaData.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -128,6 +137,10 @@ export default function AreaAccordion(props) {
                   </Grid>
               </FormGroup>
               <LocationModal
+              fukuokaAreaData={props.fukuokaAreaData}
+              kitakyusyuAreaData={props.kitakyusyuAreaData}
+              chikuhouAreaData={props.chikugoAreaData}
+              chikugoAreaData={props.chikugoAreaData}
                 handleCheckboxChange={props.handleCheckboxChange}
                 isButtonDisabled={props.isButtonDisabled}
                 labels={props.labels}
@@ -147,7 +160,7 @@ export default function AreaAccordion(props) {
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {chikugoArea[0].chikugoCity.map((item, cityIndex) => (
+                  {props.chikugoAreaData.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -159,6 +172,10 @@ export default function AreaAccordion(props) {
                   </Grid>
               </FormGroup>
               <LocationModal
+              fukuokaAreaData={props.fukuokaAreaData}
+              kitakyusyuAreaData={props.kitakyusyuAreaData}
+              chikuhouAreaData={props.chikugoAreaData}
+              chikugoAreaData={props.chikugoAreaData}
                 handleCheckboxChange={props.handleCheckboxChange}
                 isButtonDisabled={props.isButtonDisabled}
                 labels={props.labels}

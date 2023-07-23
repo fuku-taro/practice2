@@ -15,14 +15,13 @@ import { Link } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles'; // ThemeProviderをインポート
 import LocationModalStyle from '../../sass/LocationModal.module.scss';
 import theme from "./theme";
-import chikuhouArea from './SearchChikuhouArea';
 
 const LocationModal = (props) => {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
-  console.log(labels)
+  const uniqueLabels = [...new Set(props.labels)]; // 重複を取り除く
 
 
   const handleClickOpen = (scrollType) => () => {
@@ -59,7 +58,8 @@ const LocationModal = (props) => {
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
     setButtonDisabled(updatedLabels.length === 0);
   };
-  
+  // console.log("fukuokaAreaData:", props.fukuokaAreaData);
+
   return (
     <ThemeProvider theme={theme}>
     <div className={LocationModalStyle.a}>
@@ -95,7 +95,7 @@ const LocationModal = (props) => {
             tabIndex={-1}
           >
             <FormGroup>
-              {props.labels.map((item)=>(
+              {uniqueLabels.map((labelsCityName)=>(
             <>
             <Typography
                   variant="h4"
@@ -104,16 +104,60 @@ const LocationModal = (props) => {
                     color: '#fff'
                   }}
                 >
-                  {item}
+                  {labelsCityName}
                 </Typography><Grid container>
-                    {chikuhouArea[0].chikuhouCity.map((item, cityIndex) => (
-                      <Grid item xs={12} md={4} key={cityIndex}>
+                    {props.fukuokaAreaData.map((item, townIndex) => {
+                      console.log(labelsCityName);
+                      return(
+                      <Grid item xs={12} md={4} key={townIndex}>
                         <FormControlLabel
                           control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
                           label={item.cityName}
                           onChange={LMhandleCheckboxChange} />
+                {/* </Typography><Grid container>
+                    {props.fukuokaAreaData.map((item, cityIndex) => (
+                      <Grid item xs={12} md={4} key={cityIndex}>
+                        <FormControlLabel
+                          control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
+                          label={item.cityName}
+                          onChange={LMhandleCheckboxChange} /> */}
+                {/* {props.fukuokaAreaData.find((item) => item.cityName === cityName)?.data.map((item, townIndex) => (
+                  <Grid item xs={12} md={4} key={townIndex}>
+                    <FormControlLabel
+                      control={<Checkbox name={item.townNames} sx={{ px: 2 }} />}
+                      label={item.townNames}
+                      onChange={LMhandleCheckboxChange}
+                    /> */}
+                    {/* {props.fukuokaAreaData.filter((item) => item.cityName == cityName)?.data && 
+  JSON.parse(props.fukuokaAreaData.filter((item) => item.cityName == cityName).data)
+    .map((item, townIndex) => (
+      <Grid item xs={12} md={4} key={townIndex}>
+        <FormControlLabel
+          control={<Checkbox name={item.townNames} sx={{ px: 2 }} />}
+          label={item.townNames}
+          onChange={LMhandleCheckboxChange}
+        /> */}
+        {/* {props.fukuokaAreaData
+  .filter((item) => item.cityName === labelsCityName)
+  .map((cityItem) => cityItem.data.map((item, townIndex) => (
+    <Grid item xs={12} md={4} key={townIndex}>
+      <FormControlLabel
+        control={<Checkbox name={item.townNames} sx={{ px: 2 }} />}
+        label={item.townNames}
+        onChange={LMhandleCheckboxChange}
+      /> */}
+      {/* {props.fukuokaAreaData
+            .filter((item) => item.cityName === labelsCityName)
+            .map((cityItem) =>
+              cityItem.data.map((item, townIndex) => (
+                <Grid item xs={12} md={4} key={townIndex}>
+                  <FormControlLabel
+                    control={<Checkbox name={item.townNames} sx={{ px: 2 }} />}
+                    label={item.townNames}
+                    onChange={LMhandleCheckboxChange}
+                  /> */}
                       </Grid>
-                    ))}
+                      );})}
                   </Grid>
                   </>
                   ))}

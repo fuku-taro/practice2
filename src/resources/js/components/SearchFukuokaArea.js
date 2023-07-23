@@ -2,25 +2,25 @@ const fukuokaArea = [
   {
     fukuokaCity: [
       {
-        cityName: "福岡市　東区",
+        cityName: "福岡市東区",
       },
       {
-        cityName: "福岡市　博多区",
+        cityName: "福岡市博多区",
       },
       {
-        cityName: "福岡市　中央区",
+        cityName: "福岡市中央区",
       },
       {
-        cityName: "福岡市　南区",
+        cityName: "福岡市南区",
       },
       {
-        cityName: "福岡市　西区",
+        cityName: "福岡市西区",
       },
       {
-        cityName: "福岡市　城南区",
+        cityName: "福岡市城南区",
       },
       {
-        cityName: "福岡市　早良区",
+        cityName: "福岡市早良区",
       }
     ],
   },
