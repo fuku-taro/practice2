@@ -29,7 +29,14 @@ Route::get('/data', function () {
 });
 
 Route::get('/getEstateInfos', [AddressController::class, 'getEstateInfos']);
-Route::get('/getAddresses', [AddressController::class, 'getAddresses']);
+Route::get('/getFukuokaAreaAddresses', [AddressController::class, 'getFukuokaAreaAddresses']);
+Route::post('/getFukuokaAreaAddresses', [AddressController::class, 'getFukuokaAreaAddresses']);
+Route::get('/getKitakyusyuAreaAddresses', [AddressController::class, 'getKitakyusyuAreaAddresses']);
+Route::post('/getKitakyusyuAreaAddresses', [AddressController::class, 'getKitakyusyuAreaAddresses']);
+Route::get('/getChikuhouAreaAddresses', [AddressController::class, 'getChikuhouAreaAddresses']);
+Route::post('/getChikuhouAreaAddresses', [AddressController::class, 'getChikuhouAreaAddresses']);
+Route::get('/getChikugoAreaAddresses', [AddressController::class, 'getChikugoAreaAddresses']);
+Route::post('/getChikugoAreaAddresses', [AddressController::class, 'getChikugoAreaAddresses']);
 
 // データの作成
 Route::post('/data', function (Request $request) {

@@ -6,25 +6,22 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import Checkbox from '@mui/material/Checkbox';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import LocationModal from "../components/LocationModal";
 import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
-import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 import classes from '../../sass/Search_area.scss';
-
-import DBtest from '../api/DBtest';
+import AreaAccordion from '../components/AreaAccordion';
+import fukuokaArea from '../components/SearchFukuokaArea';
+import kitakyusyuArea from '../components/SearchKitaKyusyuArea';
+import chikuhouArea from '../components/SearchChikuhouArea';
+import chikugoArea from '../components/SearchChikugoArea';
 
 const dummy = [
     
         { id: 1, url:"/Search_area", title: <Checkbox>福岡市</Checkbox>},
         { id: 2, url:"/Search_area", title: "地図から探す"},
         { id: 3, url:"/Search_area", title: "路線・駅から探す"},
-        // { id: 4, url:"/Search_area", title: "駐車場", text: "33333件" },
     
 ];
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -33,18 +30,32 @@ export default function Search_area() {
   const [label, setLabel] = useState(""); // labelの初期値を設定
   const [labels, setLabels] = useState([]); // 複数のラベルを格納する配列
   const [isButtonDisabled, setButtonDisabled] = useState(true);
-  const [data, setData] = useState([]);
+  const [fukuokaAreaData, setFukuokaAreaData] = useState([]);
+  const [kitakyusyuAreaData, setKitakyusyuAreaData] = useState([]);
+  const [chikuhouAreaData, setChikuhouAreaData] = useState([]);
+  const [chikugoAreaData, setChikugoAreaData] = useState([]);
 
   useEffect(() => {
-    fetchData();
-    // const a = fetchData2();
-
-  }, [label]); // パラメーターの変更時に再度データを取得
-  
-  const fetchData = async () => {
+    postData();
+  }, []); // パラメーターの変更時に再度データを取得
+  // console.log(fukuokaAreaData);
+  // console.log(kitakyusyuAreaData);
+  // console.log(chikuhouAreaData);
+  // console.log(chikugoAreaData);
+  const postData = async () => {
     try {
-      const response = await axios.get("/api/data");
-      setData(response.data);
+      const fukuokaAreaJson = JSON.stringify(fukuokaArea);
+      const kitakyusyuAreaJson = JSON.stringify(kitakyusyuArea);
+      const chikuhouAreaJson = JSON.stringify(chikuhouArea);
+      const chikugoAreaJson = JSON.stringify(chikugoArea);
+      const FukuokaAreaAddresses = await axios.post("/api/getFukuokaAreaAddresses" , {fukuokaAreaJson});
+      const KitakyusyuAreaAddresses = await axios.post("/api/getKitakyusyuAreaAddresses" , {kitakyusyuAreaJson});
+      const ChikuhouAreaAddresses = await axios.post("/api/getChikuhouAreaAddresses" , {chikuhouAreaJson});
+      const ChikugoAreaAddresses = await axios.post("/api/getChikugoAreaAddresses" , {chikugoAreaJson});
+      setFukuokaAreaData(FukuokaAreaAddresses.data.data);
+      setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
+      setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
+      setChikugoAreaData(ChikugoAreaAddresses.data.data);
     } catch (error) {
       console.error(error);
     }
@@ -67,6 +78,7 @@ export default function Search_area() {
       updatedLabels = labels.filter((label) => label !== name);
     }
   
+    setLabel(event.target.name);
     setLabels(updatedLabels);
   
     // チェックボックスがチェックされた場合はボタンの disabled を解除し、チェックが外れた場合は disabled を設定します
@@ -83,24 +95,21 @@ export default function Search_area() {
           <div className={classes.content}>
               <Box
                   sx={{
-                      display: "flex",
-                      flexDirection: "column",
+                    display: "flex",
+                    flexDirection: "column",
                     //   my: 10,
                     //   gap: 10,
                   }}
-              >
+                  >
                   <Container
                       maxWidth="md"
                       sx={{
-                          backgroundColor: "aliceblue",
-                          py: 4,
-                          display: "flex",
-                          flexDirection: "column",
+                        backgroundColor: "aliceblue",
+                        py: 4,
+                        display: "flex",
+                        flexDirection: "column",
                       }}
-                  >
-                      {/* <Typography variant="h5">エリアを選んで下さい</Typography> */}
-{/* <Box sx={{ display: "flex" }}> */}
-
+                      >
   <Box
     sx={{
       display: "flex",
@@ -109,59 +118,18 @@ export default function Search_area() {
       justifyContent: "center",
       flexDirection: "column"
     }}
-  >
-            <Typography variant="h5">エリアを選んで下さい</Typography>
-
-    {/* {dummy.map((i) => {
-      return ( */}
-        {/* <Grid item xs={12}> */}
-        <Box
-// className={classes.a}
-          sx={{
-            backgroundColor: "white",
-            // width: "530px",
-            // height: "100%",
-            textAlign:"center"
-          }}
-        >
-            
-    <FormGroup>
-    <FormControlLabel
-  control={<Checkbox name="福岡市　東区" />}
-  label="福岡市　東区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="福岡市　西区" />}
-  label="福岡市　西区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="福岡市　南区" />}
-  label="福岡市　南区"
-  onChange={handleCheckboxChange}
-/>
-<FormControlLabel
-  control={<Checkbox name="検索０件のテスト" />}
-  label="検索０件のテスト"
-  onChange={handleCheckboxChange}
-/>
-  {/* <FormControlLabel
-    control={<Checkbox name={location1} />}
-    label={location1}
-    onChange={handleCheckboxChange}
-  /> */}
-
-
-    </FormGroup>
-
-  <LocationModal
-    handleCheckboxChange={handleCheckboxChange}
-    isButtonDisabled={isButtonDisabled}
-    labels={labels}
-  />
-
-    </Box>
+    >
+    <Typography variant="h5">エリアを選んで下さい</Typography>
+    <AreaAccordion
+      fukuokaAreaData={fukuokaAreaData}
+      kitakyusyuAreaData={kitakyusyuAreaData}
+      chikuhouAreaData={chikuhouAreaData}
+      chikugoAreaData={chikugoAreaData}
+      handleCheckboxChange={handleCheckboxChange}
+      label={label}
+      labels={labels}
+      isButtonDisabled={isButtonDisabled}
+    />
 
 </Box>
 <Button
