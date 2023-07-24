@@ -1,0 +1,2741 @@
+[
+    {
+        "cityName": "大牟田市",
+        "data": [
+            {
+                "townNames": "青葉町"
+            },
+            {
+                "townNames": "曙町"
+            },
+            {
+                "townNames": "旭町"
+            },
+            {
+                "townNames": "浅牟田町"
+            },
+            {
+                "townNames": "甘木"
+            },
+            {
+                "townNames": "飯田町"
+            },
+            {
+                "townNames": "泉町"
+            },
+            {
+                "townNames": "出雲町"
+            },
+            {
+                "townNames": "櫟野"
+            },
+            {
+                "townNames": "一浦町"
+            },
+            {
+                "townNames": "一部町"
+            },
+            {
+                "townNames": "一本町"
+            },
+            {
+                "townNames": "今山"
+            },
+            {
+                "townNames": "入船町"
+            },
+            {
+                "townNames": "岩本"
+            },
+            {
+                "townNames": "岩本新町"
+            },
+            {
+                "townNames": "右京町"
+            },
+            {
+                "townNames": "臼井新町"
+            },
+            {
+                "townNames": "臼井町"
+            },
+            {
+                "townNames": "恵比須町"
+            },
+            {
+                "townNames": "延命寺町"
+            },
+            {
+                "townNames": "大浦町"
+            },
+            {
+                "townNames": "小川町"
+            },
+            {
+                "townNames": "沖田町"
+            },
+            {
+                "townNames": "柿園町"
+            },
+            {
+                "townNames": "片平町"
+            },
+            {
+                "townNames": "勝立"
+            },
+            {
+                "townNames": "加納町"
+            },
+            {
+                "townNames": "上内"
+            },
+            {
+                "townNames": "上白川町"
+            },
+            {
+                "townNames": "上町"
+            },
+            {
+                "townNames": "上屋敷町"
+            },
+            {
+                "townNames": "亀谷町"
+            },
+            {
+                "townNames": "亀甲町"
+            },
+            {
+                "townNames": "瓦町"
+            },
+            {
+                "townNames": "神田町"
+            },
+            {
+                "townNames": "北磯町"
+            },
+            {
+                "townNames": "教楽来"
+            },
+            {
+                "townNames": "草木"
+            },
+            {
+                "townNames": "歴木"
+            },
+            {
+                "townNames": "久福木"
+            },
+            {
+                "townNames": "久保田町"
+            },
+            {
+                "townNames": "倉永"
+            },
+            {
+                "townNames": "健老町"
+            },
+            {
+                "townNames": "合成町"
+            },
+            {
+                "townNames": "黄金町"
+            },
+            {
+                "townNames": "小浜町"
+            },
+            {
+                "townNames": "栄町"
+            },
+            {
+                "townNames": "桜町"
+            },
+            {
+                "townNames": "左古町"
+            },
+            {
+                "townNames": "笹林町"
+            },
+            {
+                "townNames": "笹原町"
+            },
+            {
+                "townNames": "三坑町"
+            },
+            {
+                "townNames": "汐屋町"
+            },
+            {
+                "townNames": "四ケ"
+            },
+            {
+                "townNames": "四箇新町"
+            },
+            {
+                "townNames": "下池町"
+            },
+            {
+                "townNames": "下白川町"
+            },
+            {
+                "townNames": "上官町"
+            },
+            {
+                "townNames": "正山町"
+            },
+            {
+                "townNames": "浄真町"
+            },
+            {
+                "townNames": "昭和開"
+            },
+            {
+                "townNames": "昭和町"
+            },
+            {
+                "townNames": "白銀"
+            },
+            {
+                "townNames": "白金町"
+            },
+            {
+                "townNames": "白川"
+            },
+            {
+                "townNames": "不知火町"
+            },
+            {
+                "townNames": "城町"
+            },
+            {
+                "townNames": "新開町"
+            },
+            {
+                "townNames": "新勝立町"
+            },
+            {
+                "townNames": "新港町"
+            },
+            {
+                "townNames": "新栄町"
+            },
+            {
+                "townNames": "新地町"
+            },
+            {
+                "townNames": "真道寺町"
+            },
+            {
+                "townNames": "新町"
+            },
+            {
+                "townNames": "末広町"
+            },
+            {
+                "townNames": "住吉町"
+            },
+            {
+                "townNames": "諏訪町"
+            },
+            {
+                "townNames": "早米来町"
+            },
+            {
+                "townNames": "大黒町"
+            },
+            {
+                "townNames": "大正町"
+            },
+            {
+                "townNames": "高砂町"
+            },
+            {
+                "townNames": "宝坂町"
+            },
+            {
+                "townNames": "田隈"
+            },
+            {
+                "townNames": "橘"
+            },
+            {
+                "townNames": "谷町"
+            },
+            {
+                "townNames": "田端町"
+            },
+            {
+                "townNames": "築町"
+            },
+            {
+                "townNames": "千代町"
+            },
+            {
+                "townNames": "椿黒町"
+            },
+            {
+                "townNames": "手鎌"
+            },
+            {
+                "townNames": "天神町"
+            },
+            {
+                "townNames": "天道町"
+            },
+            {
+                "townNames": "天領町"
+            },
+            {
+                "townNames": "稲荷町"
+            },
+            {
+                "townNames": "唐船"
+            },
+            {
+                "townNames": "通町"
+            },
+            {
+                "townNames": "常盤町"
+            },
+            {
+                "townNames": "鳥塚町"
+            },
+            {
+                "townNames": "中島町"
+            },
+            {
+                "townNames": "中白川町"
+            },
+            {
+                "townNames": "長田町"
+            },
+            {
+                "townNames": "中友町"
+            },
+            {
+                "townNames": "中町"
+            },
+            {
+                "townNames": "長溝町"
+            },
+            {
+                "townNames": "七浦町"
+            },
+            {
+                "townNames": "浪花町"
+            },
+            {
+                "townNames": "西新町"
+            },
+            {
+                "townNames": "西浜田町"
+            },
+            {
+                "townNames": "西港町"
+            },
+            {
+                "townNames": "西宮浦町"
+            },
+            {
+                "townNames": "野添町"
+            },
+            {
+                "townNames": "萩尾町"
+            },
+            {
+                "townNames": "橋口町"
+            },
+            {
+                "townNames": "八尻町"
+            },
+            {
+                "townNames": "八本町"
+            },
+            {
+                "townNames": "花園町"
+            },
+            {
+                "townNames": "馬場町"
+            },
+            {
+                "townNames": "浜田町"
+            },
+            {
+                "townNames": "浜町"
+            },
+            {
+                "townNames": "早鐘町"
+            },
+            {
+                "townNames": "駛馬町"
+            },
+            {
+                "townNames": "原山町"
+            },
+            {
+                "townNames": "東泉町"
+            },
+            {
+                "townNames": "東新町"
+            },
+            {
+                "townNames": "東萩尾町"
+            },
+            {
+                "townNames": "東宮浦町"
+            },
+            {
+                "townNames": "樋口町"
+            },
+            {
+                "townNames": "日出町"
+            },
+            {
+                "townNames": "姫島町"
+            },
+            {
+                "townNames": "平原町"
+            },
+            {
+                "townNames": "藤田町"
+            },
+            {
+                "townNames": "船津町"
+            },
+            {
+                "townNames": "古町"
+            },
+            {
+                "townNames": "本町"
+            },
+            {
+                "townNames": "馬込町"
+            },
+            {
+                "townNames": "松浦町"
+            },
+            {
+                "townNames": "松原町"
+            },
+            {
+                "townNames": "馬渡町"
+            },
+            {
+                "townNames": "三池"
+            },
+            {
+                "townNames": "三川町"
+            },
+            {
+                "townNames": "岬"
+            },
+            {
+                "townNames": "岬町"
+            },
+            {
+                "townNames": "三里町"
+            },
+            {
+                "townNames": "港町"
+            },
+            {
+                "townNames": "南船津町"
+            },
+            {
+                "townNames": "宮坂町"
+            },
+            {
+                "townNames": "宮崎"
+            },
+            {
+                "townNames": "宮原町"
+            },
+            {
+                "townNames": "宮部"
+            },
+            {
+                "townNames": "宮山町"
+            },
+            {
+                "townNames": "明治町"
+            },
+            {
+                "townNames": "焼石町"
+            },
+            {
+                "townNames": "八江町"
+            },
+            {
+                "townNames": "山下町"
+            },
+            {
+                "townNames": "山上町"
+            },
+            {
+                "townNames": "有明町"
+            },
+            {
+                "townNames": "吉野"
+            },
+            {
+                "townNames": "四山町"
+            },
+            {
+                "townNames": "米生町"
+            },
+            {
+                "townNames": "龍湖瀬町"
+            },
+            {
+                "townNames": "若宮町"
+            }
+        ]
+    },
+    {
+        "cityName": "久留米市",
+        "data": [
+            {
+                "townNames": "合川町"
+            },
+            {
+                "townNames": "朝妻町"
+            },
+            {
+                "townNames": "旭町"
+            },
+            {
+                "townNames": "洗町"
+            },
+            {
+                "townNames": "荒木町荒木"
+            },
+            {
+                "townNames": "荒木町今"
+            },
+            {
+                "townNames": "荒木町下荒木"
+            },
+            {
+                "townNames": "荒木町白口"
+            },
+            {
+                "townNames": "荒木町藤田"
+            },
+            {
+                "townNames": "梅満町"
+            },
+            {
+                "townNames": "江戸屋敷"
+            },
+            {
+                "townNames": "大石町"
+            },
+            {
+                "townNames": "大手町"
+            },
+            {
+                "townNames": "大橋町合楽"
+            },
+            {
+                "townNames": "大橋町常持"
+            },
+            {
+                "townNames": "大橋町蜷川"
+            },
+            {
+                "townNames": "上津"
+            },
+            {
+                "townNames": "上津町"
+            },
+            {
+                "townNames": "北野町赤司"
+            },
+            {
+                "townNames": "北野町石崎"
+            },
+            {
+                "townNames": "北野町稲数"
+            },
+            {
+                "townNames": "北野町今山"
+            },
+            {
+                "townNames": "北野町大城"
+            },
+            {
+                "townNames": "北野町乙丸"
+            },
+            {
+                "townNames": "北野町乙吉"
+            },
+            {
+                "townNames": "北野町金島"
+            },
+            {
+                "townNames": "北野町上弓削"
+            },
+            {
+                "townNames": "北野町高良"
+            },
+            {
+                "townNames": "北野町十郎丸"
+            },
+            {
+                "townNames": "北野町陣屋"
+            },
+            {
+                "townNames": "北野町千代島"
+            },
+            {
+                "townNames": "北野町塚島"
+            },
+            {
+                "townNames": "北野町冨多"
+            },
+            {
+                "townNames": "北野町鳥巣"
+            },
+            {
+                "townNames": "北野町中"
+            },
+            {
+                "townNames": "北野町中川"
+            },
+            {
+                "townNames": "北野町中島"
+            },
+            {
+                "townNames": "北野町仁王丸"
+            },
+            {
+                "townNames": "北野町八重亀"
+            },
+            {
+                "townNames": "京町"
+            },
+            {
+                "townNames": "草野町草野"
+            },
+            {
+                "townNames": "草野町紅桃林"
+            },
+            {
+                "townNames": "草野町矢作"
+            },
+            {
+                "townNames": "草野町吉木"
+            },
+            {
+                "townNames": "櫛原町"
+            },
+            {
+                "townNames": "高良内町"
+            },
+            {
+                "townNames": "小頭町"
+            },
+            {
+                "townNames": "国分町"
+            },
+            {
+                "townNames": "小森野"
+            },
+            {
+                "townNames": "小森野町"
+            },
+            {
+                "townNames": "篠山町"
+            },
+            {
+                "townNames": "篠原町"
+            },
+            {
+                "townNames": "荘島町"
+            },
+            {
+                "townNames": "城島町青木島"
+            },
+            {
+                "townNames": "城島町芦塚"
+            },
+            {
+                "townNames": "城島町浮島"
+            },
+            {
+                "townNames": "城島町内野"
+            },
+            {
+                "townNames": "城島町江上"
+            },
+            {
+                "townNames": "城島町江上上"
+            },
+            {
+                "townNames": "城島町江上本"
+            },
+            {
+                "townNames": "城島町江島"
+            },
+            {
+                "townNames": "城島町大依"
+            },
+            {
+                "townNames": "城島町上青木"
+            },
+            {
+                "townNames": "城島町下青木"
+            },
+            {
+                "townNames": "城島町下田"
+            },
+            {
+                "townNames": "城島町城島"
+            },
+            {
+                "townNames": "城島町四郎丸"
+            },
+            {
+                "townNames": "城島町楢津"
+            },
+            {
+                "townNames": "城島町西青木"
+            },
+            {
+                "townNames": "城島町浜"
+            },
+            {
+                "townNames": "城島町原中牟田"
+            },
+            {
+                "townNames": "城島町六町原"
+            },
+            {
+                "townNames": "城南町"
+            },
+            {
+                "townNames": "白山町"
+            },
+            {
+                "townNames": "新合川"
+            },
+            {
+                "townNames": "諏訪野町"
+            },
+            {
+                "townNames": "青峰"
+            },
+            {
+                "townNames": "瀬下町"
+            },
+            {
+                "townNames": "善導寺町飯田"
+            },
+            {
+                "townNames": "善導寺町木塚"
+            },
+            {
+                "townNames": "善導寺町島"
+            },
+            {
+                "townNames": "善導寺町与田"
+            },
+            {
+                "townNames": "大善寺大橋"
+            },
+            {
+                "townNames": "大善寺町黒田"
+            },
+            {
+                "townNames": "大善寺町中津"
+            },
+            {
+                "townNames": "大善寺町藤吉"
+            },
+            {
+                "townNames": "大善寺町宮本"
+            },
+            {
+                "townNames": "大善寺町夜明"
+            },
+            {
+                "townNames": "大善寺南"
+            },
+            {
+                "townNames": "太郎原町"
+            },
+            {
+                "townNames": "高野"
+            },
+            {
+                "townNames": "田主丸町秋成"
+            },
+            {
+                "townNames": "田主丸町朝森"
+            },
+            {
+                "townNames": "田主丸町石垣"
+            },
+            {
+                "townNames": "田主丸町以真恵"
+            },
+            {
+                "townNames": "田主丸町恵利"
+            },
+            {
+                "townNames": "田主丸町上原"
+            },
+            {
+                "townNames": "田主丸町志塚島"
+            },
+            {
+                "townNames": "田主丸町菅原"
+            },
+            {
+                "townNames": "田主丸町鷹取"
+            },
+            {
+                "townNames": "田主丸町竹野"
+            },
+            {
+                "townNames": "田主丸町田主丸"
+            },
+            {
+                "townNames": "田主丸町地徳"
+            },
+            {
+                "townNames": "田主丸町常盤"
+            },
+            {
+                "townNames": "田主丸町豊城"
+            },
+            {
+                "townNames": "田主丸町中尾"
+            },
+            {
+                "townNames": "田主丸町長栖"
+            },
+            {
+                "townNames": "田主丸町野田"
+            },
+            {
+                "townNames": "田主丸町殖木"
+            },
+            {
+                "townNames": "田主丸町船越"
+            },
+            {
+                "townNames": "田主丸町牧"
+            },
+            {
+                "townNames": "田主丸町益生田"
+            },
+            {
+                "townNames": "田主丸町森部"
+            },
+            {
+                "townNames": "田主丸町八幡"
+            },
+            {
+                "townNames": "田主丸町吉本"
+            },
+            {
+                "townNames": "中央町"
+            },
+            {
+                "townNames": "津福今町"
+            },
+            {
+                "townNames": "津福本町"
+            },
+            {
+                "townNames": "寺町"
+            },
+            {
+                "townNames": "天神町"
+            },
+            {
+                "townNames": "東和町"
+            },
+            {
+                "townNames": "通東町"
+            },
+            {
+                "townNames": "通外町"
+            },
+            {
+                "townNames": "通町"
+            },
+            {
+                "townNames": "長門石"
+            },
+            {
+                "townNames": "長門石町"
+            },
+            {
+                "townNames": "縄手町"
+            },
+            {
+                "townNames": "南薫西町"
+            },
+            {
+                "townNames": "南薫町"
+            },
+            {
+                "townNames": "西町"
+            },
+            {
+                "townNames": "野中町"
+            },
+            {
+                "townNames": "野伏間"
+            },
+            {
+                "townNames": "花畑"
+            },
+            {
+                "townNames": "原古賀町"
+            },
+            {
+                "townNames": "東合川"
+            },
+            {
+                "townNames": "東合川新町"
+            },
+            {
+                "townNames": "東合川干出町"
+            },
+            {
+                "townNames": "東合川町"
+            },
+            {
+                "townNames": "東櫛原町"
+            },
+            {
+                "townNames": "東町"
+            },
+            {
+                "townNames": "日ノ出町"
+            },
+            {
+                "townNames": "百年公園"
+            },
+            {
+                "townNames": "日吉町"
+            },
+            {
+                "townNames": "藤光"
+            },
+            {
+                "townNames": "藤光町"
+            },
+            {
+                "townNames": "藤山町"
+            },
+            {
+                "townNames": "螢川町"
+            },
+            {
+                "townNames": "本町"
+            },
+            {
+                "townNames": "松ケ枝町"
+            },
+            {
+                "townNames": "御井朝妻"
+            },
+            {
+                "townNames": "御井旗崎"
+            },
+            {
+                "townNames": "御井町"
+            },
+            {
+                "townNames": "三潴町生岩"
+            },
+            {
+                "townNames": "三潴町壱町原"
+            },
+            {
+                "townNames": "三潴町清松"
+            },
+            {
+                "townNames": "三潴町草場"
+            },
+            {
+                "townNames": "三潴町高三潴"
+            },
+            {
+                "townNames": "三潴町田川"
+            },
+            {
+                "townNames": "三潴町玉満"
+            },
+            {
+                "townNames": "三潴町西牟田"
+            },
+            {
+                "townNames": "三潴町早津崎"
+            },
+            {
+                "townNames": "三潴町原田"
+            },
+            {
+                "townNames": "三潴町福光"
+            },
+            {
+                "townNames": "南"
+            },
+            {
+                "townNames": "宮ノ陣"
+            },
+            {
+                "townNames": "宮ノ陣町大杜"
+            },
+            {
+                "townNames": "宮ノ陣町五郎丸"
+            },
+            {
+                "townNames": "宮ノ陣町八丁島"
+            },
+            {
+                "townNames": "宮ノ陣町若松"
+            },
+            {
+                "townNames": "六ツ門町"
+            },
+            {
+                "townNames": "本山"
+            },
+            {
+                "townNames": "安武町住吉"
+            },
+            {
+                "townNames": "安武町武島"
+            },
+            {
+                "townNames": "安武町安武本"
+            },
+            {
+                "townNames": "山川安居野"
+            },
+            {
+                "townNames": "山川市ノ上町"
+            },
+            {
+                "townNames": "山川追分"
+            },
+            {
+                "townNames": "山川沓形町"
+            },
+            {
+                "townNames": "山川神代"
+            },
+            {
+                "townNames": "山川野口町"
+            },
+            {
+                "townNames": "山川町"
+            },
+            {
+                "townNames": "山本町豊田"
+            },
+            {
+                "townNames": "山本町耳納"
+            }
+        ]
+    },
+    {
+        "cityName": "柳川市",
+        "data": [
+            {
+                "townNames": "曙町"
+            },
+            {
+                "townNames": "旭町"
+            },
+            {
+                "townNames": "有明町"
+            },
+            {
+                "townNames": "一新町"
+            },
+            {
+                "townNames": "稲荷町"
+            },
+            {
+                "townNames": "恵美須町"
+            },
+            {
+                "townNames": "奥州町"
+            },
+            {
+                "townNames": "大浜町"
+            },
+            {
+                "townNames": "沖端町"
+            },
+            {
+                "townNames": "鬼童町"
+            },
+            {
+                "townNames": "鍛冶屋町"
+            },
+            {
+                "townNames": "片原町"
+            },
+            {
+                "townNames": "蟹町"
+            },
+            {
+                "townNames": "上町"
+            },
+            {
+                "townNames": "上宮永町"
+            },
+            {
+                "townNames": "蒲生"
+            },
+            {
+                "townNames": "金納"
+            },
+            {
+                "townNames": "北長柄町"
+            },
+            {
+                "townNames": "京町"
+            },
+            {
+                "townNames": "久々原"
+            },
+            {
+                "townNames": "糀屋町"
+            },
+            {
+                "townNames": "古賀"
+            },
+            {
+                "townNames": "小道具町"
+            },
+            {
+                "townNames": "細工町"
+            },
+            {
+                "townNames": "材木町"
+            },
+            {
+                "townNames": "坂本町"
+            },
+            {
+                "townNames": "下宮永町"
+            },
+            {
+                "townNames": "城隅町"
+            },
+            {
+                "townNames": "昭南町"
+            },
+            {
+                "townNames": "城南町"
+            },
+            {
+                "townNames": "新船津町"
+            },
+            {
+                "townNames": "新外町"
+            },
+            {
+                "townNames": "新町"
+            },
+            {
+                "townNames": "隅町"
+            },
+            {
+                "townNames": "高島"
+            },
+            {
+                "townNames": "立石"
+            },
+            {
+                "townNames": "田脇"
+            },
+            {
+                "townNames": "筑紫町"
+            },
+            {
+                "townNames": "佃町"
+            },
+            {
+                "townNames": "辻町"
+            },
+            {
+                "townNames": "椿原町"
+            },
+            {
+                "townNames": "出来町"
+            },
+            {
+                "townNames": "常盤町"
+            },
+            {
+                "townNames": "中町"
+            },
+            {
+                "townNames": "七ツ家"
+            },
+            {
+                "townNames": "西魚屋町"
+            },
+            {
+                "townNames": "西蒲池"
+            },
+            {
+                "townNames": "西浜武"
+            },
+            {
+                "townNames": "間"
+            },
+            {
+                "townNames": "橋本町"
+            },
+            {
+                "townNames": "八軒町"
+            },
+            {
+                "townNames": "東魚屋町"
+            },
+            {
+                "townNames": "東蒲池"
+            },
+            {
+                "townNames": "袋町"
+            },
+            {
+                "townNames": "保加町"
+            },
+            {
+                "townNames": "本城町"
+            },
+            {
+                "townNames": "本町"
+            },
+            {
+                "townNames": "三橋町磯鳥"
+            },
+            {
+                "townNames": "三橋町今古賀"
+            },
+            {
+                "townNames": "三橋町枝光"
+            },
+            {
+                "townNames": "三橋町江曲"
+            },
+            {
+                "townNames": "三橋町起田"
+            },
+            {
+                "townNames": "三橋町蒲船津"
+            },
+            {
+                "townNames": "三橋町木元"
+            },
+            {
+                "townNames": "三橋町五拾町"
+            },
+            {
+                "townNames": "三橋町下百町"
+            },
+            {
+                "townNames": "三橋町白鳥"
+            },
+            {
+                "townNames": "三橋町高畑"
+            },
+            {
+                "townNames": "三橋町棚町"
+            },
+            {
+                "townNames": "三橋町垂見"
+            },
+            {
+                "townNames": "三橋町中山"
+            },
+            {
+                "townNames": "三橋町久末"
+            },
+            {
+                "townNames": "三橋町百町"
+            },
+            {
+                "townNames": "三橋町藤吉"
+            },
+            {
+                "townNames": "三橋町正行"
+            },
+            {
+                "townNames": "三橋町新村"
+            },
+            {
+                "townNames": "三橋町柳河"
+            },
+            {
+                "townNames": "三橋町吉開"
+            },
+            {
+                "townNames": "南長柄町"
+            },
+            {
+                "townNames": "南浜武"
+            },
+            {
+                "townNames": "宮永町"
+            },
+            {
+                "townNames": "茂庵町"
+            },
+            {
+                "townNames": "本船津町"
+            },
+            {
+                "townNames": "元町"
+            },
+            {
+                "townNames": "八百屋町"
+            },
+            {
+                "townNames": "矢加部"
+            },
+            {
+                "townNames": "弥四郎町"
+            },
+            {
+                "townNames": "矢留本町"
+            },
+            {
+                "townNames": "矢留町"
+            },
+            {
+                "townNames": "柳町"
+            },
+            {
+                "townNames": "大和町明野"
+            },
+            {
+                "townNames": "大和町大坪"
+            },
+            {
+                "townNames": "大和町栄"
+            },
+            {
+                "townNames": "大和町皿垣開"
+            },
+            {
+                "townNames": "大和町塩塚"
+            },
+            {
+                "townNames": "大和町鷹ノ尾"
+            },
+            {
+                "townNames": "大和町谷垣"
+            },
+            {
+                "townNames": "大和町徳益"
+            },
+            {
+                "townNames": "大和町豊原"
+            },
+            {
+                "townNames": "大和町中島"
+            },
+            {
+                "townNames": "大和町永田開"
+            },
+            {
+                "townNames": "大和町六合"
+            },
+            {
+                "townNames": "横山町"
+            },
+            {
+                "townNames": "吉富町"
+            },
+            {
+                "townNames": "吉原"
+            }
+        ]
+    },
+    {
+        "cityName": "八女市",
+        "data": [
+            {
+                "townNames": "稲富"
+            },
+            {
+                "townNames": "井延"
+            },
+            {
+                "townNames": "今福"
+            },
+            {
+                "townNames": "岩崎"
+            },
+            {
+                "townNames": "鵜池"
+            },
+            {
+                "townNames": "大籠"
+            },
+            {
+                "townNames": "大島"
+            },
+            {
+                "townNames": "緒玉"
+            },
+            {
+                "townNames": "蒲原"
+            },
+            {
+                "townNames": "亀甲"
+            },
+            {
+                "townNames": "川犬"
+            },
+            {
+                "townNames": "北田形"
+            },
+            {
+                "townNames": "祈祷院"
+            },
+            {
+                "townNames": "国武"
+            },
+            {
+                "townNames": "黒木町今"
+            },
+            {
+                "townNames": "黒木町大淵"
+            },
+            {
+                "townNames": "黒木町鹿子生"
+            },
+            {
+                "townNames": "黒木町笠原"
+            },
+            {
+                "townNames": "黒木町北大淵"
+            },
+            {
+                "townNames": "黒木町北木屋"
+            },
+            {
+                "townNames": "黒木町黒木"
+            },
+            {
+                "townNames": "黒木町桑原"
+            },
+            {
+                "townNames": "黒木町木屋"
+            },
+            {
+                "townNames": "黒木町田代"
+            },
+            {
+                "townNames": "黒木町田本"
+            },
+            {
+                "townNames": "黒木町土窪"
+            },
+            {
+                "townNames": "黒木町本分"
+            },
+            {
+                "townNames": "黒木町湯辺田"
+            },
+            {
+                "townNames": "黒土"
+            },
+            {
+                "townNames": "酒井田"
+            },
+            {
+                "townNames": "上陽町上横山"
+            },
+            {
+                "townNames": "上陽町北川内"
+            },
+            {
+                "townNames": "上陽町久木原"
+            },
+            {
+                "townNames": "上陽町下横山"
+            },
+            {
+                "townNames": "新庄"
+            },
+            {
+                "townNames": "平"
+            },
+            {
+                "townNames": "高塚"
+            },
+            {
+                "townNames": "宅間田"
+            },
+            {
+                "townNames": "忠見"
+            },
+            {
+                "townNames": "立花町兼松"
+            },
+            {
+                "townNames": "立花町上辺春"
+            },
+            {
+                "townNames": "立花町北山"
+            },
+            {
+                "townNames": "立花町下辺春"
+            },
+            {
+                "townNames": "立花町白木"
+            },
+            {
+                "townNames": "立花町田形"
+            },
+            {
+                "townNames": "立花町谷川"
+            },
+            {
+                "townNames": "立花町遠久谷"
+            },
+            {
+                "townNames": "立花町原島"
+            },
+            {
+                "townNames": "立花町山崎"
+            },
+            {
+                "townNames": "龍ケ原"
+            },
+            {
+                "townNames": "立野"
+            },
+            {
+                "townNames": "津江"
+            },
+            {
+                "townNames": "豊福"
+            },
+            {
+                "townNames": "長野"
+            },
+            {
+                "townNames": "納楚"
+            },
+            {
+                "townNames": "馬場"
+            },
+            {
+                "townNames": "光"
+            },
+            {
+                "townNames": "平田"
+            },
+            {
+                "townNames": "星野村"
+            },
+            {
+                "townNames": "本"
+            },
+            {
+                "townNames": "前古賀"
+            },
+            {
+                "townNames": "宮野"
+            },
+            {
+                "townNames": "室岡"
+            },
+            {
+                "townNames": "本町"
+            },
+            {
+                "townNames": "本村"
+            },
+            {
+                "townNames": "柳島"
+            },
+            {
+                "townNames": "柳瀬"
+            },
+            {
+                "townNames": "矢原"
+            },
+            {
+                "townNames": "矢部村北矢部"
+            },
+            {
+                "townNames": "矢部村矢部"
+            },
+            {
+                "townNames": "山内"
+            },
+            {
+                "townNames": "吉田"
+            }
+        ]
+    },
+    {
+        "cityName": "筑後市",
+        "data": [
+            {
+                "townNames": "和泉"
+            },
+            {
+                "townNames": "一条"
+            },
+            {
+                "townNames": "江口"
+            },
+            {
+                "townNames": "尾島"
+            },
+            {
+                "townNames": "折地"
+            },
+            {
+                "townNames": "上北島"
+            },
+            {
+                "townNames": "北長田"
+            },
+            {
+                "townNames": "久恵"
+            },
+            {
+                "townNames": "熊野"
+            },
+            {
+                "townNames": "蔵数"
+            },
+            {
+                "townNames": "古島"
+            },
+            {
+                "townNames": "四ケ所"
+            },
+            {
+                "townNames": "島田"
+            },
+            {
+                "townNames": "志"
+            },
+            {
+                "townNames": "下北島"
+            },
+            {
+                "townNames": "下妻"
+            },
+            {
+                "townNames": "庄島"
+            },
+            {
+                "townNames": "新溝"
+            },
+            {
+                "townNames": "井田"
+            },
+            {
+                "townNames": "高江"
+            },
+            {
+                "townNames": "津島"
+            },
+            {
+                "townNames": "常用"
+            },
+            {
+                "townNames": "鶴田"
+            },
+            {
+                "townNames": "徳久"
+            },
+            {
+                "townNames": "富重"
+            },
+            {
+                "townNames": "富久"
+            },
+            {
+                "townNames": "富安"
+            },
+            {
+                "townNames": "中折地"
+            },
+            {
+                "townNames": "長崎"
+            },
+            {
+                "townNames": "長浜"
+            },
+            {
+                "townNames": "中牟田"
+            },
+            {
+                "townNames": "西牟田"
+            },
+            {
+                "townNames": "野町"
+            },
+            {
+                "townNames": "羽犬塚"
+            },
+            {
+                "townNames": "久富"
+            },
+            {
+                "townNames": "前津"
+            },
+            {
+                "townNames": "馬間田"
+            },
+            {
+                "townNames": "水田"
+            },
+            {
+                "townNames": "溝口"
+            },
+            {
+                "townNames": "山ノ井"
+            },
+            {
+                "townNames": "若菜"
+            }
+        ]
+    },
+    {
+        "cityName": "大川市",
+        "data": [
+            {
+                "townNames": "上巻"
+            },
+            {
+                "townNames": "榎津"
+            },
+            {
+                "townNames": "大野島"
+            },
+            {
+                "townNames": "大橋"
+            },
+            {
+                "townNames": "荻島"
+            },
+            {
+                "townNames": "鬼古賀"
+            },
+            {
+                "townNames": "鐘ケ江"
+            },
+            {
+                "townNames": "上白垣"
+            },
+            {
+                "townNames": "北古賀"
+            },
+            {
+                "townNames": "九網"
+            },
+            {
+                "townNames": "下林"
+            },
+            {
+                "townNames": "郷原"
+            },
+            {
+                "townNames": "小保"
+            },
+            {
+                "townNames": "坂井"
+            },
+            {
+                "townNames": "酒見"
+            },
+            {
+                "townNames": "下青木"
+            },
+            {
+                "townNames": "下木佐木"
+            },
+            {
+                "townNames": "下白垣"
+            },
+            {
+                "townNames": "下八院"
+            },
+            {
+                "townNames": "下牟田口"
+            },
+            {
+                "townNames": "新田"
+            },
+            {
+                "townNames": "津"
+            },
+            {
+                "townNames": "道海島"
+            },
+            {
+                "townNames": "中木室"
+            },
+            {
+                "townNames": "中古賀"
+            },
+            {
+                "townNames": "中八院"
+            },
+            {
+                "townNames": "幡保"
+            },
+            {
+                "townNames": "一木"
+            },
+            {
+                "townNames": "紅粉屋"
+            },
+            {
+                "townNames": "本木室"
+            },
+            {
+                "townNames": "三丸"
+            },
+            {
+                "townNames": "向島"
+            },
+            {
+                "townNames": "諸富"
+            }
+        ]
+    },
+    {
+        "cityName": "小郡市",
+        "data": [
+            {
+                "townNames": "赤川"
+            },
+            {
+                "townNames": "あすみ"
+            },
+            {
+                "townNames": "稲吉"
+            },
+            {
+                "townNames": "井上"
+            },
+            {
+                "townNames": "大板井"
+            },
+            {
+                "townNames": "大崎"
+            },
+            {
+                "townNames": "大保"
+            },
+            {
+                "townNames": "小郡"
+            },
+            {
+                "townNames": "乙隈"
+            },
+            {
+                "townNames": "上岩田"
+            },
+            {
+                "townNames": "上西鰺坂"
+            },
+            {
+                "townNames": "祇園"
+            },
+            {
+                "townNames": "小板井"
+            },
+            {
+                "townNames": "下岩田"
+            },
+            {
+                "townNames": "下西鰺坂"
+            },
+            {
+                "townNames": "津古"
+            },
+            {
+                "townNames": "寺福童"
+            },
+            {
+                "townNames": "希みが丘"
+            },
+            {
+                "townNames": "干潟"
+            },
+            {
+                "townNames": "平方"
+            },
+            {
+                "townNames": "吹上"
+            },
+            {
+                "townNames": "福童"
+            },
+            {
+                "townNames": "二タ"
+            },
+            {
+                "townNames": "二森"
+            },
+            {
+                "townNames": "古飯"
+            },
+            {
+                "townNames": "松崎"
+            },
+            {
+                "townNames": "三国が丘"
+            },
+            {
+                "townNames": "美鈴が丘"
+            },
+            {
+                "townNames": "美鈴の杜"
+            },
+            {
+                "townNames": "三沢"
+            },
+            {
+                "townNames": "光行"
+            },
+            {
+                "townNames": "八坂"
+            },
+            {
+                "townNames": "山隈"
+            },
+            {
+                "townNames": "横隈"
+            },
+            {
+                "townNames": "力武"
+            }
+        ]
+    },
+    {
+        "cityName": "うきは市",
+        "data": [
+            {
+                "townNames": "浮羽町朝田"
+            },
+            {
+                "townNames": "浮羽町妹川"
+            },
+            {
+                "townNames": "浮羽町浮羽"
+            },
+            {
+                "townNames": "浮羽町小塩"
+            },
+            {
+                "townNames": "浮羽町高見"
+            },
+            {
+                "townNames": "浮羽町田篭"
+            },
+            {
+                "townNames": "浮羽町流川"
+            },
+            {
+                "townNames": "浮羽町新川"
+            },
+            {
+                "townNames": "浮羽町西隈上"
+            },
+            {
+                "townNames": "浮羽町東隈上"
+            },
+            {
+                "townNames": "浮羽町古川"
+            },
+            {
+                "townNames": "浮羽町三春"
+            },
+            {
+                "townNames": "浮羽町山北"
+            },
+            {
+                "townNames": "吉井町"
+            },
+            {
+                "townNames": "吉井町生葉"
+            },
+            {
+                "townNames": "吉井町江南"
+            },
+            {
+                "townNames": "吉井町清瀬"
+            },
+            {
+                "townNames": "吉井町桜井"
+            },
+            {
+                "townNames": "吉井町鷹取"
+            },
+            {
+                "townNames": "吉井町橘田"
+            },
+            {
+                "townNames": "吉井町千年"
+            },
+            {
+                "townNames": "吉井町徳丸"
+            },
+            {
+                "townNames": "吉井町富永"
+            },
+            {
+                "townNames": "吉井町長栖"
+            },
+            {
+                "townNames": "吉井町新治"
+            },
+            {
+                "townNames": "吉井町福永"
+            },
+            {
+                "townNames": "吉井町福益"
+            },
+            {
+                "townNames": "吉井町宮田"
+            },
+            {
+                "townNames": "吉井町屋部"
+            },
+            {
+                "townNames": "吉井町八和田"
+            },
+            {
+                "townNames": "吉井町若宮"
+            }
+        ]
+    },
+    {
+        "cityName": "みやま市",
+        "data": [
+            {
+                "townNames": "瀬高町文廣"
+            },
+            {
+                "townNames": "瀬高町大江"
+            },
+            {
+                "townNames": "瀬高町太神"
+            },
+            {
+                "townNames": "瀬高町大草"
+            },
+            {
+                "townNames": "瀬高町大廣園"
+            },
+            {
+                "townNames": "瀬高町小川"
+            },
+            {
+                "townNames": "瀬高町小田"
+            },
+            {
+                "townNames": "瀬高町上庄"
+            },
+            {
+                "townNames": "瀬高町河内"
+            },
+            {
+                "townNames": "瀬高町坂田"
+            },
+            {
+                "townNames": "瀬高町下庄"
+            },
+            {
+                "townNames": "瀬高町泰仙寺"
+            },
+            {
+                "townNames": "瀬高町高柳"
+            },
+            {
+                "townNames": "瀬高町長田"
+            },
+            {
+                "townNames": "瀬高町濱田"
+            },
+            {
+                "townNames": "瀬高町東津留"
+            },
+            {
+                "townNames": "瀬高町廣瀬"
+            },
+            {
+                "townNames": "瀬高町本郷"
+            },
+            {
+                "townNames": "瀬高町松田"
+            },
+            {
+                "townNames": "瀬高町本吉"
+            },
+            {
+                "townNames": "瀬高町山門"
+            },
+            {
+                "townNames": "高田町今福"
+            },
+            {
+                "townNames": "高田町岩津"
+            },
+            {
+                "townNames": "高田町永治"
+            },
+            {
+                "townNames": "高田町江浦"
+            },
+            {
+                "townNames": "高田町江浦町"
+            },
+            {
+                "townNames": "高田町海津"
+            },
+            {
+                "townNames": "高田町上楠田"
+            },
+            {
+                "townNames": "高田町亀谷"
+            },
+            {
+                "townNames": "高田町北新開"
+            },
+            {
+                "townNames": "高田町黒崎開"
+            },
+            {
+                "townNames": "高田町下楠田"
+            },
+            {
+                "townNames": "高田町昭和開"
+            },
+            {
+                "townNames": "高田町竹飯"
+            },
+            {
+                "townNames": "高田町田尻"
+            },
+            {
+                "townNames": "高田町田浦"
+            },
+            {
+                "townNames": "高田町徳島"
+            },
+            {
+                "townNames": "高田町濃施"
+            },
+            {
+                "townNames": "高田町飯江"
+            },
+            {
+                "townNames": "高田町原"
+            },
+            {
+                "townNames": "高田町舞鶴"
+            },
+            {
+                "townNames": "高田町南新開"
+            },
+            {
+                "townNames": "山川町尾野"
+            },
+            {
+                "townNames": "山川町河原内"
+            },
+            {
+                "townNames": "山川町北関"
+            },
+            {
+                "townNames": "山川町甲田"
+            },
+            {
+                "townNames": "山川町重冨"
+            },
+            {
+                "townNames": "山川町清水"
+            },
+            {
+                "townNames": "山川町立山"
+            },
+            {
+                "townNames": "山川町原町"
+            },
+            {
+                "townNames": "山川町真弓"
+            }
+        ]
+    },
+    {
+        "cityName": "三井郡大刀洗町",
+        "data": [
+            {
+                "townNames": "今"
+            },
+            {
+                "townNames": "鵜木"
+            },
+            {
+                "townNames": "春日"
+            },
+            {
+                "townNames": "上高橋"
+            },
+            {
+                "townNames": "甲条"
+            },
+            {
+                "townNames": "栄田"
+            },
+            {
+                "townNames": "下高橋"
+            },
+            {
+                "townNames": "菅野"
+            },
+            {
+                "townNames": "高樋"
+            },
+            {
+                "townNames": "冨多"
+            },
+            {
+                "townNames": "中川"
+            },
+            {
+                "townNames": "西原"
+            },
+            {
+                "townNames": "本郷"
+            },
+            {
+                "townNames": "三川"
+            },
+            {
+                "townNames": "守部"
+            },
+            {
+                "townNames": "山隈"
+            }
+        ]
+    },
+    {
+        "cityName": "三潴郡大木町",
+        "data": [
+            {
+                "townNames": "筏溝"
+            },
+            {
+                "townNames": "絵下古賀"
+            },
+            {
+                "townNames": "大角"
+            },
+            {
+                "townNames": "大藪"
+            },
+            {
+                "townNames": "奥牟田"
+            },
+            {
+                "townNames": "上木佐木"
+            },
+            {
+                "townNames": "上白垣"
+            },
+            {
+                "townNames": "上八院"
+            },
+            {
+                "townNames": "上牟田口"
+            },
+            {
+                "townNames": "笹渕"
+            },
+            {
+                "townNames": "侍島"
+            },
+            {
+                "townNames": "高橋"
+            },
+            {
+                "townNames": "八町牟田"
+            },
+            {
+                "townNames": "蛭池"
+            },
+            {
+                "townNames": "福土"
+            },
+            {
+                "townNames": "前牟田"
+            },
+            {
+                "townNames": "三八松"
+            },
+            {
+                "townNames": "横溝"
+            }
+        ]
+    },
+    {
+        "cityName": "八女郡広川町",
+        "data": [
+            {
+                "townNames": "一條"
+            },
+            {
+                "townNames": "太田"
+            },
+            {
+                "townNames": "川上"
+            },
+            {
+                "townNames": "小椎尾"
+            },
+            {
+                "townNames": "長延"
+            },
+            {
+                "townNames": "新代"
+            },
+            {
+                "townNames": "久泉"
+            },
+            {
+                "townNames": "日吉"
+            },
+            {
+                "townNames": "広川"
+            },
+            {
+                "townNames": "藤田"
+            },
+            {
+                "townNames": "水原"
+            },
+            {
+                "townNames": "吉常"
+            },
+            {
+                "townNames": "六田"
+            }
+        ]
+    },
+    {
+        "cityName": "朝倉市",
+        "data": [
+            {
+                "townNames": "相窪"
+            },
+            {
+                "townNames": "秋月"
+            },
+            {
+                "townNames": "秋月野鳥"
+            },
+            {
+                "townNames": "甘木"
+            },
+            {
+                "townNames": "甘水"
+            },
+            {
+                "townNames": "石成"
+            },
+            {
+                "townNames": "板屋"
+            },
+            {
+                "townNames": "荷原"
+            },
+            {
+                "townNames": "入地"
+            },
+            {
+                "townNames": "上畑"
+            },
+            {
+                "townNames": "牛木"
+            },
+            {
+                "townNames": "牛鶴"
+            },
+            {
+                "townNames": "烏集院"
+            },
+            {
+                "townNames": "鵜木"
+            },
+            {
+                "townNames": "江川"
+            },
+            {
+                "townNames": "大庭"
+            },
+            {
+                "townNames": "小隈"
+            },
+            {
+                "townNames": "小田"
+            },
+            {
+                "townNames": "柿原"
+            },
+            {
+                "townNames": "片延"
+            },
+            {
+                "townNames": "金丸"
+            },
+            {
+                "townNames": "鎌崎"
+            },
+            {
+                "townNames": "上秋月"
+            },
+            {
+                "townNames": "上浦"
+            },
+            {
+                "townNames": "上寺"
+            },
+            {
+                "townNames": "隈江"
+            },
+            {
+                "townNames": "倉吉"
+            },
+            {
+                "townNames": "黒川"
+            },
+            {
+                "townNames": "桑原"
+            },
+            {
+                "townNames": "古賀"
+            },
+            {
+                "townNames": "古毛"
+            },
+            {
+                "townNames": "佐田"
+            },
+            {
+                "townNames": "下渕"
+            },
+            {
+                "townNames": "下浦"
+            },
+            {
+                "townNames": "白鳥"
+            },
+            {
+                "townNames": "城"
+            },
+            {
+                "townNames": "須川"
+            },
+            {
+                "townNames": "千手"
+            },
+            {
+                "townNames": "草水"
+            },
+            {
+                "townNames": "田島"
+            },
+            {
+                "townNames": "田代"
+            },
+            {
+                "townNames": "多々連"
+            },
+            {
+                "townNames": "田中"
+            },
+            {
+                "townNames": "千代丸"
+            },
+            {
+                "townNames": "堤"
+            },
+            {
+                "townNames": "徳渕"
+            },
+            {
+                "townNames": "頓田"
+            },
+            {
+                "townNames": "中"
+            },
+            {
+                "townNames": "中島田"
+            },
+            {
+                "townNames": "中寒水"
+            },
+            {
+                "townNames": "長田"
+            },
+            {
+                "townNames": "中原"
+            },
+            {
+                "townNames": "長渕"
+            },
+            {
+                "townNames": "楢原"
+            },
+            {
+                "townNames": "杷木赤谷"
+            },
+            {
+                "townNames": "杷木池田"
+            },
+            {
+                "townNames": "杷木大山"
+            },
+            {
+                "townNames": "杷木久喜宮"
+            },
+            {
+                "townNames": "杷木古賀"
+            },
+            {
+                "townNames": "杷木白木"
+            },
+            {
+                "townNames": "杷木志波"
+            },
+            {
+                "townNames": "杷木寒水"
+            },
+            {
+                "townNames": "杷木林田"
+            },
+            {
+                "townNames": "杷木穂坂"
+            },
+            {
+                "townNames": "杷木星丸"
+            },
+            {
+                "townNames": "杷木松末"
+            },
+            {
+                "townNames": "杷木若市"
+            },
+            {
+                "townNames": "長谷山"
+            },
+            {
+                "townNames": "林田"
+            },
+            {
+                "townNames": "菱野"
+            },
+            {
+                "townNames": "一木"
+            },
+            {
+                "townNames": "日向石"
+            },
+            {
+                "townNames": "平塚"
+            },
+            {
+                "townNames": "比良松"
+            },
+            {
+                "townNames": "福光"
+            },
+            {
+                "townNames": "菩提寺"
+            },
+            {
+                "townNames": "馬田"
+            },
+            {
+                "townNames": "三奈木"
+            },
+            {
+                "townNames": "美奈宜の杜"
+            },
+            {
+                "townNames": "宮野"
+            },
+            {
+                "townNames": "持丸"
+            },
+            {
+                "townNames": "八重津"
+            },
+            {
+                "townNames": "屋形原"
+            },
+            {
+                "townNames": "屋永"
+            },
+            {
+                "townNames": "矢野竹"
+            },
+            {
+                "townNames": "山田"
+            },
+            {
+                "townNames": "山見"
+            },
+            {
+                "townNames": "来春"
+            }
+        ]
+    },
+    {
+        "cityName": "朝倉郡筑前町",
+        "data": [
+            {
+                "townNames": "赤坂"
+            },
+            {
+                "townNames": "朝園"
+            },
+            {
+                "townNames": "朝日"
+            },
+            {
+                "townNames": "石櫃"
+            },
+            {
+                "townNames": "弥永"
+            },
+            {
+                "townNames": "大久保"
+            },
+            {
+                "townNames": "大塚"
+            },
+            {
+                "townNames": "上高場"
+            },
+            {
+                "townNames": "櫛木"
+            },
+            {
+                "townNames": "栗田"
+            },
+            {
+                "townNames": "三箇山"
+            },
+            {
+                "townNames": "四三嶋"
+            },
+            {
+                "townNames": "篠隈"
+            },
+            {
+                "townNames": "下高場"
+            },
+            {
+                "townNames": "新町"
+            },
+            {
+                "townNames": "曽根田"
+            },
+            {
+                "townNames": "高田"
+            },
+            {
+                "townNames": "高上"
+            },
+            {
+                "townNames": "長者町"
+            },
+            {
+                "townNames": "当所"
+            },
+            {
+                "townNames": "砥上"
+            },
+            {
+                "townNames": "中牟田"
+            },
+            {
+                "townNames": "野町"
+            },
+            {
+                "townNames": "畑嶋"
+            },
+            {
+                "townNames": "原地蔵"
+            },
+            {
+                "townNames": "東小田"
+            },
+            {
+                "townNames": "久光"
+            },
+            {
+                "townNames": "吹田"
+            },
+            {
+                "townNames": "二"
+            },
+            {
+                "townNames": "松延"
+            },
+            {
+                "townNames": "三並"
+            },
+            {
+                "townNames": "三牟田"
+            },
+            {
+                "townNames": "森山"
+            },
+            {
+                "townNames": "安野"
+            },
+            {
+                "townNames": "山隈"
+            },
+            {
+                "townNames": "依井"
+            }
+        ]
+    },
+    {
+        "cityName": "朝倉郡東峰村",
+        "data": [
+            {
+                "townNames": "小石原"
+            },
+            {
+                "townNames": "小石原鼓"
+            },
+            {
+                "townNames": "福井"
+            },
+            {
+                "townNames": "宝珠山"
+            }
+        ]
+    }
+]

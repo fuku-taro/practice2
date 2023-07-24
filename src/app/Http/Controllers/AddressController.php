@@ -55,13 +55,15 @@ class AddressController extends Controller
                         $data = DB::table('postal_codes')
                             ->select(DB::raw("CONCAT(town, azachoume) AS townNames"))
                             ->where('city', $cityName)
+                            ->where('town', '!=', '')
                             ->orderBy('town_furi', 'asc')
                             ->orderBy('azachoume', 'asc')
                             ->get();
+                        // Log::debug($data);
                         // 空白のデータをフィルタリング
-                        $data = $data->filter(function ($item) {
-                            return trim($item->townNames) !== '';
-                        });
+                        // $data = $data->filter(function ($item) {
+                        //     return trim($item->townNames) !== '';
+                        // });
                         $queryResults[] = [
                             'cityName' => $cityName,
                             'data' => $data,
@@ -71,10 +73,77 @@ class AddressController extends Controller
             }
         }
 
+        // JSONデータをstorageフォルダに保存する
+        $this->saveFukuokaJsonData($queryResults);
+
         return response()->json([
             'result' => true,
             'data' => $queryResults,
         ]);
+    }
+
+    // JSONデータをstorageフォルダに保存するメソッド
+    private function saveFukuokaJsonData($data)
+    {
+        // JSONデータをエンコードしてファイルに保存
+        $jsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        $filename = 'fukuokaAreaData.json';
+        $filepath = storage_path('app/' . $filename);
+
+        try {
+            file_put_contents($filepath, $jsonData);
+            Log::info('JSON data saved successfully.');
+        } catch (\Exception $e) {
+            Log::error('Failed to save JSON data: ' . $e->getMessage());
+        }
+    }
+
+    // JSONデータをstorageフォルダに保存するメソッド
+    private function saveKitakyusyuJsonData($data)
+    {
+        // JSONデータをエンコードしてファイルに保存
+        $jsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        $filename = 'kitakyusyuAreaData.json';
+        $filepath = storage_path('app/' . $filename);
+
+        try {
+            file_put_contents($filepath, $jsonData);
+            Log::info('JSON data saved successfully.');
+        } catch (\Exception $e) {
+            Log::error('Failed to save JSON data: ' . $e->getMessage());
+        }
+    }
+
+    // JSONデータをstorageフォルダに保存するメソッド
+    private function savechikuhouJsonData($data)
+    {
+        // JSONデータをエンコードしてファイルに保存
+        $jsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        $filename = 'chikuhouAreaData.json';
+        $filepath = storage_path('app/' . $filename);
+
+        try {
+            file_put_contents($filepath, $jsonData);
+            Log::info('JSON data saved successfully.');
+        } catch (\Exception $e) {
+            Log::error('Failed to save JSON data: ' . $e->getMessage());
+        }
+    }
+
+    // JSONデータをstorageフォルダに保存するメソッド
+    private function saveChikugoJsonData($data)
+    {
+        // JSONデータをエンコードしてファイルに保存
+        $jsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        $filename = 'chikugoAreaData.json';
+        $filepath = storage_path('app/' . $filename);
+
+        try {
+            file_put_contents($filepath, $jsonData);
+            Log::info('JSON data saved successfully.');
+        } catch (\Exception $e) {
+            Log::error('Failed to save JSON data: ' . $e->getMessage());
+        }
     }
 
     public function getKitakyusyuAreaAddresses(Request $request)
@@ -115,13 +184,10 @@ class AddressController extends Controller
                         $data = DB::table('postal_codes')
                             ->select(DB::raw("CONCAT(town, azachoume) AS townNames"))
                             ->where('city', $cityName)
+                            ->where('town', '!=', '')
                             ->orderBy('town_furi', 'asc')
                             ->orderBy('azachoume', 'asc')
                             ->get();
-                        // 空白のデータをフィルタリング
-                        $data = $data->filter(function ($item) {
-                            return trim($item->townNames) !== '';
-                        });
                         $queryResults[] = [
                             'cityName' => $cityName,
                             'data' => $data,
@@ -130,6 +196,9 @@ class AddressController extends Controller
                 }
             }
         }
+
+        // JSONデータをstorageフォルダに保存する
+        $this->saveKitakyusyuJsonData($queryResults);
 
         return response()->json([
             'result' => true,
@@ -175,13 +244,10 @@ class AddressController extends Controller
                         $data = DB::table('postal_codes')
                             ->select(DB::raw("CONCAT(town, azachoume) AS townNames"))
                             ->where('city', $cityName)
+                            ->where('town', '!=', '')
                             ->orderBy('town_furi', 'asc')
                             ->orderBy('azachoume', 'asc')
                             ->get();
-                        // 空白のデータをフィルタリング
-                        $data = $data->filter(function ($item) {
-                            return trim($item->townNames) !== '';
-                        });
                         $queryResults[] = [
                             'cityName' => $cityName,
                             'data' => $data,
@@ -190,6 +256,9 @@ class AddressController extends Controller
                 }
             }
         }
+
+        // JSONデータをstorageフォルダに保存する
+        $this->saveChikuhouJsonData($queryResults);
 
         return response()->json([
             'result' => true,
@@ -235,13 +304,10 @@ class AddressController extends Controller
                         $data = DB::table('postal_codes')
                             ->select(DB::raw("CONCAT(town, azachoume) AS townNames"))
                             ->where('city', $cityName)
+                            ->where('town', '!=', '')
                             ->orderBy('town_furi', 'asc')
                             ->orderBy('azachoume', 'asc')
                             ->get();
-                        // 空白のデータをフィルタリング
-                        $data = $data->filter(function ($item) {
-                            return trim($item->townNames) !== '';
-                        });
                         $queryResults[] = [
                             'cityName' => $cityName,
                             'data' => $data,
@@ -250,6 +316,9 @@ class AddressController extends Controller
                 }
             }
         }
+
+        // JSONデータをstorageフォルダに保存する
+        $this->saveChikugoJsonData($queryResults);
 
         return response()->json([
             'result' => true,
