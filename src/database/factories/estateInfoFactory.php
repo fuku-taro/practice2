@@ -38,10 +38,10 @@ class estateInfoFactory extends Factory
             "",
         ];
         $location1 = [
-            "福岡市　東区",
-            "福岡市　西区",
-            "福岡市　南区",
-            "福岡市　城南区"
+            "福岡市東区",
+            "福岡市西区",
+            "福岡市南区",
+            "福岡市城南区"
         ];
         $location2 = [
             "若宮５丁目",

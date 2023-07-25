@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Box from "@mui/material/Box";
 import LocationModal from './LocationModal';
 import fukuokaArea from './SearchFukuokaArea';
-import kitakyusyuArea from './SearchKitaKyusyuArea';
+import kitakyusyuArea from './SearchKitakyusyuArea';
 import chikuhouArea from './SearchChikuhouArea';
 import chikugoArea from './SearchChikugoArea';
 

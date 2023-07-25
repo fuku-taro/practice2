@@ -74,7 +74,7 @@ class AddressController extends Controller
         }
 
         // JSONデータをstorageフォルダに保存する
-        $this->saveFukuokaJsonData($queryResults);
+        // $this->saveFukuokaJsonData($queryResults);
 
         return response()->json([
             'result' => true,
@@ -198,7 +198,7 @@ class AddressController extends Controller
         }
 
         // JSONデータをstorageフォルダに保存する
-        $this->saveKitakyusyuJsonData($queryResults);
+        // $this->saveKitakyusyuJsonData($queryResults);
 
         return response()->json([
             'result' => true,
@@ -258,7 +258,7 @@ class AddressController extends Controller
         }
 
         // JSONデータをstorageフォルダに保存する
-        $this->saveChikuhouJsonData($queryResults);
+        // $this->saveChikuhouJsonData($queryResults);
 
         return response()->json([
             'result' => true,
@@ -318,7 +318,7 @@ class AddressController extends Controller
         }
 
         // JSONデータをstorageフォルダに保存する
-        $this->saveChikugoJsonData($queryResults);
+        // $this->saveChikugoJsonData($queryResults);
 
         return response()->json([
             'result' => true,

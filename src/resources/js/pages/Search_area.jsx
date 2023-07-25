@@ -12,10 +12,10 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import classes from '../../sass/Search_area.scss';
 import AreaAccordion from '../components/AreaAccordion';
-import fukuokaArea from '../components/SearchFukuokaArea';
-import kitakyusyuArea from '../components/SearchKitaKyusyuArea';
-import chikuhouArea from '../components/SearchChikuhouArea';
-import chikugoArea from '../components/SearchChikugoArea';
+// import fukuokaArea from '../components/SearchFukuokaArea';
+// import kitakyusyuArea from '../components/SearchKitakyusyuArea';
+// import chikuhouArea from '../components/SearchChikuhouArea';
+// import chikugoArea from '../components/SearchChikugoArea';
 
 const dummy = [
     
@@ -44,18 +44,18 @@ export default function Search_area() {
   // console.log(chikugoAreaData);
   const postData = async () => {
     try {
-      const fukuokaAreaJson = JSON.stringify(fukuokaArea);
-      const kitakyusyuAreaJson = JSON.stringify(kitakyusyuArea);
-      const chikuhouAreaJson = JSON.stringify(chikuhouArea);
-      const chikugoAreaJson = JSON.stringify(chikugoArea);
-      const FukuokaAreaAddresses = await axios.post("/api/getFukuokaAreaAddresses" , {fukuokaAreaJson});
-      const KitakyusyuAreaAddresses = await axios.post("/api/getKitakyusyuAreaAddresses" , {kitakyusyuAreaJson});
-      const ChikuhouAreaAddresses = await axios.post("/api/getChikuhouAreaAddresses" , {chikuhouAreaJson});
-      const ChikugoAreaAddresses = await axios.post("/api/getChikugoAreaAddresses" , {chikugoAreaJson});
-      setFukuokaAreaData(FukuokaAreaAddresses.data.data);
-      setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
-      setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
-      setChikugoAreaData(ChikugoAreaAddresses.data.data);
+      // const fukuokaAreaJson = JSON.stringify(fukuokaArea);
+      // const kitakyusyuAreaJson = JSON.stringify(kitakyusyuArea);
+      // const chikuhouAreaJson = JSON.stringify(chikuhouArea);
+      // const chikugoAreaJson = JSON.stringify(chikugoArea);
+      // const FukuokaAreaAddresses = await axios.post("/api/getFukuokaAreaAddresses" , {fukuokaAreaJson});
+      // const KitakyusyuAreaAddresses = await axios.post("/api/getKitakyusyuAreaAddresses" , {kitakyusyuAreaJson});
+      // const ChikuhouAreaAddresses = await axios.post("/api/getChikuhouAreaAddresses" , {chikuhouAreaJson});
+      // const ChikugoAreaAddresses = await axios.post("/api/getChikugoAreaAddresses" , {chikugoAreaJson});
+      // setFukuokaAreaData(FukuokaAreaAddresses.data.data);
+      // setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
+      // setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
+      // setChikugoAreaData(ChikugoAreaAddresses.data.data);
     } catch (error) {
       console.error(error);
     }
