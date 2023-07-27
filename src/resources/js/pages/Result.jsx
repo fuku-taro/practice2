@@ -7,11 +7,46 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import InfoCard from "../components/InfoCard";
 import Typography from "@mui/material/Typography";
-import DBtest from '../api/DBtest';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import NativeSelect from '@mui/material/NativeSelect';
+import InputBase from '@mui/material/InputBase';
 
-
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
+  'label + &': {
+    marginTop: theme.spacing(3),
+  },
+  '& .MuiInputBase-input': {
+    borderRadius: 4,
+    position: 'relative',
+    backgroundColor: theme.palette.background.paper,
+    border: '1px solid #ced4da',
+    fontSize: 16,
+    padding: '10px 26px 10px 12px',
+    transition: theme.transitions.create(['border-color', 'box-shadow']),
+    // Use the system font instead of the default Roboto font.
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    '&:focus': {
+      borderRadius: 4,
+      borderColor: '#80bdff',
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+    },
+  },
+}));
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 export default function Reselt() {
@@ -19,6 +54,54 @@ export default function Reselt() {
   const { label } = useParams(); // パラメーターを取得
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
   const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
+  const [selectedSortOption, setSelectedSortOption] = useState("price_low");
+
+  const handleSortChange = async (event) => {
+    const selectedValue = event.target.value;
+    setSelectedSortOption(selectedValue);
+
+    try {
+      setIsLoading(true); // データの取得が始まったことを示す
+      let response;
+      switch (selectedValue) {
+        case "price_low":
+          response = await axios.get("/api/dataPriceASC");
+          break;
+        case "price_high":
+          response = await axios.get("/api/dataPriceDESC");
+          break;
+        case "land_area_low":
+          response = await axios.get("/api/dataLand_areaASC");
+          break;
+        case "land_area_high":
+          response = await axios.get("/api/dataLand_areaDESC");
+          break;
+        case "building_ex_area_low":
+          response = await axios.get("/api/dataBuilding_ex_areaASC");
+          break;
+        case "building_ex_area_high":
+          response = await axios.get("/api/dataBuilding_ex_areaDESC");
+          break;
+        case "register_at_new":
+          response = await axios.get("/api/dataRregister_atASC");
+          break;
+        case "register_at_old":
+          response = await axios.get("/api/dataRregister_atDESC");
+          break;
+        // Add more cases for other fields
+        default:
+          // If the selected option doesn't match any case, fetch the default data
+          response = await axios.get("/api/dataPriceASC");
+          break;
+      }
+
+      setData(response.data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false); // データの取得が完了したことを示す
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -27,7 +110,7 @@ export default function Reselt() {
 console.log(data)
   const fetchData = async () => {
     try {
-      const response = await axios.get("/api/data");
+      const response = await axios.get("/api/dataPriceASC");
       setData(response.data);
       setIsLoading(false); // データの取得が完了したらローディング状態を解除
     } catch (error) {
@@ -46,13 +129,23 @@ const dataCount = filteredData.length;
 
   // ページネーション
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 5; // 1ページに表示するアイテム数
-  const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-  const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+  const [itemsPerPage, setItemsPerPage] = useState(10); // 1ページに表示するアイテム数
+
+   // ページネーションの変数
+   const indexOfLastItem = currentPage * itemsPerPage;
+   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+   const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
   };
-  const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+  
+  // 表示件数が変更されたときのイベントハンドラ
+  const handleItemsPerPageChange = (event) => {
+    const newItemsPerPage = parseInt(event.target.value);
+    setCurrentPage(1); // ページをリセットして最初のページから表示を始める
+    setItemsPerPage(newItemsPerPage);
+  };
 
   return (
 
@@ -69,6 +162,40 @@ const dataCount = filteredData.length;
     : `検索結果：${dataCount} 件`}
 
           </Typography>
+      <FormControl sx={{ m: 1 }} variant="standard">
+            <InputLabel>並び替え</InputLabel>
+            <NativeSelect
+              input={<BootstrapInput />}
+              value={selectedSortOption}
+              onChange={handleSortChange}
+            >
+              <option value="price_low">価格が安い順</option>
+              <option value="price_high">価格が高い順</option>
+              <option value="land_area_low">土地面積が狭い順</option>
+              <option value="land_area_high">土地面積が広い順</option>
+              <option value="building_ex_area_low">建物面積が狭い順</option>
+              <option value="building_ex_area_high">建物面積が広い順</option>
+              <option value="register_at_new">登録日が新しい順</option>
+              <option value="register_at_old">登録日が古い順</option>
+              {/* Add more options for other fields */}
+            </NativeSelect>
+          </FormControl>
+
+          {/* 表示件数の選択用フォーム */}
+          <FormControl sx={{ m: 1 }} variant="standard">
+            <InputLabel>表示件数</InputLabel>
+            <NativeSelect
+              input={<BootstrapInput />}
+              value={itemsPerPage}
+              onChange={handleItemsPerPageChange}
+            >
+              <option value={10}>10件</option>
+              <option value={20}>20件</option>
+              <option value={30}>30件</option>
+              <option value={50}>50件</option>
+              <option value={100}>100件</option>
+            </NativeSelect>
+          </FormControl>
         <main>
           {!isLoading && (
             <div>
@@ -76,7 +203,7 @@ const dataCount = filteredData.length;
             <Pagination
               shape="rounded"
               size='small'
-              count={Math.ceil(filteredData.length / ITEMS_PER_PAGE)}
+              count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
               onChange={handlePageChange}
               page={currentPage} // currentPageを指定
               sx={{ marginLeft: 'auto' , mb: 1}}
@@ -90,7 +217,7 @@ const dataCount = filteredData.length;
             <Pagination
               shape="rounded"
               size='small'
-              count={Math.ceil(filteredData.length / ITEMS_PER_PAGE)}
+              count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
               onChange={handlePageChange}
               page={currentPage} // currentPageを指定
               sx={{ marginLeft: 'auto' }}

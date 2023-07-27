@@ -37,6 +37,7 @@ const LocationModal = (props) => {
 
   const handleClose = () => {
     setLabels([]);
+    setButtonDisabled(true);
     setOpen(false);
   };
 

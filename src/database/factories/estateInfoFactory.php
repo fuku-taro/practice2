@@ -4,6 +4,9 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Address;
+use Illuminate\Support\Facades\Storage; // ファイルにアクセスするためにStorageファサードをインポート
+use Illuminate\Support\Arr;
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\estateInfo>
  */
@@ -16,6 +19,29 @@ class estateInfoFactory extends Factory
      */
     public function definition()
     {
+
+        // JSONファイルからデータを読み込む
+        $fukuokaAreaData = Storage::get('fukuokaAreaData.json');
+        $chikugoAreaData = Storage::get('chikugoAreaData.json');
+        $chikuhouAreaData = Storage::get('chikuhouAreaData.json');
+        $kitakyusyuAreaData = Storage::get('kitakyusyuAreaData.json');
+        $fukuokaAreaData = json_decode($fukuokaAreaData, true);
+        $chikugoAreaData = json_decode($chikugoAreaData, true);
+        $chikuhouAreaData = json_decode($chikuhouAreaData, true);
+        $kitakyusyuAreaData = json_decode($kitakyusyuAreaData, true);
+
+        // 2つのデータを結合して新しい配列を作成
+        $combinedData = array_merge($fukuokaAreaData, $kitakyusyuAreaData, $chikuhouAreaData, $chikugoAreaData);
+
+        // 市名データを抽出
+        $allCityNames = Arr::pluck($combinedData, 'cityName');
+
+        // すべての町名データを取得
+        $allTownNames = [];
+        foreach ($combinedData as $cityData) {
+            $townNames = Arr::pluck($cityData['data'], 'townNames');
+            $allTownNames = array_merge($allTownNames, $townNames);
+        }
 
         $nearest_line = [
             "福岡市空港線",
@@ -38,10 +64,10 @@ class estateInfoFactory extends Factory
             "",
         ];
         $location1 = [
-            "福岡市　東区",
-            "福岡市　西区",
-            "福岡市　南区",
-            "福岡市　城南区"
+            "福岡市東区",
+            "福岡市西区",
+            "福岡市南区",
+            "福岡市城南区"
         ];
         $location2 = [
             "若宮５丁目",
@@ -86,15 +112,15 @@ class estateInfoFactory extends Factory
             'tsubo_price'=>fake()->numberBetween($min=4.0000,$max=100.0000),
             'land_rights'=>"所有権", 
             'land_area'=>fake()->numberBetween($min=4.0000,$max=100.0000),
-            'price'=>fake()->numberBetween($min=100,$max=1000),
+            'price'=>fake()->numberBetween($min=1000,$max=10000),
             'child_school'=>"小学校",
             'middle_school'=>"中学校",
             'nearest_line'=>fake()->randomElement($nearest_line),
             'station'=>fake()->randomElement($station),
             'use_area'=>fake()->randomElement($use_area),
             'walk_time'=>fake()->numberBetween($min=1,$max=30),
-            'location1'=>fake()->randomElement($location1),
-            'location2'=>fake()->randomElement($location2),
+            'location1'=>fake()->randomElement($allCityNames),
+            'location2'=>fake()->randomElement($allTownNames),
             'address'=>fake()->randomElement($address),
 
             'images'=>json_encode($images),
