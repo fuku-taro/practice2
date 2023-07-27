@@ -40,4 +40,28 @@ class EstateInfoController extends Controller
         // 住所データをビューに渡して表示する例
         return view('Estate', compact('estateInfo'));
     }
+
+    public function searchEstateInfos(Request $request, $labels)
+    {
+    // キーワード検索
+    // if (empty($filter['inKeyword']) == false) {
+    //     $query->where(function ($query) use ($filter) {
+            // foreach ($labels as $keyword) {
+            //     $query->orWhere('profile->skill->title', 'like', '%' . $this->escape_like($keyword) . '%')
+            //         ->orWhere('profile->skill->suggest', 'like', '%' . $this->escape_like($keyword) . '%');
+            //     }
+        //     });
+        // }
+    }
+    /**
+     * like句をエスケープする
+     */
+    function escape_like(string $value, string $char = '\\'): string
+    {
+        return str_replace(
+            [$char, '%', '_'],
+            [$char . $char, $char . '%', $char . '_'],
+            $value
+        );
+    }
 }

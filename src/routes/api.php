@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\estateInfo; // 使用するモデルをインポート
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\EstateInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,75 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 // データの取得
 Route::get('/data', function () {
-    $data = estateInfo::all();
+    $orderBy = request('order_by', 'price'); // クエリパラメーター "order_by" を取得し、デフォルトは "price"
+    $orderDirection = request('order_direction', 'asc'); // クエリパラメーター "order_direction" を取得し、デフォルトは "asc"
+
+    $data = EstateInfo::orderBy($orderBy, $orderDirection)->get();
+
+    foreach ($data as $d) {
+        $d->images = json_decode($d->images);
+    }
+
+    return response()->json($data);
+});
+Route::get('/dataPriceASC', function () {
+    $data = EstateInfo::orderBy('price', 'ASC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataPriceDESC', function () {
+    $data = EstateInfo::orderBy('price', 'DESC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataLand_areaASC', function () {
+    $data = EstateInfo::orderBy('land_area', 'ASC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataLand_areaDESC', function () {
+    $data = EstateInfo::orderBy('land_area', 'DESC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataBuilding_ex_areaASC', function () {
+    $data = EstateInfo::orderBy('building_ex_area', 'ASC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataBuilding_ex_areaDESC', function () {
+    $data = EstateInfo::orderBy('building_ex_area', 'DESC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataRregister_atASC', function () {
+    $data = EstateInfo::orderBy('register_at', 'ASC')->get();
+    foreach($data as $d){
+        $d->images = json_decode($d->images);;
+    }
+    return response()->json($data);
+});
+
+Route::get('/dataRegister_atDESC', function () {
+    $data = EstateInfo::orderBy('register_at', 'DESC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }

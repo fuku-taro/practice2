@@ -54,7 +54,7 @@ export default function InfoCard(props) {
                                       </Typography>
                                       <Typography
                                           variant="body2"
-                                          color="text.secondary"
+                                        //   color="text.secondary"
                                           sx={{
                                               display: {
                                                   xs: "block",
@@ -62,10 +62,22 @@ export default function InfoCard(props) {
                                               },
                                           }}
                                       >
-                                          Lizards are a widespread group of
-                                          squamate reptiles, with over 6,000
-                                          species, ranging across all continents
-                                          except Antarctica
+                                          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+    <b>価格</b>
+    <span style={{ color:"red" }}>{item.price}万円</span>
+  <br />
+  </Box>
+                                          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+    <b>間取り</b>
+    <span>{item.floor_plan}</span>
+  <br />
+  </Box>
+  {item.location1}
+  {item.location2}
+  {item.address}
+  <br />
+  {item.nearest_line} {item.station}駅 徒歩{item.walk_time}(分)
+
                                       </Typography>
 
                                       <Table item={item} />
