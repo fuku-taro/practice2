@@ -86,7 +86,7 @@ export default function Reselt() {
           response = await axios.get("/api/dataRregister_atASC");
           break;
         case "register_at_old":
-          response = await axios.get("/api/dataRregister_atDESC");
+          response = await axios.get("/api/dataRegister_atDESC");
           break;
         // Add more cases for other fields
         default:
