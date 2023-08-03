@@ -14,6 +14,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
+import Circular from '../components/Circular';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
@@ -154,6 +155,7 @@ const dataCount = filteredData.length;
       <CssBaseline />
       <Container maxWidth="lg">
         <Header />
+
           <Typography variant='h4' style={{ whiteSpace: 'pre-line' }}>
                 {isLoading
     ? "検索結果を取得中..."
@@ -196,8 +198,16 @@ const dataCount = filteredData.length;
               <option value={100}>100件</option>
             </NativeSelect>
           </FormControl>
-        <main>
-          {!isLoading && (
+          {isLoading ? (
+          <div style={{
+            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+          }}
+          >
+            <Circular size="5rem" />
+          </div>
+          ) : (
+          <main>
+          
             <div>
           <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Pagination
@@ -224,14 +234,14 @@ const dataCount = filteredData.length;
               color="primary"
             />
           </Stack>
-          </div>
-          )}
-        </main>
-      </Container>
       <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
+      title="Footer"
+      description="Something here to give the footer a purpose!"
       />
+      </div>
+      </main>
+      )}
+      </Container>
     </ThemeProvider>
   );
 }
