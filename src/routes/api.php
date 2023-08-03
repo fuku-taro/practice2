@@ -25,7 +25,7 @@ Route::get('/data', function () {
     $orderBy = request('order_by', 'price'); // クエリパラメーター "order_by" を取得し、デフォルトは "price"
     $orderDirection = request('order_direction', 'asc'); // クエリパラメーター "order_direction" を取得し、デフォルトは "asc"
 
-    $data = EstateInfo::orderBy($orderBy, $orderDirection)->get();
+    $data = estateInfo::orderBy($orderBy, $orderDirection)->get();
 
     foreach ($data as $d) {
         $d->images = json_decode($d->images);
@@ -34,7 +34,7 @@ Route::get('/data', function () {
     return response()->json($data);
 });
 Route::get('/dataPriceASC', function () {
-    $data = EstateInfo::orderBy('price', 'ASC')->get();
+    $data = estateInfo::orderBy('price', 'ASC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -42,7 +42,7 @@ Route::get('/dataPriceASC', function () {
 });
 
 Route::get('/dataPriceDESC', function () {
-    $data = EstateInfo::orderBy('price', 'DESC')->get();
+    $data = estateInfo::orderBy('price', 'DESC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -50,7 +50,7 @@ Route::get('/dataPriceDESC', function () {
 });
 
 Route::get('/dataLand_areaASC', function () {
-    $data = EstateInfo::orderBy('land_area', 'ASC')->get();
+    $data = estateInfo::orderBy('land_area', 'ASC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -58,7 +58,7 @@ Route::get('/dataLand_areaASC', function () {
 });
 
 Route::get('/dataLand_areaDESC', function () {
-    $data = EstateInfo::orderBy('land_area', 'DESC')->get();
+    $data = estateInfo::orderBy('land_area', 'DESC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -66,7 +66,7 @@ Route::get('/dataLand_areaDESC', function () {
 });
 
 Route::get('/dataBuilding_ex_areaASC', function () {
-    $data = EstateInfo::orderBy('building_ex_area', 'ASC')->get();
+    $data = estateInfo::orderBy('building_ex_area', 'ASC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -74,7 +74,7 @@ Route::get('/dataBuilding_ex_areaASC', function () {
 });
 
 Route::get('/dataBuilding_ex_areaDESC', function () {
-    $data = EstateInfo::orderBy('building_ex_area', 'DESC')->get();
+    $data = estateInfo::orderBy('building_ex_area', 'DESC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -82,7 +82,7 @@ Route::get('/dataBuilding_ex_areaDESC', function () {
 });
 
 Route::get('/dataRregister_atASC', function () {
-    $data = EstateInfo::orderBy('register_at', 'ASC')->get();
+    $data = estateInfo::orderBy('register_at', 'ASC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
@@ -90,7 +90,7 @@ Route::get('/dataRregister_atASC', function () {
 });
 
 Route::get('/dataRegister_atDESC', function () {
-    $data = EstateInfo::orderBy('register_at', 'DESC')->get();
+    $data = estateInfo::orderBy('register_at', 'DESC')->get();
     foreach($data as $d){
         $d->images = json_decode($d->images);;
     }
