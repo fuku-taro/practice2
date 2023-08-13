@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-function Sidebar(props) {
+function SidebarDummy(props) {
   const { archives, description, social, title } = props;
 
   return (
@@ -47,7 +47,7 @@ function Sidebar(props) {
   );
 }
 
-Sidebar.propTypes = {
+SidebarDummy.propTypes = {
   archives: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -64,4 +64,4 @@ Sidebar.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Sidebar;
+export default SidebarDummy;

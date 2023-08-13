@@ -16,6 +16,7 @@ import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 import Circular from '../components/Circular';
 import { Grid } from '@mui/material';
+import Paper from '@mui/material/Paper';
 import styles from '../../sass/Result.module.scss';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -52,7 +53,10 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }));
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
+
+
 export default function Reselt() {
+
   const [data, setData] = useState([]);
   const { label } = useParams(); // パラメーターを取得
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
@@ -224,7 +228,9 @@ const dataCount = filteredData.length;
           </Stack>
           <div className={styles.containts}>
               <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" } }}>
-                <InfoCard currentData={currentData}/>
+                <Paper>
+                  サイドバー
+                </Paper>
               </Grid>
               <Grid container xs={12}>
                 <InfoCard currentData={currentData}/>

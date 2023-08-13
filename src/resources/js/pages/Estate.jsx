@@ -13,7 +13,7 @@ import Header from '../components/Header';
 import MainFeaturedPost from '../components/MainFeaturedPost';
 import FeaturedPost from '../components/FeaturedPost';
 import Main from '../components/Main';
-import Sidebar from '../components/Sidebar';
+import SidebarDummy from '../components/SidebarDummy';
 import Footer from '../components/Footer';
 
 
@@ -89,7 +89,7 @@ export default function Estate() {
           </div>
                            ))}
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Sidebar
+            <SidebarDummy
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
