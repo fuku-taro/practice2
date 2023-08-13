@@ -15,6 +15,8 @@ import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 import Circular from '../components/Circular';
+import { Grid } from '@mui/material';
+import styles from '../../sass/Result.module.scss';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
@@ -220,9 +222,14 @@ const dataCount = filteredData.length;
               color="primary"
             />
           </Stack>
-
-              <InfoCard currentData={currentData}/>
-
+          <div className={styles.containts}>
+              <Grid container xs={4}>
+                <InfoCard currentData={currentData}/>
+              </Grid>
+              <Grid container xs={8}>
+                <InfoCard currentData={currentData}/>
+              </Grid>
+          </div>
             <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Pagination
               shape="rounded"
