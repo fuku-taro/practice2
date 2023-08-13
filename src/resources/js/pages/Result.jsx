@@ -15,6 +15,10 @@ import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 import Circular from '../components/Circular';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Sidebar from '../components/Sidebar';
+// import { useMediaQuery } from '@mui/material';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
@@ -48,6 +52,23 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+  // 仮のデフォルト値を設定
+  // const defaultSidebarData = {
+  //   title: "Default Title",
+  //   description: "Default Description",
+  //   archives: [
+  //     { title: 'March 2020', url: '#' },
+  //     { title: 'February 2020', url: '#' },
+  //     { title: 'January 2020', url: '#' },
+  //     { title: 'November 1999', url: '#' },
+  //     { title: 'October 1999', url: '#' },
+  //   ],
+  //   social: [
+  //     { name: 'GitHub', icon: GitHubIcon },
+  //     { name: 'Twitter', icon: TwitterIcon },
+  //     { name: 'Facebook', icon: FacebookIcon },
+  //   ]
+  // };
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 export default function Reselt() {
@@ -56,6 +77,8 @@ export default function Reselt() {
   const labels = label.split('&'); // パラメーターを&で分割して配列にする
   const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
   const [selectedSortOption, setSelectedSortOption] = useState("price_low");
+  // サイドバーのデータを取得（仮のデフォルト値を使用）
+  // const [sidebar, setSidebar] = useState(defaultSidebarData);
 
   const handleSortChange = async (event) => {
     const selectedValue = event.target.value;
@@ -148,6 +171,8 @@ const dataCount = filteredData.length;
     setItemsPerPage(newItemsPerPage);
   };
 
+  // const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
 
     <ThemeProvider theme={defaultTheme}>
@@ -206,39 +231,53 @@ const dataCount = filteredData.length;
             <Circular size="5rem" />
           </div>
           ) : (
-          <main>
-          
-            <div>
+      <main>
+        <div>
+        <Grid container spacing={5} sx={{ mt: 3 }}>
+      {/* Sidebarコンポーネントを左側に配置 */}
+      <Grid item xs={4} sx={{ display: { xs: "none", sm: "flex" } }}>
+        {/* <Paper > */}
+        <Sidebar sx={{ width:'100%' }}/>
+        {/* </Paper> */}
+
+      </Grid>
+      {/* 他のコンポーネントを右側に配置 */}
+      <Grid item xs={12} sm={8}>
+        <Grid container spacing={4} justifyContent='center' >
           <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Pagination
-              shape="rounded"
-              size='small'
-              count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
-              onChange={handlePageChange}
-              page={currentPage} // currentPageを指定
-              sx={{ marginLeft: 'auto' , mb: 1}}
-              color="primary"
-            />
-          </Stack>
-
-              <InfoCard currentData={currentData}/>
-
-            <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Pagination
-              shape="rounded"
-              size='small'
-              count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
-              onChange={handlePageChange}
-              page={currentPage} // currentPageを指定
-              sx={{ marginLeft: 'auto' }}
-              color="primary"
-            />
-          </Stack>
-      <Footer
-      title="Footer"
-      description="Something here to give the footer a purpose!"
+        <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+      <Pagination
+        shape="rounded"
+        size='small'
+        count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
+        onChange={handlePageChange}
+        page={currentPage} // currentPageを指定
+        sx={{ mb:1 }}
+        color="primary"
       />
-      </div>
+    </div>
+
+    <InfoCard currentData={currentData}/>
+
+    <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+      <Pagination
+        shape="rounded"
+        size='small'
+        count={Math.ceil(filteredData.length / itemsPerPage)} // ページ数を計算
+        onChange={handlePageChange}
+        page={currentPage} // currentPageを指定
+        color="primary"
+      />
+    </div>
+    </Stack>
+        </Grid>
+      </Grid>
+    </Grid>
+        <Footer
+          title="Footer"
+          description="Something here to give the footer a purpose!"
+        />
+        </div>
       </main>
       )}
       </Container>
