@@ -223,10 +223,10 @@ const dataCount = filteredData.length;
             />
           </Stack>
           <div className={styles.containts}>
-              <Grid container xs={4}>
+              <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" } }}>
                 <InfoCard currentData={currentData}/>
               </Grid>
-              <Grid container xs={8}>
+              <Grid container xs={12}>
                 <InfoCard currentData={currentData}/>
               </Grid>
           </div>
