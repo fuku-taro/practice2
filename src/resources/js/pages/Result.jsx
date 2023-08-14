@@ -18,6 +18,7 @@ import Circular from '../components/Circular';
 import { Grid } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import styles from '../../sass/Result.module.scss';
+import Sidebar from '../components/Sidebar';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
@@ -139,9 +140,12 @@ const dataCount = filteredData.length;
   const [itemsPerPage, setItemsPerPage] = useState(10); // 1ページに表示するアイテム数
 
    // ページネーションの変数
-   const indexOfLastItem = currentPage * itemsPerPage;
-   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-   const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+    const pagesToShow = 3; // 先頭および最後のページの数
+    const totalPageCount = Math.ceil(filteredData.length / itemsPerPage);
+    const middlePages = Math.min(pagesToShow, totalPageCount - pagesToShow * 2);
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
@@ -227,14 +231,16 @@ const dataCount = filteredData.length;
             />
           </Stack>
           <div className={styles.containts}>
-              <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" } }}>
-                <Paper>
-                  サイドバー
-                </Paper>
-              </Grid>
-              <Grid container xs={12}>
-                <InfoCard currentData={currentData}/>
-              </Grid>
+            {/* サイドバー */}
+            {/* <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" } }}> */}
+            {/* <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" }, height: '100vh', overflowY: 'auto' }}> */}
+            <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" }, height: '100vh'}}>
+              <Sidebar/>
+            </Grid>
+            {/* メインコンテンツ */}
+            <Grid container xs={12}>
+              <InfoCard currentData={currentData}/>
+            </Grid>
           </div>
             <Stack spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Pagination
@@ -247,11 +253,11 @@ const dataCount = filteredData.length;
               color="primary"
             />
           </Stack>
+      </div>
       <Footer
       title="Footer"
       description="Something here to give the footer a purpose!"
       />
-      </div>
       </main>
       )}
       </Container>
