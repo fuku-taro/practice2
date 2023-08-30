@@ -15,7 +15,6 @@ export default function InfoCard(props) {
           sx={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
           }}
       >
           <Grid container justifyContent="center">
