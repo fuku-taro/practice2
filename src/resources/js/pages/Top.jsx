@@ -35,7 +35,7 @@ export default function Top() {
                       width: "150px",
                       height: "150px",
                       mr: 3,
-                      backgroundColor:"#078dff",
+                      backgroundColor:"#418aff",
                       fontSize:"1.2em",
                       color: "#fee3fa",
                     }}
@@ -51,7 +51,7 @@ export default function Top() {
                     sx={{
                       width: "150px",
                       height: "150px",
-                      backgroundColor:"#1aff07",
+                      backgroundColor:"#18ce09",
                       fontSize:"1.2em",
                       color: "#fee3fa",
                     }}
