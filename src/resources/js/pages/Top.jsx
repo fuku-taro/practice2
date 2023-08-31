@@ -20,10 +20,11 @@ export default function Top() {
       <div className={styles.mainVisual}>
         {/* 背景画像の上に要素を配置 */}
         <div className={styles.mainMask}>
-          <Container maxWidth="md">
+          {/* <Container maxWidth="md"> */}
+          <Container maxWidth="md" sx={{ marginTop: "80px" }}>
             <div className={styles.buttonsContainer}>
               <div className={styles.buttons}>
-                <p className={styles.p}>沖縄の不動産・賃貸情報</p>
+                <p className={styles.p}><span className={styles.span}>沖縄の不動産・賃貸情報</span></p>
                 <p className={styles.p}>どのような物件をお探しですか？</p>
                 <div className={styles.buttonGroup}>
                 <Link to="/Search_area">
