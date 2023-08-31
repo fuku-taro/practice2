@@ -23,7 +23,7 @@ export default function Top() {
           <Container maxWidth="md">
             <div className={styles.buttonsContainer}>
               <div className={styles.buttons}>
-                <p className={styles.p}>福岡の不動産・賃貸情報</p>
+                <p className={styles.p}>沖縄の不動産・賃貸情報</p>
                 <p className={styles.p}>どのような物件をお探しですか？</p>
                 <div className={styles.buttonGroup}>
                 <Link to="/Search_area">
@@ -34,8 +34,9 @@ export default function Top() {
                       width: "150px",
                       height: "150px",
                       mr: 3,
-                      backgroundColor:"#ffc107",
+                      backgroundColor:"#078dff",
                       fontSize:"1.2em",
+                      color: "#fee3fa",
                     }}
                     // href="/Search_area"
                   >
@@ -49,14 +50,29 @@ export default function Top() {
                     sx={{
                       width: "150px",
                       height: "150px",
-                      backgroundColor:"#ffc107",
+                      backgroundColor:"#1aff07",
                       fontSize:"1.2em",
+                      color: "#fee3fa",
                     }}
                   >
                     買う
                   </Button>
                   </Link>
                 </div>
+                <Button
+                    variant="contained"
+                    color="warning"
+                    sx={{
+                      width: "320px",
+                      height: "80px",
+                      backgroundColor:"#ff0000",
+                      fontSize:"1.2em",
+                      color: "#fee3fa",
+                      mt:2,
+                    }}
+                  >
+                    不動産業者様専用会員ページ
+                  </Button>
               </div>
             </div>
           </Container>

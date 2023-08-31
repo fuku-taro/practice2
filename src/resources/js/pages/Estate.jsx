@@ -88,14 +88,14 @@ export default function Estate() {
           </Grid>
           </div>
                            ))}
-          <Grid container spacing={5} sx={{ mt: 3 }}>
+          {/* <Grid container spacing={5} sx={{ mt: 3 }}>
             <SidebarDummy
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
-          </Grid>
+          </Grid> */}
         </main>
       </Container>
       <Footer

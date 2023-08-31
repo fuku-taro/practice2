@@ -19,7 +19,7 @@ import chikugoArea from './SearchChikugoArea';
 export default function AreaAccordion(props) {
   return (
     <div>
-        <Accordion sx={{ mb:2 }}>
+        <Accordion sx={{ mb:2 }}defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"

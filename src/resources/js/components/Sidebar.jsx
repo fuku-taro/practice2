@@ -21,7 +21,7 @@ function Sidebar() {
 
   return (
     <div>
-      <Paper sx={{ bgcolor:'aliceblue' }}>
+      <Paper sx={{ bgcolor:'#fada2a' }}>
         <div className={styles.title}>
          絞り込み
         </div>

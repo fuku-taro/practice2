@@ -31,7 +31,7 @@ export default function InfoCard(props) {
                                   display: { xs: "block", sm: "flex" },
                                   height: { xs: "auto", sm: "270px" },
                                   mb: 3,
-                                  bgcolor: "aliceblue",
+                                  bgcolor: "#19ff19",
                               }}
                           >
                               <CardActionArea sx={{ flexBasis: "35%" }}>

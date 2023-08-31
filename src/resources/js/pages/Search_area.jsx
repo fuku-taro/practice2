@@ -10,8 +10,9 @@ import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import classes from '../../sass/Search_area.scss';
+import styles from '../../sass/Search_area.module.scss';
 import AreaAccordion from '../components/AreaAccordion';
+import { Grid } from '@mui/material';
 // import fukuokaArea from '../components/SearchFukuokaArea';
 // import kitakyusyuArea from '../components/SearchKitakyusyuArea';
 // import chikuhouArea from '../components/SearchChikuhouArea';
@@ -88,23 +89,23 @@ export default function Search_area() {
 
     <ThemeProvider theme={defaultTheme}>
       
-      <CssBaseline />
-      <Container >
         <Header  />
-        <main>
-          <div className={classes.content}>
+        <div className={styles.main}>
+      <Container >
+        <div className={styles.contents}>
+
+          <div className={styles.content}>
+        <Grid container xs={6} sx={{ display: { xs: "none", sm: "block" }, height: '100vh',mr:2}}>
               <Box
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    //   my: 10,
-                    //   gap: 10,
                   }}
                   >
                   <Container
                       maxWidth="md"
                       sx={{
-                        backgroundColor: "aliceblue",
+                        backgroundColor: "#ffc107",
                         py: 4,
                         display: "flex",
                         flexDirection: "column",
@@ -148,10 +149,17 @@ export default function Search_area() {
                   
                   
               </Box>
+        </Grid>
           </div>
-
-        </main>
+          <div className={styles.img}>
+            <Grid container xs={12}>
+              {/* <img src="/images/fukuoka_tizu0810.png" alt="" className={styles.image}/> */}
+              <img src="/images/okinawa_tizu0810.png" alt="" className={styles.image}/>
+            </Grid>
+          </div>
+        </div>
       </Container>
+        </div>
       <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"

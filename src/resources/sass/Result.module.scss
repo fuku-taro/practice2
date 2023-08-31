@@ -1,3 +1,22 @@
 .containts{
   display: flex;
 }
+.main{
+  background-color: antiquewhite;
+}
+  /* Your existing styles for .img container */
+  .img {
+    height: 300px; /* 必要に応じて高さを調整してください */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  .image {
+    max-width: 100%; /* Scale image width within the container */
+    max-height: 100%; /* Scale image height within the container */
+    width: auto; /* Let the width adjust automatically while maintaining aspect ratio */
+    height: auto; /* Let the height adjust automatically while maintaining aspect ratio */
+    display: block; /* Make sure the image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+}

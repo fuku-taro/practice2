@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import styles from '../../sass/header.module.scss'
 
 function Header(props) {
   const sections = [
@@ -25,16 +26,12 @@ function Header(props) {
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
-        >
-          eBuye!
-        </Typography>
+        <Link to="/">
+        <div className={styles.icon}>
+          <img src="/images/logo_okinawa2.png" alt="" />
+
+        </div>
+        </Link>
         <IconButton onClick={()=>('/Search')} >
           <SearchIcon />
         </IconButton>
