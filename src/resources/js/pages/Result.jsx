@@ -234,7 +234,7 @@ const dataCount = filteredData.length;
             {/* サイドバー */}
             {/* <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" } }}> */}
             {/* <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" }, height: '100vh', overflowY: 'auto' }}> */}
-            <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" }, height: '100vh'}}>
+            <Grid container xs={4} sx={{ display: { xs: "none", sm: "block" }, height: 'auto'}}>
               <Sidebar/>
             </Grid>
             {/* メインコンテンツ */}

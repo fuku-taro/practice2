@@ -40,9 +40,11 @@ class ImportPostalCodeCommand extends Command
 
         // CSVファイルの文字コード変換
         //先程ダウンロードしたCSVファイルのパスを書く
-        $csv_path = storage_path('app/csv/40fukuok.csv');
+        // $csv_path = storage_path('app/csv/40fukuok.csv');
+        $csv_path = storage_path('app/csv/47okinaw.csv');
         //CSVファイルの文字コードをSJIS-winからUTF-8に変換した後のファイル名を指定
-        $converted_csv_path = storage_path('app/csv/postal_code_utf8.csv');
+        // $converted_csv_path = storage_path('app/csv/postal_code_utf8.csv');
+        $converted_csv_path = storage_path('app/csv/okinaw_code_utf8.csv');
         file_put_contents(
             $converted_csv_path,
             mb_convert_encoding(
@@ -64,23 +66,37 @@ class ImportPostalCodeCommand extends Command
             }
             //空行の場合、登録処理の際にエラーが発生することがあるので条件分岐させる
             if (!is_null($row[0])) { 
-                if($row[5] == 1){
-                    continue;
-                }
+                // if($row[5] == 1){
+                //     continue;
+                // }
+
                 // 与えられた文字列からハイフンを取り除く
-                $postal_code = str_replace('-', '', $row[4]);
+                // $postal_code = str_replace('-', '', $row[4]);
+                // \App\Models\PostalCode::create([
+                //     'code' => $row[4],
+                //     'first_code' => intval(substr($postal_code, 0, 3)),
+                //     'last_code' => substr($postal_code, -4),
+                //     'ken' => $row[7],
+                //     'ken_furi' => $row[8],
+                //     'city' => $row[9],
+                //     'city_furi' => $row[10],
+                //     'town' => $row[11],
+                //     'town_furi' => $row[12],
+                //     'azachoume' => $row[15],
+                //     'azachoume_furi' => $row[16],
+                $postal_code = str_replace('-', '', $row[2]);
                 \App\Models\PostalCode::create([
-                    'code' => $row[4],
+                    'code' => $row[2],
                     'first_code' => intval(substr($postal_code, 0, 3)),
                     'last_code' => substr($postal_code, -4),
-                    'ken' => $row[7],
-                    'ken_furi' => $row[8],
-                    'city' => $row[9],
-                    'city_furi' => $row[10],
-                    'town' => $row[11],
-                    'town_furi' => $row[12],
-                    'azachoume' => $row[15],
-                    'azachoume_furi' => $row[16],
+                    'ken' => $row[6],
+                    'ken_furi' => $row[3],
+                    'city' => $row[7],
+                    'city_furi' => $row[4],
+                    'town' => $row[8],
+                    'town_furi' => $row[5],
+                    'azachoume' => $row[9],
+                    'azachoume_furi' => $row[10],
                     // 'address' => (str_contains($row[8], '（')) ? current(explode('（', $row[8])) : $row[8]
                 ]);
             }

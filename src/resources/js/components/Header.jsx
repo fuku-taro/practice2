@@ -5,8 +5,9 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import styles from '../../sass/header.module.scss'
+import { Link } from 'react-router-dom';
 
 function Header(props) {
   const sections = [
@@ -26,12 +27,11 @@ function Header(props) {
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
-        <Link to="/">
-        <div className={styles.icon}>
-          <img src="/images/logo_okinawa2.png" alt="" />
-
-        </div>
-        </Link>
+          <div className={styles.icon}>
+            <Link to="/">
+                <img src="/images/logo_okinawa2.png" alt="" />
+            </Link>
+          </div>
         <IconButton onClick={()=>('/Search')} >
           <SearchIcon />
         </IconButton>
@@ -50,7 +50,7 @@ function Header(props) {
             noWrap
             key={section.title}
             variant="body2"
-            href={section.url}
+            to={section.url}
             sx={{ p: 1, flexShrink: 0 }}
           >
             {section.title}
