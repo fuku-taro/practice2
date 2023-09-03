@@ -1,4 +1,4 @@
-const nanbu = [
+const nanbu = 
   {
     nanbuArea: [
       {
@@ -23,7 +23,6 @@ const nanbu = [
         cityName: "糸満市",
       },
     ]
-  }
-];
+  };
 
 export default nanbu;

@@ -14,16 +14,12 @@ import fukuokaArea from './SearchFukuokaArea';
 import kitakyusyuArea from './SearchKitakyusyuArea';
 import chikuhouArea from './SearchChikuhouArea';
 import chikugoArea from './SearchChikugoArea';
-import hokubu from '../json/Hokubu';
-import chubu from '../json/Chubu';
-import nanbu from '../json/Nanbu';
-import ritou from '../json/Ritou';
 
 
 export default function AreaAccordion(props) {
   return (
     <div>
-        <Accordion sx={{ mb:2 }}>
+        <Accordion sx={{ mb:2 }}defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -36,7 +32,18 @@ export default function AreaAccordion(props) {
             <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {hokubu.hokubuArea.map((item, cityIndex) => (
+                  {fukuokaArea[0].fukuokaCity.map((item, cityIndex) => (
+                    <Grid item xs={12} md={4} key={cityIndex}>
+                      <FormControlLabel
+                        control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
+                        label={item.cityName}
+                        onChange={props.handleCheckboxChange}
+                      />
+                    </Grid>
+                  ))}
+                  </Grid>
+                <Grid container>
+                  {fukuokaArea[1].otherCity.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -73,7 +80,7 @@ export default function AreaAccordion(props) {
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {chubu.chubuArea.map((item, cityIndex) => (
+                  {kitakyusyuArea[0].kitakyusyuCity.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -83,6 +90,17 @@ export default function AreaAccordion(props) {
                     </Grid>
                   ))}
                   </Grid>
+                  <Grid container>
+                  {kitakyusyuArea[1].otherCity.map((item, cityIndex) => (
+                    <Grid item xs={12} md={4} key={cityIndex}>
+                      <FormControlLabel
+                        control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
+                        label={item.cityName}
+                        onChange={props.handleCheckboxChange}
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
               </FormGroup>
               <LocationModal
               fukuokaAreaData={props.fukuokaAreaData}
@@ -102,13 +120,13 @@ export default function AreaAccordion(props) {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>南部エリア</Typography>
+          <Typography>筑豊エリア</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {nanbu.nanbuArea.map((item, cityIndex) => (
+                  {chikuhouArea[0].chikuhouCity.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}
@@ -131,20 +149,19 @@ export default function AreaAccordion(props) {
             </Box>
         </AccordionDetails>
       </Accordion>
-
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>離島エリア</Typography>
+          <Typography>筑後エリア</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Box sx={{ backgroundColor: "white", textAlign: "left" }}>
               <FormGroup>
                 <Grid container>
-                  {ritou.ritouArea.map((item, cityIndex) => (
+                  {chikugoArea[0].chikugoCity.map((item, cityIndex) => (
                     <Grid item xs={12} md={4} key={cityIndex}>
                       <FormControlLabel
                         control={<Checkbox name={item.cityName} sx={{ px: 2 }} />}

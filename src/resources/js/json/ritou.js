@@ -1,4 +1,4 @@
-const ritou = [
+const ritou = 
   {
     ritouArea: [
       {
@@ -47,7 +47,6 @@ const ritou = [
         cityName: "南大東島",
       },
     ]
-  }
-];
+  };
 
 export default ritou;

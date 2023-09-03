@@ -1,4 +1,4 @@
-const chubu = [
+const chubu = 
   {
     chubuArea: [
       {
@@ -32,7 +32,6 @@ const chubu = [
         cityName: "浦添市",
       },
     ]
-  }
-];
+  };
 
 export default chubu;

@@ -1,5 +1,4 @@
-const hokubu = [
-  {
+const hokubu ={
     hokubuArea: [
       {
         cityName: "名護市",
@@ -30,6 +29,5 @@ const hokubu = [
       },
     ]
   }
-];
 
 export default hokubu;
