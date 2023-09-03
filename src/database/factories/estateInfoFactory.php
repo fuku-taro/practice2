@@ -21,17 +21,26 @@ class estateInfoFactory extends Factory
     {
 
         // JSONファイルからデータを読み込む
-        $fukuokaAreaData = Storage::get('fukuokaAreaData.json');
-        $chikugoAreaData = Storage::get('chikugoAreaData.json');
-        $chikuhouAreaData = Storage::get('chikuhouAreaData.json');
-        $kitakyusyuAreaData = Storage::get('kitakyusyuAreaData.json');
-        $fukuokaAreaData = json_decode($fukuokaAreaData, true);
-        $chikugoAreaData = json_decode($chikugoAreaData, true);
-        $chikuhouAreaData = json_decode($chikuhouAreaData, true);
-        $kitakyusyuAreaData = json_decode($kitakyusyuAreaData, true);
+        // $fukuokaAreaData = Storage::get('fukuokaAreaData.json');
+        // $chikugoAreaData = Storage::get('chikugoAreaData.json');
+        // $chikuhouAreaData = Storage::get('chikuhouAreaData.json');
+        // $kitakyusyuAreaData = Storage::get('kitakyusyuAreaData.json');
+        $chubuAreaData = Storage::get('chubuAreaData.json');
+        $hokubuAreaData = Storage::get('hokubuAreaData.json');
+        $nanbuAreaData = Storage::get('nanbuAreaData.json');
+        $ritouAreaData = Storage::get('ritouAreaData.json');
+        // $fukuokaAreaData = json_decode($fukuokaAreaData, true);
+        // $chikugoAreaData = json_decode($chikugoAreaData, true);
+        // $chikuhouAreaData = json_decode($chikuhouAreaData, true);
+        // $kitakyusyuAreaData = json_decode($kitakyusyuAreaData, true);
+        $hokubuAreaData = json_decode($hokubuAreaData, true);
+        $chubuAreaData = json_decode($chubuAreaData, true);
+        $nanbuAreaData = json_decode($nanbuAreaData, true);
+        $ritouAreaData = json_decode($ritouAreaData, true);
 
         // 2つのデータを結合して新しい配列を作成
-        $combinedData = array_merge($fukuokaAreaData, $kitakyusyuAreaData, $chikuhouAreaData, $chikugoAreaData);
+        // $combinedData = array_merge($fukuokaAreaData, $kitakyusyuAreaData, $chikuhouAreaData, $chikugoAreaData);
+        $combinedData = array_merge($hokubuAreaData, $chubuAreaData, $nanbuAreaData, $ritouAreaData);
 
         // 市名データを抽出
         $allCityNames = Arr::pluck($combinedData, 'cityName');
@@ -44,18 +53,26 @@ class estateInfoFactory extends Factory
         }
 
         $nearest_line = [
-            "福岡市空港線",
-            "西日本鉄道貝塚線",
-            "福岡市七隈線",
-            "西鉄天神大牟田線",
+            // "西日本鉄道貝塚線",
+            // "七隈線",
+            // "西鉄天神大牟田線",
+            // "空港線",
+            "モノレール",
+            "バス",
         ];
         $station = [
-            "姪浜",
-            "唐の原",
-            "六本松",
-            "三苫",
-            "西鉄平尾",
-            "金山",
+            "那覇空港",
+            "県庁前",
+            "おもろまち",
+            "石嶺",
+            "北谷",
+            // "金山",
+            // "姪浜",
+            // "唐の原",
+            // "六本松",
+            // "三苫",
+            // "西鉄平尾",
+            // "金山",
         ];
         $use_area = [
             "一種住居",
