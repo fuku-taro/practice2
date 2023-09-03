@@ -19,6 +19,10 @@ import kitakyusyuData from './kitakyusyuAreaData.json';
 import chikuhouData from './chikuhouAreaData.json';
 import chikugoData from './chikugoAreaData.json';
 import theme from "./theme";
+import hokubuData from '../json/hokubuAreaData.json';
+import chubuData from '../json/chubuAreaData.json';
+import nanbuData from '../json/nanbuAreaData.json';
+import ritouData from '../json/ritouAreaData.json';
 
 const LocationModal = (props) => {
   const [open, setOpen] = React.useState(false);
@@ -27,7 +31,8 @@ const LocationModal = (props) => {
   const [isButtonDisabled, setButtonDisabled] = useState(true);
   const uniqueLabels = [...new Set(props.labels)]; // 重複を取り除く
   // console.log('Data',Data);
-  const areaData = [...fukuokaData, ...kitakyusyuData, ...chikuhouData, ...chikugoData]
+  // const areaData = [...fukuokaData, ...kitakyusyuData, ...chikuhouData, ...chikugoData]
+  const areaData = [...hokubuData, ...chubuData, ...nanbuData, ...ritouData]
 
 
   const handleClickOpen = (scrollType) => () => {

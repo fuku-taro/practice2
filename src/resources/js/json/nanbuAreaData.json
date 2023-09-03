@@ -1,0 +1,672 @@
+[
+    {
+        "cityName": "那覇市",
+        "data": [
+            {
+                "townNames": "赤嶺"
+            },
+            {
+                "townNames": "曙"
+            },
+            {
+                "townNames": "安里"
+            },
+            {
+                "townNames": "旭町"
+            },
+            {
+                "townNames": "安次嶺"
+            },
+            {
+                "townNames": "安謝"
+            },
+            {
+                "townNames": "天久"
+            },
+            {
+                "townNames": "泉崎"
+            },
+            {
+                "townNames": "上之屋"
+            },
+            {
+                "townNames": "宇栄原"
+            },
+            {
+                "townNames": "上間"
+            },
+            {
+                "townNames": "奥武山町"
+            },
+            {
+                "townNames": "大嶺"
+            },
+            {
+                "townNames": "おもろまち"
+            },
+            {
+                "townNames": "小禄"
+            },
+            {
+                "townNames": "鏡水"
+            },
+            {
+                "townNames": "垣花町"
+            },
+            {
+                "townNames": "金城"
+            },
+            {
+                "townNames": "鏡原町"
+            },
+            {
+                "townNames": "具志"
+            },
+            {
+                "townNames": "久米"
+            },
+            {
+                "townNames": "久茂地"
+            },
+            {
+                "townNames": "国場"
+            },
+            {
+                "townNames": "古波蔵"
+            },
+            {
+                "townNames": "識名"
+            },
+            {
+                "townNames": "首里赤田町"
+            },
+            {
+                "townNames": "首里赤平町"
+            },
+            {
+                "townNames": "首里池端町"
+            },
+            {
+                "townNames": "首里石嶺町"
+            },
+            {
+                "townNames": "首里大中町"
+            },
+            {
+                "townNames": "首里大名町"
+            },
+            {
+                "townNames": "首里儀保町"
+            },
+            {
+                "townNames": "首里金城町"
+            },
+            {
+                "townNames": "首里久場川町"
+            },
+            {
+                "townNames": "首里崎山町"
+            },
+            {
+                "townNames": "首里寒川町"
+            },
+            {
+                "townNames": "首里末吉町"
+            },
+            {
+                "townNames": "首里平良町"
+            },
+            {
+                "townNames": "首里汀良町"
+            },
+            {
+                "townNames": "首里当蔵町"
+            },
+            {
+                "townNames": "首里桃原町"
+            },
+            {
+                "townNames": "首里鳥堀町"
+            },
+            {
+                "townNames": "首里真和志町"
+            },
+            {
+                "townNames": "首里山川町"
+            },
+            {
+                "townNames": "住吉町"
+            },
+            {
+                "townNames": "楚辺"
+            },
+            {
+                "townNames": "大道"
+            },
+            {
+                "townNames": "高良"
+            },
+            {
+                "townNames": "田原"
+            },
+            {
+                "townNames": "辻"
+            },
+            {
+                "townNames": "壺川"
+            },
+            {
+                "townNames": "壺屋"
+            },
+            {
+                "townNames": "当間"
+            },
+            {
+                "townNames": "泊"
+            },
+            {
+                "townNames": "通堂町"
+            },
+            {
+                "townNames": "仲井真"
+            },
+            {
+                "townNames": "長田"
+            },
+            {
+                "townNames": "西"
+            },
+            {
+                "townNames": "繁多川"
+            },
+            {
+                "townNames": "東町"
+            },
+            {
+                "townNames": "樋川"
+            },
+            {
+                "townNames": "古島"
+            },
+            {
+                "townNames": "真地"
+            },
+            {
+                "townNames": "前島"
+            },
+            {
+                "townNames": "真嘉比"
+            },
+            {
+                "townNames": "牧志"
+            },
+            {
+                "townNames": "松尾"
+            },
+            {
+                "townNames": "松川"
+            },
+            {
+                "townNames": "松島"
+            },
+            {
+                "townNames": "松山"
+            },
+            {
+                "townNames": "港町"
+            },
+            {
+                "townNames": "三原"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "銘苅"
+            },
+            {
+                "townNames": "山下町"
+            },
+            {
+                "townNames": "与儀"
+            },
+            {
+                "townNames": "寄宮"
+            },
+            {
+                "townNames": "若狭"
+            }
+        ]
+    },
+    {
+        "cityName": "南風腹町",
+        "data": []
+    },
+    {
+        "cityName": "与那原町",
+        "data": [
+            {
+                "townNames": "東浜"
+            },
+            {
+                "townNames": "板良敷"
+            },
+            {
+                "townNames": "上与那原"
+            },
+            {
+                "townNames": "与那原"
+            }
+        ]
+    },
+    {
+        "cityName": "豊見城市",
+        "data": [
+            {
+                "townNames": "伊良波"
+            },
+            {
+                "townNames": "上田"
+            },
+            {
+                "townNames": "翁長"
+            },
+            {
+                "townNames": "嘉数"
+            },
+            {
+                "townNames": "我那覇"
+            },
+            {
+                "townNames": "金良"
+            },
+            {
+                "townNames": "宜保"
+            },
+            {
+                "townNames": "座安"
+            },
+            {
+                "townNames": "瀬長"
+            },
+            {
+                "townNames": "平良"
+            },
+            {
+                "townNames": "田頭"
+            },
+            {
+                "townNames": "高嶺"
+            },
+            {
+                "townNames": "高安"
+            },
+            {
+                "townNames": "渡嘉敷"
+            },
+            {
+                "townNames": "渡橋名"
+            },
+            {
+                "townNames": "豊見城"
+            },
+            {
+                "townNames": "豊崎"
+            },
+            {
+                "townNames": "名嘉地"
+            },
+            {
+                "townNames": "長堂"
+            },
+            {
+                "townNames": "根差部"
+            },
+            {
+                "townNames": "饒波"
+            },
+            {
+                "townNames": "保栄茂"
+            },
+            {
+                "townNames": "真玉橋"
+            },
+            {
+                "townNames": "与根"
+            }
+        ]
+    },
+    {
+        "cityName": "八重瀬町",
+        "data": [
+            {
+                "townNames": "安里"
+            },
+            {
+                "townNames": "新城"
+            },
+            {
+                "townNames": "伊覇"
+            },
+            {
+                "townNames": "上田原"
+            },
+            {
+                "townNames": "大頓"
+            },
+            {
+                "townNames": "宜次"
+            },
+            {
+                "townNames": "具志頭"
+            },
+            {
+                "townNames": "小城"
+            },
+            {
+                "townNames": "後原"
+            },
+            {
+                "townNames": "東風平"
+            },
+            {
+                "townNames": "志多伯"
+            },
+            {
+                "townNames": "高良"
+            },
+            {
+                "townNames": "当銘"
+            },
+            {
+                "townNames": "友寄"
+            },
+            {
+                "townNames": "富盛"
+            },
+            {
+                "townNames": "仲座"
+            },
+            {
+                "townNames": "長毛"
+            },
+            {
+                "townNames": "玻名城"
+            },
+            {
+                "townNames": "外間"
+            },
+            {
+                "townNames": "港川"
+            },
+            {
+                "townNames": "屋宜原"
+            },
+            {
+                "townNames": "与座"
+            },
+            {
+                "townNames": "世名城"
+            }
+        ]
+    },
+    {
+        "cityName": "南城市",
+        "data": [
+            {
+                "townNames": "大里稲嶺"
+            },
+            {
+                "townNames": "大里大里"
+            },
+            {
+                "townNames": "大里大城"
+            },
+            {
+                "townNames": "大里平良"
+            },
+            {
+                "townNames": "大里高平"
+            },
+            {
+                "townNames": "大里仲間"
+            },
+            {
+                "townNames": "大里古堅"
+            },
+            {
+                "townNames": "大里嶺井"
+            },
+            {
+                "townNames": "佐敷伊原"
+            },
+            {
+                "townNames": "佐敷小谷"
+            },
+            {
+                "townNames": "佐敷兼久"
+            },
+            {
+                "townNames": "佐敷佐敷"
+            },
+            {
+                "townNames": "佐敷新開"
+            },
+            {
+                "townNames": "佐敷新里"
+            },
+            {
+                "townNames": "佐敷津波古"
+            },
+            {
+                "townNames": "佐敷手登根"
+            },
+            {
+                "townNames": "佐敷仲伊保"
+            },
+            {
+                "townNames": "佐敷冨祖崎"
+            },
+            {
+                "townNames": "佐敷屋比久"
+            },
+            {
+                "townNames": "玉城愛地"
+            },
+            {
+                "townNames": "玉城糸数"
+            },
+            {
+                "townNames": "玉城奥武"
+            },
+            {
+                "townNames": "玉城親慶原"
+            },
+            {
+                "townNames": "玉城垣花"
+            },
+            {
+                "townNames": "玉城喜良原"
+            },
+            {
+                "townNames": "玉城志堅原"
+            },
+            {
+                "townNames": "玉城玉城"
+            },
+            {
+                "townNames": "玉城當山"
+            },
+            {
+                "townNames": "玉城中山"
+            },
+            {
+                "townNames": "玉城仲村渠"
+            },
+            {
+                "townNames": "玉城百名"
+            },
+            {
+                "townNames": "玉城富里"
+            },
+            {
+                "townNames": "玉城船越"
+            },
+            {
+                "townNames": "玉城堀川"
+            },
+            {
+                "townNames": "玉城前川"
+            },
+            {
+                "townNames": "玉城屋嘉部"
+            },
+            {
+                "townNames": "知念安座真"
+            },
+            {
+                "townNames": "知念海野"
+            },
+            {
+                "townNames": "知念具志堅"
+            },
+            {
+                "townNames": "知念久高"
+            },
+            {
+                "townNames": "知念久手堅"
+            },
+            {
+                "townNames": "知念久原"
+            },
+            {
+                "townNames": "知念志喜屋"
+            },
+            {
+                "townNames": "知念知名"
+            },
+            {
+                "townNames": "知念知念"
+            },
+            {
+                "townNames": "知念山里"
+            },
+            {
+                "townNames": "知念吉富"
+            },
+            {
+                "townNames": "つきしろ"
+            }
+        ]
+    },
+    {
+        "cityName": "糸満市",
+        "data": [
+            {
+                "townNames": "阿波根"
+            },
+            {
+                "townNames": "新垣"
+            },
+            {
+                "townNames": "伊敷"
+            },
+            {
+                "townNames": "糸洲"
+            },
+            {
+                "townNames": "糸満"
+            },
+            {
+                "townNames": "伊原"
+            },
+            {
+                "townNames": "宇江城"
+            },
+            {
+                "townNames": "大里"
+            },
+            {
+                "townNames": "大度"
+            },
+            {
+                "townNames": "賀数"
+            },
+            {
+                "townNames": "兼城"
+            },
+            {
+                "townNames": "北波平"
+            },
+            {
+                "townNames": "喜屋武"
+            },
+            {
+                "townNames": "国吉"
+            },
+            {
+                "townNames": "小波蔵"
+            },
+            {
+                "townNames": "米須"
+            },
+            {
+                "townNames": "座波"
+            },
+            {
+                "townNames": "潮崎町"
+            },
+            {
+                "townNames": "潮平"
+            },
+            {
+                "townNames": "武富"
+            },
+            {
+                "townNames": "束里"
+            },
+            {
+                "townNames": "照屋"
+            },
+            {
+                "townNames": "豊原"
+            },
+            {
+                "townNames": "名城"
+            },
+            {
+                "townNames": "西川町"
+            },
+            {
+                "townNames": "西崎"
+            },
+            {
+                "townNames": "西崎町"
+            },
+            {
+                "townNames": "福地"
+            },
+            {
+                "townNames": "真栄里"
+            },
+            {
+                "townNames": "真栄平"
+            },
+            {
+                "townNames": "真壁"
+            },
+            {
+                "townNames": "摩文仁"
+            },
+            {
+                "townNames": "南波平"
+            },
+            {
+                "townNames": "山城"
+            },
+            {
+                "townNames": "与座"
+            }
+        ]
+    }
+]

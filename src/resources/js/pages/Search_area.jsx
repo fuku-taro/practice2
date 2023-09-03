@@ -17,6 +17,10 @@ import { Grid } from "@mui/material";
 // import kitakyusyuArea from '../components/SearchKitakyusyuArea';
 // import chikuhouArea from '../components/SearchChikuhouArea';
 // import chikugoArea from '../components/SearchChikugoArea';
+import hokubu from "../json/Hokubu";
+import chubu from "../json/Chubu";
+import nanbu from "../json/Nanbu";
+import ritou from "../json/Ritou";
 
 const dummy = [
     { id: 1, url: "/Search_area", title: <Checkbox>福岡市</Checkbox> },
@@ -33,28 +37,44 @@ export default function Search_area() {
     const [kitakyusyuAreaData, setKitakyusyuAreaData] = useState([]);
     const [chikuhouAreaData, setChikuhouAreaData] = useState([]);
     const [chikugoAreaData, setChikugoAreaData] = useState([]);
+    const [hokubuAreaData, setHokubuAreaData] = useState([]);
+    const [chubuAreaData, setChubuAreaData] = useState([]);
+    const [nanbuAreaData, setNanbuAreaData] = useState([]);
+    const [ritouAreaData, setRitouAreaData] = useState([]);
 
     useEffect(() => {
-        postData();
+        // postData();
     }, []); // パラメーターの変更時に再度データを取得
-    // console.log(fukuokaAreaData);
-    // console.log(kitakyusyuAreaData);
-    // console.log(chikuhouAreaData);
-    // console.log(chikugoAreaData);
+    // console.log(hokubuAreaData);
+    // console.log(chubuAreaData);
+    // console.log(nanbuAreaData);
+    // console.log(nanbuAreaData);
     const postData = async () => {
         try {
             // const fukuokaAreaJson = JSON.stringify(fukuokaArea);
             // const kitakyusyuAreaJson = JSON.stringify(kitakyusyuArea);
             // const chikuhouAreaJson = JSON.stringify(chikuhouArea);
             // const chikugoAreaJson = JSON.stringify(chikugoArea);
+            // const hokubuAreaJson = JSON.stringify(hokubu);
+            // const chubuAreaJson = JSON.stringify(chubu);
+            // const nanbuAreaJson = JSON.stringify(nanbu);
+            // const ritouAreaJson = JSON.stringify(ritou);
             // const FukuokaAreaAddresses = await axios.post("/api/getFukuokaAreaAddresses" , {fukuokaAreaJson});
             // const KitakyusyuAreaAddresses = await axios.post("/api/getKitakyusyuAreaAddresses" , {kitakyusyuAreaJson});
             // const ChikuhouAreaAddresses = await axios.post("/api/getChikuhouAreaAddresses" , {chikuhouAreaJson});
             // const ChikugoAreaAddresses = await axios.post("/api/getChikugoAreaAddresses" , {chikugoAreaJson});
+            // const hokubuAreaAddresses = await axios.post("/api/getHokubuAreaAddresses" , {hokubuAreaJson});
+            // const chubuAreaAddresses = await axios.post("/api/getChubuAreaAddresses" , {chubuAreaJson});
+            // const nanbuAreaAddresses = await axios.post("/api/getNanbuAreaAddresses" , {nanbuAreaJson});
+            // const ritouAreaAddresses = await axios.post("/api/getRitouAreaAddresses" , {ritouAreaJson});
             // setFukuokaAreaData(FukuokaAreaAddresses.data.data);
             // setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
             // setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
             // setChikugoAreaData(ChikugoAreaAddresses.data.data);
+            // setHokubuAreaData(hokubuAreaAddresses.data.data);
+            // setChubuAreaData(chubuAreaAddresses.data.data);
+            // setNanbuAreaData(nanbuAreaAddresses.data.data);
+            // setRitouAreaData(ritouAreaAddresses.data.data);
         } catch (error) {
             console.error(error);
         }
@@ -91,7 +111,7 @@ export default function Search_area() {
                         <div className={styles.content}>
                             <Grid
                                 container
-                                xs={6}
+                                xs={8}
                                 sx={{
                                     display: { xs: "none", sm: "block" },
                                     height: "auto",

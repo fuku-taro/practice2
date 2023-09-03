@@ -1,0 +1,515 @@
+[
+    {
+        "cityName": "石垣島",
+        "data": [
+            {
+                "townNames": "新川"
+            },
+            {
+                "townNames": "石垣"
+            },
+            {
+                "townNames": "伊原間"
+            },
+            {
+                "townNames": "大川"
+            },
+            {
+                "townNames": "大浜"
+            },
+            {
+                "townNames": "川平"
+            },
+            {
+                "townNames": "崎枝"
+            },
+            {
+                "townNames": "白保"
+            },
+            {
+                "townNames": "新栄町"
+            },
+            {
+                "townNames": "桃里"
+            },
+            {
+                "townNames": "登野城"
+            },
+            {
+                "townNames": "登野城尖閣"
+            },
+            {
+                "townNames": "名蔵"
+            },
+            {
+                "townNames": "野底"
+            },
+            {
+                "townNames": "南ぬ浜町"
+            },
+            {
+                "townNames": "浜崎町"
+            },
+            {
+                "townNames": "平得"
+            },
+            {
+                "townNames": "平久保"
+            },
+            {
+                "townNames": "桴海"
+            },
+            {
+                "townNames": "真栄里"
+            },
+            {
+                "townNames": "美崎町"
+            },
+            {
+                "townNames": "宮良"
+            },
+            {
+                "townNames": "盛山"
+            },
+            {
+                "townNames": "八島町"
+            }
+        ]
+    },
+    {
+        "cityName": "宮古島",
+        "data": [
+            {
+                "townNames": "伊良部池間添"
+            },
+            {
+                "townNames": "伊良部伊良部"
+            },
+            {
+                "townNames": "伊良部国仲"
+            },
+            {
+                "townNames": "伊良部佐和田"
+            },
+            {
+                "townNames": "伊良部仲地"
+            },
+            {
+                "townNames": "伊良部長浜"
+            },
+            {
+                "townNames": "伊良部前里添"
+            },
+            {
+                "townNames": "上野上野"
+            },
+            {
+                "townNames": "上野新里"
+            },
+            {
+                "townNames": "上野野原"
+            },
+            {
+                "townNames": "上野宮国"
+            },
+            {
+                "townNames": "城辺新城"
+            },
+            {
+                "townNames": "城辺砂川"
+            },
+            {
+                "townNames": "城辺下里添"
+            },
+            {
+                "townNames": "城辺友利"
+            },
+            {
+                "townNames": "城辺長間"
+            },
+            {
+                "townNames": "城辺西里添"
+            },
+            {
+                "townNames": "城辺比嘉"
+            },
+            {
+                "townNames": "城辺福里"
+            },
+            {
+                "townNames": "城辺保良"
+            },
+            {
+                "townNames": "塩川"
+            },
+            {
+                "townNames": "下地上地"
+            },
+            {
+                "townNames": "下地嘉手苅"
+            },
+            {
+                "townNames": "下地川満"
+            },
+            {
+                "townNames": "下地来間"
+            },
+            {
+                "townNames": "下地洲鎌"
+            },
+            {
+                "townNames": "下地与那覇"
+            },
+            {
+                "townNames": "仲筋"
+            },
+            {
+                "townNames": "平良池間"
+            },
+            {
+                "townNames": "平良大浦"
+            },
+            {
+                "townNames": "平良大神"
+            },
+            {
+                "townNames": "平良狩俣"
+            },
+            {
+                "townNames": "平良久貝"
+            },
+            {
+                "townNames": "平良島尻"
+            },
+            {
+                "townNames": "平良下里"
+            },
+            {
+                "townNames": "平良荷川取"
+            },
+            {
+                "townNames": "平良西里"
+            },
+            {
+                "townNames": "平良西仲宗根"
+            },
+            {
+                "townNames": "平良西原"
+            },
+            {
+                "townNames": "平良東仲宗根"
+            },
+            {
+                "townNames": "平良東仲宗根添"
+            },
+            {
+                "townNames": "平良前里"
+            },
+            {
+                "townNames": "平良松原"
+            },
+            {
+                "townNames": "水納"
+            }
+        ]
+    },
+    {
+        "cityName": "久米島",
+        "data": [
+            {
+                "townNames": "阿嘉"
+            },
+            {
+                "townNames": "宇江城"
+            },
+            {
+                "townNames": "上江洲"
+            },
+            {
+                "townNames": "宇根"
+            },
+            {
+                "townNames": "奥武"
+            },
+            {
+                "townNames": "大田"
+            },
+            {
+                "townNames": "大原"
+            },
+            {
+                "townNames": "嘉手苅"
+            },
+            {
+                "townNames": "兼城"
+            },
+            {
+                "townNames": "北原"
+            },
+            {
+                "townNames": "儀間"
+            },
+            {
+                "townNames": "具志川"
+            },
+            {
+                "townNames": "島尻"
+            },
+            {
+                "townNames": "謝名堂"
+            },
+            {
+                "townNames": "銭田"
+            },
+            {
+                "townNames": "鳥島"
+            },
+            {
+                "townNames": "仲地"
+            },
+            {
+                "townNames": "仲泊"
+            },
+            {
+                "townNames": "仲村渠"
+            },
+            {
+                "townNames": "西銘"
+            },
+            {
+                "townNames": "比嘉"
+            },
+            {
+                "townNames": "比屋定"
+            },
+            {
+                "townNames": "真我里"
+            },
+            {
+                "townNames": "真謝"
+            },
+            {
+                "townNames": "山城"
+            },
+            {
+                "townNames": "山里"
+            }
+        ]
+    },
+    {
+        "cityName": "伊江島",
+        "data": [
+            {
+                "townNames": "川平"
+            },
+            {
+                "townNames": "西江上"
+            },
+            {
+                "townNames": "西江前"
+            },
+            {
+                "townNames": "東江上"
+            },
+            {
+                "townNames": "東江前"
+            }
+        ]
+    },
+    {
+        "cityName": "粟国島",
+        "data": [
+            {
+                "townNames": "西"
+            },
+            {
+                "townNames": "浜"
+            },
+            {
+                "townNames": "東"
+            }
+        ]
+    },
+    {
+        "cityName": "伊是名島",
+        "data": [
+            {
+                "townNames": "伊是名"
+            },
+            {
+                "townNames": "内花"
+            },
+            {
+                "townNames": "諸見"
+            },
+            {
+                "townNames": "勢理客"
+            },
+            {
+                "townNames": "仲田"
+            }
+        ]
+    },
+    {
+        "cityName": "多良間島",
+        "data": [
+            {
+                "townNames": "塩川"
+            },
+            {
+                "townNames": "仲筋"
+            },
+            {
+                "townNames": "水納"
+            }
+        ]
+    },
+    {
+        "cityName": "渡名喜島",
+        "data": [
+            {
+                "townNames": "渡名喜村一円"
+            }
+        ]
+    },
+    {
+        "cityName": "伊平屋島",
+        "data": [
+            {
+                "townNames": "我喜屋"
+            },
+            {
+                "townNames": "島尻"
+            },
+            {
+                "townNames": "田名"
+            },
+            {
+                "townNames": "野甫"
+            },
+            {
+                "townNames": "前泊"
+            }
+        ]
+    },
+    {
+        "cityName": "竹富島",
+        "data": [
+            {
+                "townNames": "新城"
+            },
+            {
+                "townNames": "西表"
+            },
+            {
+                "townNames": "上原"
+            },
+            {
+                "townNames": "黒島"
+            },
+            {
+                "townNames": "小浜"
+            },
+            {
+                "townNames": "古見"
+            },
+            {
+                "townNames": "崎山"
+            },
+            {
+                "townNames": "高那"
+            },
+            {
+                "townNames": "竹富"
+            },
+            {
+                "townNames": "南風見"
+            },
+            {
+                "townNames": "南風見仲"
+            },
+            {
+                "townNames": "波照間"
+            },
+            {
+                "townNames": "鳩間"
+            }
+        ]
+    },
+    {
+        "cityName": "座間味島",
+        "data": [
+            {
+                "townNames": "阿嘉"
+            },
+            {
+                "townNames": "阿佐"
+            },
+            {
+                "townNames": "阿真"
+            },
+            {
+                "townNames": "慶留間"
+            },
+            {
+                "townNames": "座間味"
+            }
+        ]
+    },
+    {
+        "cityName": "北大東島",
+        "data": [
+            {
+                "townNames": "中野"
+            },
+            {
+                "townNames": "港"
+            },
+            {
+                "townNames": "南"
+            }
+        ]
+    },
+    {
+        "cityName": "与那国島",
+        "data": [
+            {
+                "townNames": "与那国"
+            }
+        ]
+    },
+    {
+        "cityName": "渡嘉敷島",
+        "data": [
+            {
+                "townNames": "阿波連"
+            },
+            {
+                "townNames": "渡嘉敷"
+            }
+        ]
+    },
+    {
+        "cityName": "南大東島",
+        "data": [
+            {
+                "townNames": "池之沢"
+            },
+            {
+                "townNames": "北"
+            },
+            {
+                "townNames": "旧東"
+            },
+            {
+                "townNames": "在所"
+            },
+            {
+                "townNames": "新東"
+            },
+            {
+                "townNames": "南"
+            }
+        ]
+    }
+]

@@ -1,0 +1,799 @@
+[
+    {
+        "cityName": "沖縄市",
+        "data": [
+            {
+                "townNames": "安慶田"
+            },
+            {
+                "townNames": "明道"
+            },
+            {
+                "townNames": "泡瀬"
+            },
+            {
+                "townNames": "池原"
+            },
+            {
+                "townNames": "上地"
+            },
+            {
+                "townNames": "大里"
+            },
+            {
+                "townNames": "海邦"
+            },
+            {
+                "townNames": "海邦町"
+            },
+            {
+                "townNames": "嘉間良"
+            },
+            {
+                "townNames": "久保田"
+            },
+            {
+                "townNames": "倉敷"
+            },
+            {
+                "townNames": "越来"
+            },
+            {
+                "townNames": "古謝"
+            },
+            {
+                "townNames": "古謝津嘉山町"
+            },
+            {
+                "townNames": "胡屋"
+            },
+            {
+                "townNames": "潮乃森"
+            },
+            {
+                "townNames": "白川"
+            },
+            {
+                "townNames": "城前町"
+            },
+            {
+                "townNames": "住吉"
+            },
+            {
+                "townNames": "園田"
+            },
+            {
+                "townNames": "高原"
+            },
+            {
+                "townNames": "知花"
+            },
+            {
+                "townNames": "中央"
+            },
+            {
+                "townNames": "照屋"
+            },
+            {
+                "townNames": "桃原"
+            },
+            {
+                "townNames": "仲宗根町"
+            },
+            {
+                "townNames": "登川"
+            },
+            {
+                "townNames": "東"
+            },
+            {
+                "townNames": "比屋根"
+            },
+            {
+                "townNames": "松本"
+            },
+            {
+                "townNames": "美里"
+            },
+            {
+                "townNames": "美里仲原町"
+            },
+            {
+                "townNames": "南桃原"
+            },
+            {
+                "townNames": "美原"
+            },
+            {
+                "townNames": "宮里"
+            },
+            {
+                "townNames": "室川"
+            },
+            {
+                "townNames": "諸見里"
+            },
+            {
+                "townNames": "八重島"
+            },
+            {
+                "townNames": "山内"
+            },
+            {
+                "townNames": "山里"
+            },
+            {
+                "townNames": "与儀"
+            }
+        ]
+    },
+    {
+        "cityName": "読谷村",
+        "data": [
+            {
+                "townNames": "伊良皆"
+            },
+            {
+                "townNames": "上地"
+            },
+            {
+                "townNames": "宇座"
+            },
+            {
+                "townNames": "大木"
+            },
+            {
+                "townNames": "大湾"
+            },
+            {
+                "townNames": "喜名"
+            },
+            {
+                "townNames": "儀間"
+            },
+            {
+                "townNames": "座喜味"
+            },
+            {
+                "townNames": "瀬名波"
+            },
+            {
+                "townNames": "楚辺"
+            },
+            {
+                "townNames": "高志保"
+            },
+            {
+                "townNames": "渡具知"
+            },
+            {
+                "townNames": "渡慶次"
+            },
+            {
+                "townNames": "都屋"
+            },
+            {
+                "townNames": "長浜"
+            },
+            {
+                "townNames": "波平"
+            },
+            {
+                "townNames": "比謝"
+            },
+            {
+                "townNames": "比謝矼"
+            },
+            {
+                "townNames": "古堅"
+            }
+        ]
+    },
+    {
+        "cityName": "うるま市",
+        "data": [
+            {
+                "townNames": "赤野"
+            },
+            {
+                "townNames": "赤道"
+            },
+            {
+                "townNames": "安慶名"
+            },
+            {
+                "townNames": "石川"
+            },
+            {
+                "townNames": "石川赤崎"
+            },
+            {
+                "townNames": "石川東山"
+            },
+            {
+                "townNames": "石川東山本町"
+            },
+            {
+                "townNames": "石川曙"
+            },
+            {
+                "townNames": "石川石崎"
+            },
+            {
+                "townNames": "石川伊波"
+            },
+            {
+                "townNames": "石川嘉手苅"
+            },
+            {
+                "townNames": "石川白浜"
+            },
+            {
+                "townNames": "石川楚南"
+            },
+            {
+                "townNames": "石川東恩納"
+            },
+            {
+                "townNames": "石川東恩納崎"
+            },
+            {
+                "townNames": "石川山城"
+            },
+            {
+                "townNames": "西原"
+            },
+            {
+                "townNames": "上江洲"
+            },
+            {
+                "townNames": "宇堅"
+            },
+            {
+                "townNames": "江洲"
+            },
+            {
+                "townNames": "栄野比"
+            },
+            {
+                "townNames": "大田"
+            },
+            {
+                "townNames": "勝連内間"
+            },
+            {
+                "townNames": "勝連津堅"
+            },
+            {
+                "townNames": "勝連南風原"
+            },
+            {
+                "townNames": "勝連浜"
+            },
+            {
+                "townNames": "勝連比嘉"
+            },
+            {
+                "townNames": "勝連平敷屋"
+            },
+            {
+                "townNames": "勝連平安名"
+            },
+            {
+                "townNames": "兼箇段"
+            },
+            {
+                "townNames": "川崎"
+            },
+            {
+                "townNames": "川田"
+            },
+            {
+                "townNames": "喜仲"
+            },
+            {
+                "townNames": "喜屋武"
+            },
+            {
+                "townNames": "具志川"
+            },
+            {
+                "townNames": "昆布"
+            },
+            {
+                "townNames": "塩屋"
+            },
+            {
+                "townNames": "州崎"
+            },
+            {
+                "townNames": "平良川"
+            },
+            {
+                "townNames": "高江洲"
+            },
+            {
+                "townNames": "田場"
+            },
+            {
+                "townNames": "天願"
+            },
+            {
+                "townNames": "豊原"
+            },
+            {
+                "townNames": "仲嶺"
+            },
+            {
+                "townNames": "前原"
+            },
+            {
+                "townNames": "みどり町"
+            },
+            {
+                "townNames": "宮里"
+            },
+            {
+                "townNames": "与那城"
+            },
+            {
+                "townNames": "与那城安勢理"
+            },
+            {
+                "townNames": "与那城伊計"
+            },
+            {
+                "townNames": "与那城池味"
+            },
+            {
+                "townNames": "与那城上原"
+            },
+            {
+                "townNames": "与那城中央"
+            },
+            {
+                "townNames": "与那城照間"
+            },
+            {
+                "townNames": "与那城桃原"
+            },
+            {
+                "townNames": "与那城西原"
+            },
+            {
+                "townNames": "与那城饒辺"
+            },
+            {
+                "townNames": "与那城平宮"
+            },
+            {
+                "townNames": "与那城平安座"
+            },
+            {
+                "townNames": "与那城宮城"
+            },
+            {
+                "townNames": "与那城屋慶名"
+            },
+            {
+                "townNames": "与那城屋平"
+            }
+        ]
+    },
+    {
+        "cityName": "北谷町",
+        "data": [
+            {
+                "townNames": "伊平"
+            },
+            {
+                "townNames": "大村"
+            },
+            {
+                "townNames": "上勢頭"
+            },
+            {
+                "townNames": "北前"
+            },
+            {
+                "townNames": "桑江"
+            },
+            {
+                "townNames": "砂辺"
+            },
+            {
+                "townNames": "玉上"
+            },
+            {
+                "townNames": "北谷"
+            },
+            {
+                "townNames": "桃原"
+            },
+            {
+                "townNames": "浜川"
+            },
+            {
+                "townNames": "港"
+            },
+            {
+                "townNames": "美浜"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "吉原"
+            }
+        ]
+    },
+    {
+        "cityName": "嘉手納町",
+        "data": [
+            {
+                "townNames": "嘉手納"
+            },
+            {
+                "townNames": "兼久"
+            },
+            {
+                "townNames": "久得"
+            },
+            {
+                "townNames": "水釜"
+            },
+            {
+                "townNames": "屋良"
+            }
+        ]
+    },
+    {
+        "cityName": "北中城村",
+        "data": [
+            {
+                "townNames": "安谷屋"
+            },
+            {
+                "townNames": "熱田"
+            },
+            {
+                "townNames": "大城"
+            },
+            {
+                "townNames": "荻道"
+            },
+            {
+                "townNames": "喜舎場"
+            },
+            {
+                "townNames": "島袋"
+            },
+            {
+                "townNames": "瑞慶覧"
+            },
+            {
+                "townNames": "仲順"
+            },
+            {
+                "townNames": "渡口"
+            },
+            {
+                "townNames": "比嘉"
+            },
+            {
+                "townNames": "美崎"
+            },
+            {
+                "townNames": "屋宜原"
+            },
+            {
+                "townNames": "ライカム"
+            },
+            {
+                "townNames": "和仁屋"
+            }
+        ]
+    },
+    {
+        "cityName": "宜野湾市",
+        "data": [
+            {
+                "townNames": "愛知"
+            },
+            {
+                "townNames": "赤道"
+            },
+            {
+                "townNames": "新城"
+            },
+            {
+                "townNames": "伊佐"
+            },
+            {
+                "townNames": "上原"
+            },
+            {
+                "townNames": "宇地泊"
+            },
+            {
+                "townNames": "大謝名"
+            },
+            {
+                "townNames": "大山"
+            },
+            {
+                "townNames": "嘉数"
+            },
+            {
+                "townNames": "我如古"
+            },
+            {
+                "townNames": "神山"
+            },
+            {
+                "townNames": "宜野湾"
+            },
+            {
+                "townNames": "喜友名"
+            },
+            {
+                "townNames": "佐真下"
+            },
+            {
+                "townNames": "志真志"
+            },
+            {
+                "townNames": "長田"
+            },
+            {
+                "townNames": "野嵩"
+            },
+            {
+                "townNames": "普天間"
+            },
+            {
+                "townNames": "真栄原"
+            },
+            {
+                "townNames": "真志喜"
+            }
+        ]
+    },
+    {
+        "cityName": "西原町",
+        "data": [
+            {
+                "townNames": "東崎"
+            },
+            {
+                "townNames": "安室"
+            },
+            {
+                "townNames": "池田"
+            },
+            {
+                "townNames": "上原"
+            },
+            {
+                "townNames": "内間"
+            },
+            {
+                "townNames": "翁長"
+            },
+            {
+                "townNames": "小那覇"
+            },
+            {
+                "townNames": "掛保久"
+            },
+            {
+                "townNames": "我謝"
+            },
+            {
+                "townNames": "嘉手苅"
+            },
+            {
+                "townNames": "兼久"
+            },
+            {
+                "townNames": "幸地"
+            },
+            {
+                "townNames": "小橋川"
+            },
+            {
+                "townNames": "小波津"
+            },
+            {
+                "townNames": "呉屋"
+            },
+            {
+                "townNames": "千原"
+            },
+            {
+                "townNames": "棚原"
+            },
+            {
+                "townNames": "津花波"
+            },
+            {
+                "townNames": "桃原"
+            },
+            {
+                "townNames": "徳佐田"
+            },
+            {
+                "townNames": "森川"
+            },
+            {
+                "townNames": "与那城"
+            }
+        ]
+    },
+    {
+        "cityName": "中城村",
+        "data": [
+            {
+                "townNames": "安里"
+            },
+            {
+                "townNames": "安谷屋"
+            },
+            {
+                "townNames": "熱田"
+            },
+            {
+                "townNames": "新垣"
+            },
+            {
+                "townNames": "伊舎堂"
+            },
+            {
+                "townNames": "伊集"
+            },
+            {
+                "townNames": "大城"
+            },
+            {
+                "townNames": "荻道"
+            },
+            {
+                "townNames": "奥間"
+            },
+            {
+                "townNames": "喜舎場"
+            },
+            {
+                "townNames": "北上原"
+            },
+            {
+                "townNames": "北浜"
+            },
+            {
+                "townNames": "久場"
+            },
+            {
+                "townNames": "島袋"
+            },
+            {
+                "townNames": "瑞慶覧"
+            },
+            {
+                "townNames": "添石"
+            },
+            {
+                "townNames": "仲順"
+            },
+            {
+                "townNames": "津覇"
+            },
+            {
+                "townNames": "当間"
+            },
+            {
+                "townNames": "渡口"
+            },
+            {
+                "townNames": "泊"
+            },
+            {
+                "townNames": "登又"
+            },
+            {
+                "townNames": "浜"
+            },
+            {
+                "townNames": "比嘉"
+            },
+            {
+                "townNames": "美崎"
+            },
+            {
+                "townNames": "南上原"
+            },
+            {
+                "townNames": "南浜"
+            },
+            {
+                "townNames": "屋宜"
+            },
+            {
+                "townNames": "屋宜原"
+            },
+            {
+                "townNames": "ライカム"
+            },
+            {
+                "townNames": "和宇慶"
+            },
+            {
+                "townNames": "和仁屋"
+            }
+        ]
+    },
+    {
+        "cityName": "浦添市",
+        "data": [
+            {
+                "townNames": "安波茶"
+            },
+            {
+                "townNames": "伊祖"
+            },
+            {
+                "townNames": "伊奈武瀬"
+            },
+            {
+                "townNames": "西洲"
+            },
+            {
+                "townNames": "内間"
+            },
+            {
+                "townNames": "大平"
+            },
+            {
+                "townNames": "経塚"
+            },
+            {
+                "townNames": "城間"
+            },
+            {
+                "townNames": "小湾"
+            },
+            {
+                "townNames": "勢理客"
+            },
+            {
+                "townNames": "沢岻"
+            },
+            {
+                "townNames": "当山"
+            },
+            {
+                "townNames": "仲西"
+            },
+            {
+                "townNames": "仲間"
+            },
+            {
+                "townNames": "西原"
+            },
+            {
+                "townNames": "前田"
+            },
+            {
+                "townNames": "牧港"
+            },
+            {
+                "townNames": "港川"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "屋富祖"
+            }
+        ]
+    }
+]

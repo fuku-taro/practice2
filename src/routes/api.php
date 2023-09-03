@@ -106,6 +106,14 @@ Route::get('/getChikuhouAreaAddresses', [AddressController::class, 'getChikuhouA
 Route::post('/getChikuhouAreaAddresses', [AddressController::class, 'getChikuhouAreaAddresses']);
 Route::get('/getChikugoAreaAddresses', [AddressController::class, 'getChikugoAreaAddresses']);
 Route::post('/getChikugoAreaAddresses', [AddressController::class, 'getChikugoAreaAddresses']);
+Route::get('/getHokubuAreaAddresses', [AddressController::class, 'getHokubuAreaAddresses']);
+Route::post('/getHokubuAreaAddresses', [AddressController::class, 'getHokubuAreaAddresses']);
+Route::get('/getChubuAreaAddresses', [AddressController::class, 'getChubuAreaAddresses']);
+Route::post('/getChubuAreaAddresses', [AddressController::class, 'getChubuAreaAddresses']);
+Route::get('/getNanbuAreaAddresses', [AddressController::class, 'getNanbuAreaAddresses']);
+Route::post('/getNanbuAreaAddresses', [AddressController::class, 'getNanbuAreaAddresses']);
+Route::get('/getRitouAreaAddresses', [AddressController::class, 'getRitouAreaAddresses']);
+Route::post('/getRitouAreaAddresses', [AddressController::class, 'getRitouAreaAddresses']);
 
 // データの作成
 Route::post('/data', function (Request $request) {

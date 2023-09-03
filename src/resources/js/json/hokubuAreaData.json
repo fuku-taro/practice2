@@ -1,0 +1,833 @@
+[
+    {
+        "cityName": "名護市",
+        "data": [
+            {
+                "townNames": "東江"
+            },
+            {
+                "townNames": "旭川"
+            },
+            {
+                "townNames": "安部"
+            },
+            {
+                "townNames": "安和"
+            },
+            {
+                "townNames": "伊差川"
+            },
+            {
+                "townNames": "稲嶺"
+            },
+            {
+                "townNames": "宇茂佐"
+            },
+            {
+                "townNames": "宇茂佐の森"
+            },
+            {
+                "townNames": "運天原"
+            },
+            {
+                "townNames": "大浦"
+            },
+            {
+                "townNames": "大川"
+            },
+            {
+                "townNames": "大北"
+            },
+            {
+                "townNames": "大中"
+            },
+            {
+                "townNames": "大西"
+            },
+            {
+                "townNames": "大東"
+            },
+            {
+                "townNames": "大南"
+            },
+            {
+                "townNames": "親川"
+            },
+            {
+                "townNames": "勝山"
+            },
+            {
+                "townNames": "我部"
+            },
+            {
+                "townNames": "我部祖河"
+            },
+            {
+                "townNames": "嘉陽"
+            },
+            {
+                "townNames": "川上"
+            },
+            {
+                "townNames": "喜瀬"
+            },
+            {
+                "townNames": "許田"
+            },
+            {
+                "townNames": "久志"
+            },
+            {
+                "townNames": "城"
+            },
+            {
+                "townNames": "源河"
+            },
+            {
+                "townNames": "幸喜"
+            },
+            {
+                "townNames": "呉我"
+            },
+            {
+                "townNames": "古我知"
+            },
+            {
+                "townNames": "数久田"
+            },
+            {
+                "townNames": "済井出"
+            },
+            {
+                "townNames": "瀬嵩"
+            },
+            {
+                "townNames": "田井等"
+            },
+            {
+                "townNames": "汀間"
+            },
+            {
+                "townNames": "天仁屋"
+            },
+            {
+                "townNames": "豊原"
+            },
+            {
+                "townNames": "仲尾"
+            },
+            {
+                "townNames": "仲尾次"
+            },
+            {
+                "townNames": "中山"
+            },
+            {
+                "townNames": "名護"
+            },
+            {
+                "townNames": "為又"
+            },
+            {
+                "townNames": "二見"
+            },
+            {
+                "townNames": "振慶名"
+            },
+            {
+                "townNames": "辺野古"
+            },
+            {
+                "townNames": "真喜屋"
+            },
+            {
+                "townNames": "港"
+            },
+            {
+                "townNames": "三原"
+            },
+            {
+                "townNames": "宮里"
+            },
+            {
+                "townNames": "屋我"
+            },
+            {
+                "townNames": "屋部"
+            },
+            {
+                "townNames": "山入端"
+            },
+            {
+                "townNames": "世冨慶"
+            },
+            {
+                "townNames": "饒平名"
+            }
+        ]
+    },
+    {
+        "cityName": "本部町",
+        "data": [
+            {
+                "townNames": "石川"
+            },
+            {
+                "townNames": "伊豆味"
+            },
+            {
+                "townNames": "伊野波"
+            },
+            {
+                "townNames": "大堂"
+            },
+            {
+                "townNames": "浦崎"
+            },
+            {
+                "townNames": "大嘉陽"
+            },
+            {
+                "townNames": "大浜"
+            },
+            {
+                "townNames": "嘉津宇"
+            },
+            {
+                "townNames": "北里"
+            },
+            {
+                "townNames": "具志堅"
+            },
+            {
+                "townNames": "健堅"
+            },
+            {
+                "townNames": "崎本部"
+            },
+            {
+                "townNames": "謝花"
+            },
+            {
+                "townNames": "新里"
+            },
+            {
+                "townNames": "瀬底"
+            },
+            {
+                "townNames": "谷茶"
+            },
+            {
+                "townNames": "渡久地"
+            },
+            {
+                "townNames": "豊原"
+            },
+            {
+                "townNames": "並里"
+            },
+            {
+                "townNames": "野原"
+            },
+            {
+                "townNames": "浜元"
+            },
+            {
+                "townNames": "東"
+            },
+            {
+                "townNames": "備瀬"
+            },
+            {
+                "townNames": "古島"
+            },
+            {
+                "townNames": "辺名地"
+            },
+            {
+                "townNames": "山川"
+            },
+            {
+                "townNames": "山里"
+            }
+        ]
+    },
+    {
+        "cityName": "国頭村",
+        "data": [
+            {
+                "townNames": "安田"
+            },
+            {
+                "townNames": "安波"
+            },
+            {
+                "townNames": "安富祖"
+            },
+            {
+                "townNames": "天底"
+            },
+            {
+                "townNames": "有銘"
+            },
+            {
+                "townNames": "伊芸"
+            },
+            {
+                "townNames": "伊地"
+            },
+            {
+                "townNames": "石川"
+            },
+            {
+                "townNames": "伊豆味"
+            },
+            {
+                "townNames": "伊野波"
+            },
+            {
+                "townNames": "今泊"
+            },
+            {
+                "townNames": "上原"
+            },
+            {
+                "townNames": "宇嘉"
+            },
+            {
+                "townNames": "大堂"
+            },
+            {
+                "townNames": "宇良"
+            },
+            {
+                "townNames": "浦崎"
+            },
+            {
+                "townNames": "運天"
+            },
+            {
+                "townNames": "江洲"
+            },
+            {
+                "townNames": "大兼久"
+            },
+            {
+                "townNames": "大嘉陽"
+            },
+            {
+                "townNames": "大宜味"
+            },
+            {
+                "townNames": "大浜"
+            },
+            {
+                "townNames": "奥"
+            },
+            {
+                "townNames": "奥間"
+            },
+            {
+                "townNames": "押川"
+            },
+            {
+                "townNames": "恩納"
+            },
+            {
+                "townNames": "鏡地"
+            },
+            {
+                "townNames": "嘉津宇"
+            },
+            {
+                "townNames": "兼次"
+            },
+            {
+                "townNames": "上運天"
+            },
+            {
+                "townNames": "川田"
+            },
+            {
+                "townNames": "川平"
+            },
+            {
+                "townNames": "漢那"
+            },
+            {
+                "townNames": "喜如嘉"
+            },
+            {
+                "townNames": "喜瀬武原"
+            },
+            {
+                "townNames": "北里"
+            },
+            {
+                "townNames": "宜名真"
+            },
+            {
+                "townNames": "宜野座"
+            },
+            {
+                "townNames": "金武"
+            },
+            {
+                "townNames": "具志堅"
+            },
+            {
+                "townNames": "慶佐次"
+            },
+            {
+                "townNames": "健堅"
+            },
+            {
+                "townNames": "古宇利"
+            },
+            {
+                "townNames": "越地"
+            },
+            {
+                "townNames": "呉我山"
+            },
+            {
+                "townNames": "崎本部"
+            },
+            {
+                "townNames": "崎山"
+            },
+            {
+                "townNames": "佐手"
+            },
+            {
+                "townNames": "塩屋"
+            },
+            {
+                "townNames": "謝敷"
+            },
+            {
+                "townNames": "謝名"
+            },
+            {
+                "townNames": "謝名城"
+            },
+            {
+                "townNames": "謝花"
+            },
+            {
+                "townNames": "諸志"
+            },
+            {
+                "townNames": "白浜"
+            },
+            {
+                "townNames": "新里"
+            },
+            {
+                "townNames": "瀬底"
+            },
+            {
+                "townNames": "瀬良垣"
+            },
+            {
+                "townNames": "勢理客"
+            },
+            {
+                "townNames": "惣慶"
+            },
+            {
+                "townNames": "楚洲"
+            },
+            {
+                "townNames": "大保"
+            },
+            {
+                "townNames": "平良"
+            },
+            {
+                "townNames": "高江"
+            },
+            {
+                "townNames": "田嘉里"
+            },
+            {
+                "townNames": "玉城"
+            },
+            {
+                "townNames": "田港"
+            },
+            {
+                "townNames": "谷茶"
+            },
+            {
+                "townNames": "谷茶"
+            },
+            {
+                "townNames": "津波"
+            },
+            {
+                "townNames": "桃原"
+            },
+            {
+                "townNames": "渡喜仁"
+            },
+            {
+                "townNames": "渡久地"
+            },
+            {
+                "townNames": "豊原"
+            },
+            {
+                "townNames": "仲尾次"
+            },
+            {
+                "townNames": "仲宗根"
+            },
+            {
+                "townNames": "仲泊"
+            },
+            {
+                "townNames": "名嘉真"
+            },
+            {
+                "townNames": "並里"
+            },
+            {
+                "townNames": "西江上"
+            },
+            {
+                "townNames": "西江前"
+            },
+            {
+                "townNames": "饒波"
+            },
+            {
+                "townNames": "根路銘"
+            },
+            {
+                "townNames": "野原"
+            },
+            {
+                "townNames": "浜"
+            },
+            {
+                "townNames": "浜元"
+            },
+            {
+                "townNames": "半地"
+            },
+            {
+                "townNames": "東"
+            },
+            {
+                "townNames": "東江上"
+            },
+            {
+                "townNames": "東江前"
+            },
+            {
+                "townNames": "比地"
+            },
+            {
+                "townNames": "備瀬"
+            },
+            {
+                "townNames": "冨着"
+            },
+            {
+                "townNames": "古島"
+            },
+            {
+                "townNames": "平敷"
+            },
+            {
+                "townNames": "辺戸"
+            },
+            {
+                "townNames": "辺名地"
+            },
+            {
+                "townNames": "辺野喜"
+            },
+            {
+                "townNames": "辺土名"
+            },
+            {
+                "townNames": "前兼久"
+            },
+            {
+                "townNames": "真栄田"
+            },
+            {
+                "townNames": "松田"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "屋嘉"
+            },
+            {
+                "townNames": "屋古"
+            },
+            {
+                "townNames": "山川"
+            },
+            {
+                "townNames": "山里"
+            },
+            {
+                "townNames": "山田"
+            },
+            {
+                "townNames": "与那"
+            },
+            {
+                "townNames": "与那嶺"
+            },
+            {
+                "townNames": "湧川"
+            }
+        ]
+    },
+    {
+        "cityName": "恩納村",
+        "data": [
+            {
+                "townNames": "安富祖"
+            },
+            {
+                "townNames": "恩納"
+            },
+            {
+                "townNames": "喜瀬武原"
+            },
+            {
+                "townNames": "瀬良垣"
+            },
+            {
+                "townNames": "谷茶"
+            },
+            {
+                "townNames": "仲泊"
+            },
+            {
+                "townNames": "名嘉真"
+            },
+            {
+                "townNames": "冨着"
+            },
+            {
+                "townNames": "前兼久"
+            },
+            {
+                "townNames": "真栄田"
+            },
+            {
+                "townNames": "山田"
+            }
+        ]
+    },
+    {
+        "cityName": "宜野座村",
+        "data": [
+            {
+                "townNames": "漢那"
+            },
+            {
+                "townNames": "宜野座"
+            },
+            {
+                "townNames": "惣慶"
+            },
+            {
+                "townNames": "松田"
+            }
+        ]
+    },
+    {
+        "cityName": "東村",
+        "data": [
+            {
+                "townNames": "有銘"
+            },
+            {
+                "townNames": "池之沢"
+            },
+            {
+                "townNames": "川田"
+            },
+            {
+                "townNames": "北"
+            },
+            {
+                "townNames": "旧東"
+            },
+            {
+                "townNames": "慶佐次"
+            },
+            {
+                "townNames": "在所"
+            },
+            {
+                "townNames": "新東"
+            },
+            {
+                "townNames": "平良"
+            },
+            {
+                "townNames": "高江"
+            },
+            {
+                "townNames": "中野"
+            },
+            {
+                "townNames": "港"
+            },
+            {
+                "townNames": "南"
+            },
+            {
+                "townNames": "南"
+            },
+            {
+                "townNames": "宮城"
+            }
+        ]
+    },
+    {
+        "cityName": "金武町",
+        "data": [
+            {
+                "townNames": "伊芸"
+            },
+            {
+                "townNames": "金武"
+            },
+            {
+                "townNames": "屋嘉"
+            }
+        ]
+    },
+    {
+        "cityName": "今帰仁村",
+        "data": [
+            {
+                "townNames": "天底"
+            },
+            {
+                "townNames": "今泊"
+            },
+            {
+                "townNames": "運天"
+            },
+            {
+                "townNames": "兼次"
+            },
+            {
+                "townNames": "上運天"
+            },
+            {
+                "townNames": "古宇利"
+            },
+            {
+                "townNames": "越地"
+            },
+            {
+                "townNames": "呉我山"
+            },
+            {
+                "townNames": "崎山"
+            },
+            {
+                "townNames": "謝名"
+            },
+            {
+                "townNames": "諸志"
+            },
+            {
+                "townNames": "勢理客"
+            },
+            {
+                "townNames": "玉城"
+            },
+            {
+                "townNames": "渡喜仁"
+            },
+            {
+                "townNames": "仲尾次"
+            },
+            {
+                "townNames": "仲宗根"
+            },
+            {
+                "townNames": "平敷"
+            },
+            {
+                "townNames": "与那嶺"
+            },
+            {
+                "townNames": "湧川"
+            }
+        ]
+    },
+    {
+        "cityName": "大宜味村",
+        "data": [
+            {
+                "townNames": "上原"
+            },
+            {
+                "townNames": "江洲"
+            },
+            {
+                "townNames": "大兼久"
+            },
+            {
+                "townNames": "大宜味"
+            },
+            {
+                "townNames": "押川"
+            },
+            {
+                "townNames": "喜如嘉"
+            },
+            {
+                "townNames": "塩屋"
+            },
+            {
+                "townNames": "謝名城"
+            },
+            {
+                "townNames": "白浜"
+            },
+            {
+                "townNames": "大保"
+            },
+            {
+                "townNames": "田嘉里"
+            },
+            {
+                "townNames": "田港"
+            },
+            {
+                "townNames": "津波"
+            },
+            {
+                "townNames": "饒波"
+            },
+            {
+                "townNames": "根路銘"
+            },
+            {
+                "townNames": "宮城"
+            },
+            {
+                "townNames": "屋古"
+            }
+        ]
+    }
+]
