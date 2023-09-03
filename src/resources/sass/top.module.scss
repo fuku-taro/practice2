@@ -4,9 +4,7 @@
     opacity: 1;
     text-shadow: 1px 1px 4px rgb(253 253 253);
 }
-.span{
-    // box-shadow: 0px 9px 8px rgba(0, 0, 0, 0.2);
-}
+
 .content{
     background-color: beige;
     display:flex;
@@ -33,9 +31,6 @@
     height: calc(100vh - 100px);
 }
 
-.buttons{
-    
-}
 .buttonsContainer{
     display: flex;
     justify-content: center;
@@ -47,5 +42,10 @@
 @media (max-width: 767px){
     .buttonsContainer{
         margin-top: calc(100vh - 600px);
+    }
+    .buttonsContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: calc(100vh - 750px);
     }
 }
