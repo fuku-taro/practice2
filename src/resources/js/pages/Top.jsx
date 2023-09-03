@@ -38,8 +38,10 @@ export default function Top() {
                       backgroundColor:"#418aff",
                       fontSize:"1.2em",
                       color: "#fee3fa",
+                      "&:hover": {
+                        backgroundColor: "#0a58ca", // ホバー時の新しい背景色をここに指定
+                      },
                     }}
-                    // href="/Search_area"
                   >
                     借りる
                   </Button>
@@ -54,6 +56,9 @@ export default function Top() {
                       backgroundColor:"#18ce09",
                       fontSize:"1.2em",
                       color: "#fee3fa",
+                      "&:hover": {
+                        backgroundColor: "#198754", // ホバー時の新しい背景色をここに指定
+                      },
                     }}
                   >
                     買う
@@ -69,6 +74,9 @@ export default function Top() {
                       backgroundColor:"#ff0000",
                       fontSize:"1.2em",
                       color: "#fee3fa",
+                      "&:hover": {
+                        backgroundColor: "#b50606", // ホバー時の新しい背景色をここに指定
+                      },
                       mt:2,
                     }}
                   >
