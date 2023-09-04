@@ -113,7 +113,7 @@ export default function Search_area() {
                                 container
                                 xs={8}
                                 sx={{
-                                    display: { xs: "none", sm: "block" },
+                                    // display: { xs: "none", sm: "block" },
                                     height: "auto",
                                     mr: 2,
                                 }}
@@ -184,7 +184,17 @@ export default function Search_area() {
                             </Grid>
                         </div>
                         <div className={styles.img}>
-                            <Grid container xs={12}>
+                            <Grid container xs={12} sx={{ display: { xs: "none", sm: "block" } }}>
+                                {/* <img src="/images/fukuoka_tizu0810.png" alt="" className={styles.image}/> */}
+                                <img
+                                    src="/images/okinawa_tizu0810.png"
+                                    alt=""
+                                    className={styles.image}
+                                />
+                            </Grid>
+                        </div>
+                        <div className={styles.img}>
+                            <Grid container xs={12} sx={{ display: { xs: "block", sm: "none" } }}>
                                 {/* <img src="/images/fukuoka_tizu0810.png" alt="" className={styles.image}/> */}
                                 <img
                                     src="/images/okinawa_tizu0810.png"

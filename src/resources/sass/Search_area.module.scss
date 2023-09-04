@@ -21,3 +21,8 @@
     margin: 0 auto; /* Center the image horizontally */
   }
 }
+@media (max-width: 767px) {
+  .contents{
+    display: block;
+  }
+}
