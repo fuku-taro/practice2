@@ -14,89 +14,97 @@ import { Button } from "@mui/material";
 const defaultTheme = createTheme();
 
 export default function Top() {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <Header />
-      <div className={styles.mainVisual}>
-        {/* 背景画像の上に要素を配置 */}
-        <div className={styles.mainMask}>
-          {/* <Container maxWidth="md"> */}
-          <Container maxWidth="md" sx={{ marginTop: "80px" }}>
-            <div className={styles.buttonsContainer}>
-              <div className={styles.buttons}>
-                <p className={styles.p}><span className={styles.span}>沖縄の不動産・賃貸情報</span></p>
-                <p className={styles.p}>どのような物件をお探しですか？</p>
-                <div className={styles.buttonGroup}>
-                <Link to="/Search_area">
-                  <Button
-                    variant="contained"
-                    color="warning"
-                    sx={{
-                      width: "150px",
-                      height: "150px",
-                      mr: 3,
-                      backgroundColor:"#418aff",
-                      fontSize:"1.2em",
-                      color: "#fee3fa",
-                      "&:hover": {
-                        backgroundColor: "#0a58ca", // ホバー時の新しい背景色をここに指定
-                      },
-                    }}
-                  >
-                    借りる
-                  </Button>
-                </Link>
-                <Link to="/Search_area">
-                  <Button
-                    variant="contained"
-                    color="warning"
-                    sx={{
-                      width: "150px",
-                      height: "150px",
-                      backgroundColor:"#18ce09",
-                      fontSize:"1.2em",
-                      color: "#fee3fa",
-                      "&:hover": {
-                        backgroundColor: "#198754", // ホバー時の新しい背景色をここに指定
-                      },
-                    }}
-                  >
-                    買う
-                  </Button>
-                  </Link>
+    return (
+        <ThemeProvider theme={defaultTheme}>
+            <Header />
+            <div className={styles.mainVisual}>
+                {/* 背景画像の上に要素を配置 */}
+                <div className={styles.mainMask}>
+                    {/* <Container maxWidth="md"> */}
+                    <Container maxWidth="md" sx={{ marginTop: "80px" }}>
+                        <div className={styles.buttonsContainer}>
+                            <div className={styles.buttons}>
+                                <p className={styles.p}>
+                                    <span className={styles.span}>
+                                        沖縄の不動産・賃貸情報
+                                    </span>
+                                </p>
+                                <p className={styles.p}>
+                                    どのような物件をお探しですか？
+                                </p>
+                                <div className={styles.buttonGroup}>
+                                    <Link to="/Search_area">
+                                        <Button
+                                            variant="contained"
+                                            color="warning"
+                                            sx={{
+                                                width: "150px",
+                                                height: "150px",
+                                                mr: 3,
+                                                backgroundColor: "#418aff",
+                                                fontSize: "1.2em",
+                                                color: "#fee3fa",
+                                                "&:hover": {
+                                                    backgroundColor: "#0a58ca", // ホバー時の新しい背景色をここに指定
+                                                },
+                                            }}
+                                        >
+                                            借りる
+                                        </Button>
+                                    </Link>
+                                    <Link to="/Search_area">
+                                        <Button
+                                            variant="contained"
+                                            color="warning"
+                                            sx={{
+                                                width: "150px",
+                                                height: "150px",
+                                                backgroundColor: "#18ce09",
+                                                fontSize: "1.2em",
+                                                color: "#fee3fa",
+                                                "&:hover": {
+                                                    backgroundColor: "#198754", // ホバー時の新しい背景色をここに指定
+                                                },
+                                            }}
+                                        >
+                                            買う
+                                        </Button>
+                                    </Link>
+                                </div>
+                                <Link to="Login">
+                                    <Button
+                                        variant="contained"
+                                        color="warning"
+                                        sx={{
+                                            width: "320px",
+                                            height: "80px",
+                                            backgroundColor: "#ff0000",
+                                            fontSize: "1.2em",
+                                            color: "#fee3fa",
+                                            "&:hover": {
+                                                backgroundColor: "#b50606", // ホバー時の新しい背景色をここに指定
+                                            },
+                                            mt: 2,
+                                        }}
+                                    >
+                                        不動産業者様専用会員ページ
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
+                    </Container>
                 </div>
-                <Button
-                    variant="contained"
-                    color="warning"
-                    sx={{
-                      width: "320px",
-                      height: "80px",
-                      backgroundColor:"#ff0000",
-                      fontSize:"1.2em",
-                      color: "#fee3fa",
-                      "&:hover": {
-                        backgroundColor: "#b50606", // ホバー時の新しい背景色をここに指定
-                      },
-                      mt:2,
-                    }}
-                  >
-                    不動産業者様専用会員ページ
-                  </Button>
-              </div>
             </div>
-          </Container>
-        </div>
-      </div>
-      <Container>
-        <main className={styles.main}>
-          <div className={styles.content}></div>
-        </main>
-      </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-        sx={{ mt: "auto" }}
-      />
-    </ThemeProvider>
-  );
+            <Container>
+                <main className={styles.main}>
+                    <div className={styles.content}></div>
+                </main>
+            </Container>
+            <Footer
+                title="Footer"
+                description="Something here to give the footer a purpose!"
+                sx={{ mt: "auto" }}
+            />
+        </ThemeProvider>
+    );
 }
