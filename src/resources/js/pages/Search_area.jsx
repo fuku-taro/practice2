@@ -111,7 +111,8 @@ export default function Search_area() {
                         <div className={styles.content}>
                             <Grid
                                 container
-                                xs={8}
+                                xs={12}
+                                md={8}
                                 sx={{
                                     // display: { xs: "none", sm: "block" },
                                     height: "auto",
