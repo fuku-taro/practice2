@@ -15,6 +15,7 @@ import FeaturedPost from '../components/FeaturedPost';
 import Main from '../components/Main';
 import SidebarDummy from '../components/SidebarDummy';
 import Footer from '../components/Footer';
+import Circular from "../components/Circular";
 
 
 
@@ -48,6 +49,7 @@ const sidebar = {
 const defaultTheme = createTheme();
 export default function Estate() {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
   const { uid } = useParams(); // uidパラメーターを取得
   console.log(uid);
   
@@ -57,11 +59,14 @@ export default function Estate() {
 
   const fetchData = async () => {
     try {
+      setIsLoading(true); // データの取得が始まったことを示す
       const response = await axios.get('/api/data');
       setData(response.data);
     } catch (error) {
       console.error(error);
-    }
+    } finally {
+      setIsLoading(false); // データの取得が完了したことを示す
+  }
   };
   // const uids = uid.split('&'); // パラメーターを&で分割して配列にする
   console.log(data);
@@ -70,9 +75,22 @@ export default function Estate() {
   return (
     <ThemeProvider theme={defaultTheme}>
       
-      <CssBaseline />
-      <Container maxWidth="lg">
         <Header />
+      <CssBaseline />
+      {isLoading ? (
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                        }}
+                    >
+                        <Circular size="5rem" />
+                    </div>
+                ) : (
+                  <>
+      <Container maxWidth="lg">
         
         <main>
         {filteredData.map((item) => (
@@ -102,6 +120,8 @@ export default function Estate() {
         title="Footer"
         description="Something here to give the footer a purpose!"
       />
+      </>
+      )}
     </ThemeProvider>
   );
             }

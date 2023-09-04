@@ -159,9 +159,9 @@ export default function Reselt() {
 
     return (
         <ThemeProvider theme={defaultTheme}>
+                <Header />
             <CssBaseline />
             <Container maxWidth="lg">
-                <Header />
                 <Typography variant="h4" style={{ whiteSpace: "pre-line" }}>
                     {isLoading
                         ? "検索結果を取得中..."
