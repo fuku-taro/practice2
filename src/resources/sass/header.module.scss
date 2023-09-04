@@ -1,9 +1,8 @@
-scss
 .group{
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  position: relative;
+  flex: 1;
 }
 
 .icon{
@@ -13,5 +12,6 @@ scss
 }
 
 .button{
-  margin-left: auto;
+  position: absolute;
+  right: 0;
 }

@@ -26,13 +26,13 @@ function Header(props) {
                             <img src="/images/logo_okinawa2.png" alt="" />
                         </Link>
                     </div>
-                    {/* <div className={styles.button}>
+                    <div className={styles.button}>
                         <Link to="/Login">
                             <Button variant="outlined" size="small">
                                 ログイン
                             </Button>
                         </Link>
-                    </div> */}
+                    </div>
                 </div>
             </Toolbar>
         </React.Fragment>
