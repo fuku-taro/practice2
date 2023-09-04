@@ -8,6 +8,8 @@ import Search_area from './pages/Search_area';
 import InfoCard from './components/InfoCard';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Seiyaku from './pages/Seiyaku';
+import Done from './pages/Done';
 function App() {
   return (
     <Routes>
@@ -18,10 +20,13 @@ function App() {
       <Route path="/Result" element={<Result />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
+      <Route path="/Seiyaku" element={<Seiyaku />} />
+      <Route path="/Done" element={<Done />} />
       {/* <Route path="/Result/:label" component={InfoCard} /> */}
       <Route path="/Result/:label" element={<Result />} />
       <Route path="/Estate/:uid" element={<Estate />} />
-
+      <Route path="/Done/:name" element={<Done />} />
+      <Route path="/Seiyaku/:name" element={<Seiyaku />} />
     </Routes>
   );
 }

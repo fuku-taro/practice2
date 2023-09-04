@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,19 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    protected function authenticated(Request $request, $user)
+{
+    // トークンの生成と保存（Laravel Passportを使用）
+    $token = $user->createToken('MyApp')->accessToken;
+
+    // ログイン成功時のレスポンス
+    return response()->json(['token' => $token, 'user' => $user]);
+}
+
+    public function login()
+    {
+        
     }
 }

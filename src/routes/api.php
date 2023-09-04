@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\estateInfo; // 使用するモデルをインポート
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\EstateInfoController;
-
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -114,6 +115,11 @@ Route::get('/getNanbuAreaAddresses', [AddressController::class, 'getNanbuAreaAdd
 Route::post('/getNanbuAreaAddresses', [AddressController::class, 'getNanbuAreaAddresses']);
 Route::get('/getRitouAreaAddresses', [AddressController::class, 'getRitouAreaAddresses']);
 Route::post('/getRitouAreaAddresses', [AddressController::class, 'getRitouAreaAddresses']);
+
+Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
+// Route::post('/register', 'Auth\RegisterController@register');
+
 
 // データの作成
 Route::post('/data', function (Request $request) {

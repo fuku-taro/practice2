@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -70,4 +72,28 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function register(Request $request)
+{
+    try {
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+        ]);
+
+        $user = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+
+        // You can also generate and return an API token if you're using Laravel Passport for API authentication.
+
+        return response()->json(['message' => 'User registered successfully']);
+    } catch (ValidationException $e) {
+        // If validation fails, return the validation errors as a JSON response
+        return response()->json(['errors' => $e->errors()], 422);
+    }
+}
 }
