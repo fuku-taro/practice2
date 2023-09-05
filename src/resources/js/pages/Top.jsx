@@ -38,8 +38,16 @@ export default function Top() {
                                             variant="contained"
                                             color="warning"
                                             sx={{
-                                                width: "150px",
-                                                height: "150px",
+                                                // width: "150px",
+                                                // height: "150px",
+                                                width: {
+                                                    xs: "130px",
+                                                    md: "150px",
+                                                }, // Set width for xs and default screen sizes
+                                                height: {
+                                                    xs: "130px",
+                                                    md: "150px",
+                                                },
                                                 mr: 3,
                                                 backgroundColor: "#418aff",
                                                 fontSize: "1.2em",
@@ -57,8 +65,14 @@ export default function Top() {
                                             variant="contained"
                                             color="warning"
                                             sx={{
-                                                width: "150px",
-                                                height: "150px",
+                                                width: {
+                                                    xs: "130px",
+                                                    md: "150px",
+                                                }, // Set width for xs and default screen sizes
+                                                height: {
+                                                    xs: "130px",
+                                                    md: "150px",
+                                                },
                                                 backgroundColor: "#18ce09",
                                                 fontSize: "1.2em",
                                                 color: "#fee3fa",
@@ -76,8 +90,11 @@ export default function Top() {
                                         variant="contained"
                                         color="warning"
                                         sx={{
-                                            width: "320px",
                                             height: "80px",
+                                            width: {
+                                                xs: "285px",
+                                                md: "320px",
+                                            }, // Set width for xs and default screen sizes
                                             backgroundColor: "#ff0000",
                                             fontSize: "1.2em",
                                             color: "#fee3fa",
