@@ -9,6 +9,7 @@ import InfoCard from './components/InfoCard';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Seiyaku from './pages/Seiyaku';
+import SeiyakuSearch from './pages/SeiyakuSearch';
 import Done from './pages/Done';
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
       <Route path="/Seiyaku" element={<Seiyaku />} />
+      <Route path="/SeiyakuSearch" element={<SeiyakuSearch />} />
       <Route path="/Done" element={<Done />} />
       {/* <Route path="/Result/:label" component={InfoCard} /> */}
       <Route path="/Result/:label" element={<Result />} />
