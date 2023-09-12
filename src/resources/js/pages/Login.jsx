@@ -32,21 +32,49 @@ function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+    
         try {
+            // First, make a request to get the CSRF cookie
+            await axios.get('/sanctum/csrf-cookie');
+            
+            // Then, submit the login data
             const response = await axios.post('/api/login', formData);
-            // const { name } = response.data.user; // ユーザーの名前を取得
-
+            if(response.status === 200){
+                const response = await axios.get('/api/login', formData);
+                console.log(response);
+                const { name } = response.data.user; // ユーザーの名前を取得
+            }
+    
             // ログイン成功の場合、トークンを保存などの処理を実行
-
+    
             // ログイン成功後、遷移先のURLにリダイレクト
-            // navigate('/Seiyaku');
             navigate('/Seiyaku/' + name); 
         } catch (error) {
             // ログインエラーの処理
             console.error("ログインエラー:", error);
         }
     };
+    
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+        
+    //     try {
+    //         const response = axios.get('/sanctum/csrf-cookie').then(res => {
+    //             // ログイン…
+    //             axios.post('/api/login', formData);
+    //             console.log(response);
+    //         })
+    //         const { name } = response.data.user; // ユーザーの名前を取得
+
+    //         // ログイン成功の場合、トークンを保存などの処理を実行
+
+    //         // ログイン成功後、遷移先のURLにリダイレクト
+    //         navigate('/Seiyaku/' + name); 
+    //     } catch (error) {
+    //         // ログインエラーの処理
+    //         console.error("ログインエラー:", error);
+    //     }
+    // };
 
     return (
         <ThemeProvider theme={createTheme()}>

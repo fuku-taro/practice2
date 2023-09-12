@@ -118,6 +118,7 @@ Route::post('/getRitouAreaAddresses', [AddressController::class, 'getRitouAreaAd
 
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login']);
 // Route::post('/register', 'Auth\RegisterController@register');
 
 
