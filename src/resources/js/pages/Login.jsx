@@ -34,14 +34,18 @@ function Login() {
         event.preventDefault();
         
         try {
+            // First, make a request to get the CSRF cookie
+            const sanctum = await axios.get('/sanctum/csrf-cookie');
+            
             const response = await axios.post('/api/login', formData);
             // const { name } = response.data.user; // ユーザーの名前を取得
 
             // ログイン成功の場合、トークンを保存などの処理を実行
 
             // ログイン成功後、遷移先のURLにリダイレクト
-            // navigate('/Seiyaku');
-            navigate('/Seiyaku/' + name); 
+            console.log(sanctum);
+            console.log(response.data);
+            navigate('/Seiyaku'); 
         } catch (error) {
             // ログインエラーの処理
             console.error("ログインエラー:", error);

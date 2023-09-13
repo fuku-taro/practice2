@@ -35,12 +35,25 @@ return [
     |
     */
 
+    // 'guards' => [
+    //     'web' => [
+    //         'driver' => 'session',
+    //         'provider' => 'users',
+    //     ],
+    // ],
+
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+    
+        'api' => [
+            'driver' => 'passport', // API認証にLaravel Passportを使用している場合
+            'provider' => 'users',
+        ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
