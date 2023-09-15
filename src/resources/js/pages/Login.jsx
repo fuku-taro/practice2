@@ -46,7 +46,7 @@ function Login() {
             // ログイン成功後、遷移先のURLにリダイレクト
             console.log(sanctum);
             console.log(response.data);
-            navigate("/SeiyakuSearch");
+            navigate("/Seiyaku");
         } catch (error) {
             // ログインエラーの処理
             if (error.response.status === 401) {

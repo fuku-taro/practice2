@@ -51,18 +51,15 @@ export default function Seiyaku() {
           <Typography component="h1" variant="h5">
             ログインが完了しました。
           </Typography>
-          <Typography  variant="h6">
-          こちらは成約物件が掲載される予定です
-          </Typography>
           
           <Box sx={{ mt: 1 }}>
-            <Link to="/Login">
+            <Link to="/SeiyakuSearch">
             <Button
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              ログイン画面へ
+              成約情報検索画面へ
             </Button>
             </Link>
             <Grid container>
