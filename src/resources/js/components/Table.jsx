@@ -7,7 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-export default function CustomizedTables({item,rows}) {
+export default function CustomizedTables(props) {
 
   // const formatDate = (timestamp) => {
   //   const date = new Date(timestamp);
@@ -84,13 +84,14 @@ export default function CustomizedTables({item,rows}) {
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableBody>
-          {rows.map((row) => (
+          {props.rows.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row" sx={{ bgcolor: '#E7EAEC', width: '30%' }}>
-                {row.name}
+              {/* {row.name !== null ? row.name : ""} */}
+              {row.name}
               </TableCell>
               <TableCell align="right" sx={{ width: '70%' }}>{row.calories}</TableCell>
             </TableRow>
