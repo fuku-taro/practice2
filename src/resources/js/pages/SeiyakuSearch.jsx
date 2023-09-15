@@ -55,6 +55,8 @@ export default function SeiyakuSearch() {
             // setKitakyusyuAreaData(KitakyusyuAreaAddresses.data.data);
             // setChikuhouAreaData(ChikuhouAreaAddresses.data.data);
             // setChikugoAreaData(ChikugoAreaAddresses.data.data);
+            const response = await axios.get("/api/login");
+            console.log('get',response)
         } catch (error) {
             console.error(error);
         }

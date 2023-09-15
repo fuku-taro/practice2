@@ -12,11 +12,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 function Login() {
     const navigate = useNavigate();
+    const [error, setError] = useState("");
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -32,12 +33,12 @@ function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         try {
             // First, make a request to get the CSRF cookie
-            const sanctum = await axios.get('/sanctum/csrf-cookie');
-            
-            const response = await axios.post('/api/login', formData);
+            const sanctum = await axios.get("/sanctum/csrf-cookie");
+
+            const response = await axios.post("/api/login", formData);
             // const { name } = response.data.user; // ユーザーの名前を取得
 
             // ログイン成功の場合、トークンを保存などの処理を実行
@@ -45,9 +46,16 @@ function Login() {
             // ログイン成功後、遷移先のURLにリダイレクト
             console.log(sanctum);
             console.log(response.data);
-            navigate('/Seiyaku'); 
+            navigate("/SeiyakuSearch");
         } catch (error) {
             // ログインエラーの処理
+            if (error.response.status === 401) {
+                setError(
+                    "認証エラー: メールアドレスまたはパスワードが正しくありません。"
+                );
+            } else {
+                setError("ログインエラーが発生しました。");
+            }
             console.error("ログインエラー:", error);
         }
     };
@@ -99,12 +107,17 @@ function Login() {
                             autoComplete="current-password"
                             onChange={handleChange} // 追加
                         />
-                        <FormControlLabel
+                        {error && (
+                            <Typography variant="body2" color="error">
+                                {error}
+                            </Typography>
+                        )}
+                        {/* <FormControlLabel
                             control={
                                 <Checkbox value="remember" color="primary" />
                             }
                             label="メールとパスワードを記憶"
-                        />
+                        /> */}
                         <Button
                             type="submit"
                             fullWidth

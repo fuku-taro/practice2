@@ -16,6 +16,9 @@ import Main from '../components/Main';
 import SidebarDummy from '../components/SidebarDummy';
 import Footer from '../components/Footer';
 import Circular from "../components/Circular";
+import { Button } from '@mui/material';
+import MailIcon from '@mui/icons-material/Mail';
+import styles from '../../sass/Estate.module.scss';
 
 
 
@@ -93,6 +96,9 @@ export default function Estate() {
       <Container maxWidth="lg">
         
         <main>
+          <div className={styles.button}>
+            <Button variant="contained" startIcon={<MailIcon />}>お問い合わせ</Button>
+          </div>
         {filteredData.map((item) => (
           <div key={item.id}>
         <MyCustomCarousel item={item}/>
@@ -114,6 +120,9 @@ export default function Estate() {
               social={sidebar.social}
             />
           </Grid> */}
+          <div className={styles.button}>
+            <Button variant="contained" startIcon={<MailIcon />}>お問い合わせ</Button>
+          </div>
         </main>
       </Container>
       <Footer
