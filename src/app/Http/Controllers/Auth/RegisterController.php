@@ -80,7 +80,15 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
-        ]);
+        ],
+        [
+            'name.required' => 'お名前は必須項目です。',
+            'email.required' => 'メールは必須項目です。',
+            'email.email' => 'メールアドレスを入力してください。',
+            'password.required' => 'パスワードは必須項目です。',
+            'password.min' => 'パスワードは8文字以上入力してください。',
+        ]
+    );
 
         $user = User::create([
             'name' => $request->input('name'),
