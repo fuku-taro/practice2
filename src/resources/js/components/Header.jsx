@@ -1,29 +1,42 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
-import Typography from "@mui/material/Typography";
 // import Link from '@mui/material/Link';
+import DehazeIcon from "@mui/icons-material/Dehaze";
 import styles from "../../sass/header.module.scss";
 import { Link } from "react-router-dom";
+import MenuDrawer from "./MenuDrawer";
 
-function Header(props) {
-    const sections = [
-        { title: "Topページへ", url: "/" },
-        { title: "エリアから探す", url: "/Search" },
-        { title: "地図から探す", url: "/Search" },
-        { title: "駅・路線から探す", url: "/Search" },
-    ];
+function Header() {
+    const [openDrawer, setOpenDrawer] = React.useState(false);
+
+    // Drawerを開く関数
+    const openDrawerHandler = () => {
+        setOpenDrawer(true);
+    };
+
+    // Drawerを閉じる関数
+    const closeDrawerHandler = () => {
+        setOpenDrawer(false);
+    };
 
     return (
         <React.Fragment>
-            <Toolbar sx={{ borderBottom: 1, borderColor: "divider", justifyContent: 'center'}}>
+            <Toolbar
+                sx={{
+                    borderBottom: 1,
+                    borderColor: "divider",
+                    justifyContent: "center",
+                }}
+            >
                 <div className={styles.group}>
                     <div className={styles.icon}>
                         <Link to="/">
-                            <img src="/images/logo_okinawa2.png" alt="" />
+                            <img
+                                className={styles.img}
+                                src="/images/logo0921_w300.png"
+                                alt=""
+                            />
                         </Link>
                     </div>
                     <div className={styles.button}>
@@ -33,6 +46,17 @@ function Header(props) {
                             </Button>
                         </Link>
                     </div>
+                    <div className={styles.toggle}>
+                        <DehazeIcon
+                            onClick={openDrawerHandler}
+                            sx={{ display: { xs: "block", sm: "none" } }}
+                        />
+                    </div>
+                    <MenuDrawer
+                        openDrawer={openDrawer}
+                        openDrawerHandler={openDrawerHandler}
+                        closeDrawerHandler={closeDrawerHandler}
+                    />
                 </div>
             </Toolbar>
         </React.Fragment>

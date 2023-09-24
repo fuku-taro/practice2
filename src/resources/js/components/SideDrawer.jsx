@@ -1,7 +1,9 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
+import CloseIcon from "@mui/icons-material/Close";
 import Sidebar from "./Sidebar";
+import styles from "../../sass/MenuDrawer.module.scss";
 
 export default function SideDrawer() {
     const [openDrawer, setOpenDrawer] = React.useState(false);
@@ -28,8 +30,31 @@ export default function SideDrawer() {
                 >
                     詳しい条件で絞り込む
                 </Button>
+                {/* CloseIconをDrawerの外に配置 */}
+                {openDrawer ? (
+                    <div className={styles.close}>
+                        <CloseIcon
+                            sx={{
+                                position: "absolute",
+                                right: "calc(250px - 0px)",
+                                top: "5px",
+                                cursor: "pointer",
+                                color: "#fff",
+                                zIndex: 999, // 適切な値を設定してアイコンを前面に表示
+                            }}
+                            onClick={closeDrawerHandler}
+                        />
+                    </div>
+                ) : (
+                    ""
+                )}
                 {/* Drawerコンポーネント */}
-                <Drawer anchor="right" open={openDrawer} onClose={closeDrawerHandler}>
+                <Drawer
+                    anchor="right"
+                    open={openDrawer}
+                    onClose={closeDrawerHandler}
+                    sx={{ zIndex: 998 }}
+                >
                     <div style={{ width: "250px" }}>
                         <Sidebar />
                     </div>

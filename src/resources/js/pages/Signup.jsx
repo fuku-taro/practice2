@@ -104,7 +104,7 @@ function Signup() {
                         required
                         fullWidth
                         id="name"
-                        label="お名前"
+                        label="会社名"
                         name="name"
                         autoComplete="name"
                         autoFocus

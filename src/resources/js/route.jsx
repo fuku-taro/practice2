@@ -11,6 +11,9 @@ import Signup from './pages/Signup';
 import Seiyaku from './pages/Seiyaku';
 import SeiyakuSearch from './pages/SeiyakuSearch';
 import Done from './pages/Done';
+import Admin from './pages/Admin';
+import AdminLogin from './pages/AdminLogin';
+
 function App() {
   return (
     <Routes>
@@ -24,6 +27,8 @@ function App() {
       <Route path="/Seiyaku" element={<Seiyaku />} />
       <Route path="/SeiyakuSearch" element={<SeiyakuSearch />} />
       <Route path="/Done" element={<Done />} />
+      <Route path="/Admin" element={<Admin />} />
+      <Route path="/AdminLogin" element={<AdminLogin />} />
       {/* <Route path="/Result/:label" component={InfoCard} /> */}
       <Route path="/Result/:label" element={<Result />} />
       <Route path="/Estate/:uid" element={<Estate />} />

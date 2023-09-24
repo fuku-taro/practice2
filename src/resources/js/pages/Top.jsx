@@ -17,6 +17,12 @@ export default function Top() {
     return (
         <ThemeProvider theme={defaultTheme}>
             <Header />
+            <div>
+                <Button>借りる</Button>
+                <Button>買う</Button>
+                <Button>安心売却査定依頼</Button>
+                
+            </div>
             <div className={styles.mainVisual}>
                 {/* 背景画像の上に要素を配置 */}
                 <div className={styles.mainMask}>
@@ -24,11 +30,13 @@ export default function Top() {
                     <Container maxWidth="md" sx={{ marginTop: "80px" }}>
                         <div className={styles.buttonsContainer}>
                             <div className={styles.buttons}>
-                                <p className={styles.p}>
+                                {/* <p className={styles.p}> */}
+                                <h1 className={styles.p}>
                                     <span className={styles.span}>
-                                        沖縄の不動産・賃貸情報
+                                        沖縄の不動産・賃貸売買情報
                                     </span>
-                                </p>
+                                {/* </p> */}
+                                </h1>
                                 <p className={styles.p}>
                                     どのような物件をお探しですか？
                                 </p>
