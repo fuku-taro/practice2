@@ -1,0 +1,11 @@
+.path {
+  fill: #5fd35f;
+  stroke: #165016;
+  stroke-width: 1;
+  transition-duration: 200ms;
+  cursor: pointer;
+  pointer-events: all;
+}
+path:hover {
+  fill: #2ca02c;
+}

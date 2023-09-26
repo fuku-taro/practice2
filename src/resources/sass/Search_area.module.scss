@@ -26,3 +26,34 @@
     display: block;
   }
 }
+
+/* これらのスタイルをSCSSファイルに追加します */
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.imageHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageNormal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.imageContainer:hover .imageHover {
+  opacity: 1;
+}
+
+.imageContainer:hover .imageNormal {
+  opacity: 0;
+}
+
