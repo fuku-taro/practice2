@@ -13,6 +13,8 @@ import SeiyakuSearch from './pages/SeiyakuSearch';
 import Done from './pages/Done';
 import Admin from './pages/Admin';
 import AdminLogin from './pages/AdminLogin';
+import Assessment from './pages/Assessment';
+import AssessmentContact from './pages/AssessmentContact';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
       <Route path="/Done" element={<Done />} />
       <Route path="/Admin" element={<Admin />} />
       <Route path="/AdminLogin" element={<AdminLogin />} />
+      <Route path="/Assessment" element={<Assessment />} />
+      <Route path="/AssessmentContact" element={<AssessmentContact />} />
       {/* <Route path="/Result/:label" component={InfoCard} /> */}
       <Route path="/Result/:label" element={<Result />} />
       <Route path="/Estate/:uid" element={<Estate />} />
