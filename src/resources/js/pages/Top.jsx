@@ -20,8 +20,9 @@ export default function Top() {
             <div>
                 <Button>借りる</Button>
                 <Button>買う</Button>
-                <Button>安心売却査定依頼</Button>
-                
+                <Link to="/Assessment">
+                    <Button>安心売却査定依頼</Button>
+                </Link>
             </div>
             <div className={styles.mainVisual}>
                 {/* 背景画像の上に要素を配置 */}
@@ -35,7 +36,7 @@ export default function Top() {
                                     <span className={styles.span}>
                                         沖縄の不動産・賃貸売買情報
                                     </span>
-                                {/* </p> */}
+                                    {/* </p> */}
                                 </h1>
                                 <p className={styles.p}>
                                     どのような物件をお探しですか？

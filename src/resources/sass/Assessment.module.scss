@@ -1,0 +1,28 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: aquamarine;
+  height: calc(100vh - 110px);
+}
+
+.textContainer{
+  margin-top: 160px;
+}
+
+.ima{
+  color: darkorange;
+}
+
+.span{
+  color: darkorange;
+}
+
+.button{
+  margin-top: 80px;
+}
+@media(max-width: 767px){
+  .main{
+    height: calc(100vh - 70px);
+  }
+}
