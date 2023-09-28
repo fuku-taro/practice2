@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['お客様情報', 'お問い合わせ', 'Review your order'];
 
 function getStepContent(step) {
   switch (step) {
@@ -60,9 +60,9 @@ export default function Checkout() {
       <Header/>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-          <Typography component="h1" variant="h4" align="center">
+          {/* <Typography component="h1" variant="h4" align="center">
             Checkout
-          </Typography>
+          </Typography> */}
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
             {steps.map((label) => (
               <Step key={label}>

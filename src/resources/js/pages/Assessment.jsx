@@ -24,7 +24,15 @@ export default function Assessment() {
                     </div>
                     <div className={styles.button}>
                         <Link to="/AssessmentContact">
-                            <Button variant="contained">無料査定スタート</Button>
+                            <Button variant="contained"
+                            sx={{
+                                backgroundColor: "#18ce09",
+                                fontSize: "1.2em",
+                                color: "#fee3fa",
+                                "&:hover": {
+                                    backgroundColor: "#198754", // ホバー時の新しい背景色をここに指定
+                                },
+                            }}>無料査定スタート</Button>
                         </Link>
                     </div>
                 </div>

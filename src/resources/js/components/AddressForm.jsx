@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import { FormGroup } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Divider from "@mui/material/Divider";
 import styles from "../../sass/AddressForm.module.scss";
 
 export default function AddressForm() {
@@ -99,7 +100,7 @@ export default function AddressForm() {
                             variant="standard"
                         />
                     </Grid>
-                    <Grid item xs={12} sx={{ mb:2 }}>
+                    <Grid item xs={12} sx={{ mb: 2 }}>
                         <TextField
                             id="address2"
                             name="address2"
@@ -132,10 +133,17 @@ export default function AddressForm() {
             </Grid>
 
             <div className={styles.label}>③連絡方法・連絡先</div>
-            <div className={styles.kome}>※メール・電話・ファックス・郵送の連絡方法のチェックをいれて、連絡先を入力してください。（複数選択可）</div>
+            <div className={styles.kome}>
+                ※メール・電話・ファックス・郵送の連絡方法のチェックをいれて、連絡先を入力してください。（複数選択可）
+            </div>
             <Grid container spacing={3}>
-                <Grid item xs={12} sm={3}>
-                <FormGroup>
+                <Grid
+                    item
+                    xs={12}
+                    sm={3}
+                    sx={{ display: "flex", alignItems: "center" }}
+                >
+                    <FormGroup>
                         <FormControlLabel
                             control={<Checkbox size="small" />}
                             label="メール"
@@ -144,18 +152,16 @@ export default function AddressForm() {
                 </Grid>
                 <Grid item xs={12} sm={9}>
                     <TextField
-                        required
                         id="mail"
                         name="mail"
                         label="メールアドレス"
                         fullWidth
                         autoComplete="family-name"
                         variant="standard"
-                        sx={{ mb:1 }}
-                        />
+                        sx={{ mb: 1 }}
+                    />
                     <TextField
-                        sx={{ mb:1 }}
-                        required
+                        sx={{ mb: 1 }}
                         id="mailk"
                         name="mailk"
                         label="メールアドレス再確認"
@@ -164,45 +170,179 @@ export default function AddressForm() {
                         variant="standard"
                     />
                     <p>メールアドレスは間違い防止のため２度入力となります。</p>
-                    <p>連絡先等の入力内容に誤りがないか、再度ご確認ください。</p>
-                    <p>※入力内容に誤りがある場合、連絡が取れない場合があります。</p>
-                    <p className={styles.kome}>携帯電話のメールの場合、受信設定でメールが受信できるように設定してください</p>
+                    <p>
+                        連絡先等の入力内容に誤りがないか、再度ご確認ください。
+                    </p>
+                    <p>
+                        ※入力内容に誤りがある場合、連絡が取れない場合があります。
+                    </p>
+                    <p className={styles.kome}>
+                        携帯電話のメールの場合、受信設定でメールが受信できるように設定してください
+                    </p>
                 </Grid>
-                <Grid item xs={12} sm={3}>
-                <FormGroup>
+            </Grid>
+
+            <Divider />
+
+            <Grid container spacing={3} sx={{ mb: 1 }}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={3}
+                    sx={{ display: "flex", alignItems: "center" }}
+                >
+                    <FormGroup>
                         <FormControlLabel
                             control={<Checkbox size="small" />}
-                            label="メール"
+                            label="電話"
                         />
                     </FormGroup>
                 </Grid>
-                <Grid item xs={12} sm={9} sx={{ paddingLeft:'5px' }}>
+                <Grid item xs={12} sm={9} sx={{ paddingLeft: "5px" }}>
                     <TextField
-                        required
-                        id="mail"
-                        name="mail"
-                        label="メールアドレス"
+                        id="tel"
+                        name="tel"
+                        label="電話番号"
+                        placeholder="電話番号"
                         fullWidth
                         autoComplete="family-name"
                         variant="standard"
-                        sx={{ mb:1 }}
-                        />
-                    <TextField
-                        sx={{ mb:1 }}
-                        required
-                        id="mailk"
-                        name="mailk"
-                        label="メールアドレス再確認"
-                        fullWidth
-                        autoComplete="given-name"
-                        variant="standard"
+                        sx={{ mb: 1 }}
                     />
-                    <p>メールアドレスは間違い防止のため２度入力となります。</p>
-                    <p>連絡先等の入力内容に誤りがないか、再度ご確認ください。</p>
-                    <p>※入力内容に誤りがある場合、連絡が取れない場合があります。</p>
-                    <p className={styles.kome}>携帯電話のメールの場合、受信設定でメールが受信できるように設定してください</p>
+                    <div>
+                        <h5>連絡可能時間帯</h5>
+                    </div>
+                    <Grid container spacing={2} sx={{ mt: 1 }}>
+                        <Grid item xs={12} sm={6}>
+                            <FormGroup>
+                                平日(月～金)
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="いつでも可"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="10 - 12時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="12 - 14時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="14 - 16時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="16 - 18時"
+                                />
+                            </FormGroup>
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <FormGroup>
+                                休日(土・日)
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="いつでも可"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="10 - 12時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="12 - 14時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="14 - 16時"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox size="small" />}
+                                    label="16 - 18時"
+                                />
+                            </FormGroup>
+                        </Grid>
+                    </Grid>
+                    <TextField
+                        id="other"
+                        name="other"
+                        label="その他希望日時"
+                        fullWidth
+                        autoComplete="family-name"
+                        variant="standard"
+                        sx={{ mb: 1 }}
+                    />
                 </Grid>
+            </Grid>
 
+            <Divider sx={{ mb: 1 }}/>
+
+            <Grid container spacing={3} sx={{ mb: 1 }}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={3}
+                    sx={{ display: "flex", alignItems: "center" }}
+                >
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Checkbox size="small" />}
+                            label="ファックス"
+                        />
+                    </FormGroup>
+                </Grid>
+                <Grid item xs={12} sm={9} sx={{ paddingLeft: "5px" }}>
+                    <TextField
+                        id="fax"
+                        name="fax"
+                        label="ファックス番号"
+                        placeholder="ファックス番号"
+                        fullWidth
+                        autoComplete="family-name"
+                        variant="standard"
+                        sx={{ mb: 1 }}
+                    />
+                </Grid>
+            </Grid>
+
+            <Divider sx={{ mb: 1 }}/>
+            <Grid container spacing={3}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={3}
+                    sx={{ display: "flex", alignItems: "center" }}
+                >
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Checkbox size="small" />}
+                            label="郵送"
+                        />
+                    </FormGroup>
+                </Grid>
+                <Grid item xs={12} sm={9} sx={{ paddingLeft: "5px" }}>
+                    <TextField
+                        id="zip"
+                        name="zip"
+                        label="郵便番号"
+                        placeholder="郵便番号"
+                        fullWidth
+                        autoComplete="family-name"
+                        variant="standard"
+                        sx={{ mb: 1 }}
+                    />
+                    <TextField
+                        id="address"
+                        name="address"
+                        label="住所"
+                        placeholder="住所"
+                        fullWidth
+                        autoComplete="family-name"
+                        variant="standard"
+                        sx={{ mb: 1 }}
+                    />
+                </Grid>
             </Grid>
         </React.Fragment>
     );
