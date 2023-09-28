@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const steps = ['お客様情報', 'お問い合わせ', 'Review your order'];
+const steps = ['ご入力', 'ご確認', '完了'];
 
 function getStepContent(step) {
   switch (step) {
@@ -87,7 +87,7 @@ export default function Checkout() {
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
                   <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                    Back
+                    戻る
                   </Button>
                 )}
 
@@ -96,7 +96,7 @@ export default function Checkout() {
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
                 >
-                  {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                  {activeStep === steps.length - 1 ? '送信完了' : '次へ'}
                 </Button>
               </Box>
             </React.Fragment>
