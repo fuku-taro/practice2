@@ -1,24 +1,4 @@
-.main{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #F3F3F4;
-  height: calc(100vh - 110px);
-}
-
-.textContainer{
-  margin-top: 30px;
-}
-
-.paper{
-  margin: 0 20px;
-}
-
 .button{
-  margin-top: 30px;
-}
-@media(max-width: 767px){
-  .main{
-    height: calc(100vh - 70px);
-  }
+  display: flex;
+  justify-content: center;
 }

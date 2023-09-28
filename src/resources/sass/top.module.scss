@@ -5,6 +5,11 @@
     text-shadow: 1px 1px 4px rgb(253 253 253);
 }
 
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .content{
     background-color: beige;
     display:flex;

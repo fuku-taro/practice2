@@ -8,13 +8,14 @@ import Paper from '@mui/material/Paper';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import AddressForm from '../components/AddressForm';
 import PaymentForm from '../components/PaymentForm';
 import Review from '../components/Review';
 import Header from '../components/Header';
+import styles from '../../sass/AssessmentContact.module.scss';
 
 function Copyright() {
   return (
@@ -80,6 +81,12 @@ export default function Checkout() {
                 confirmation, and will send you an update when your order has
                 shipped.
               </Typography>
+              <div className={styles.button}>
+              <Link to="/">
+                    <Button>ホーム画面へ</Button>
+                </Link>
+
+              </div>
             </React.Fragment>
           ) : (
             <React.Fragment>

@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 
 import styles from "../../sass/top.module.scss";
 
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 
 const defaultTheme = createTheme();
@@ -17,7 +15,7 @@ export default function Top() {
     return (
         <ThemeProvider theme={defaultTheme}>
             <Header />
-            <div>
+            <div className={styles.nav}>
                 <Button>借りる</Button>
                 <Button>買う</Button>
                 <Link to="/Assessment">
