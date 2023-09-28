@@ -98,6 +98,7 @@ Route::get('/dataRegister_atDESC', function () {
     return response()->json($data);
 });
 
+Route::get('/getAllEstateInfos', [EstateInfoController::class, 'getAllEstateInfos']);
 Route::get('/getEstateInfos', [AddressController::class, 'getEstateInfos']);
 Route::get('/getFukuokaAreaAddresses', [AddressController::class, 'getFukuokaAreaAddresses']);
 Route::post('/getFukuokaAreaAddresses', [AddressController::class, 'getFukuokaAreaAddresses']);
