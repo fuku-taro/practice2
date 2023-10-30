@@ -367,8 +367,8 @@ export default function Admin() {
                 >
                     <Toolbar />
 
-                    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-                        <Grid container spacing={3}>
+                    {/* <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}> */}
+                        {/* <Grid container spacing={3}> */}
                         <ListTable
         rows={rows}
         setRows={setRows}
@@ -382,10 +382,10 @@ export default function Admin() {
         successEditName={successEditName}
       />
                             {/* Recent Orders */}
-                            <Grid item xs={12}></Grid>
-                        </Grid>
+                            {/* <Grid item xs={12}></Grid> */}
+                        {/* </Grid> */}
                         <Copyright sx={{ pt: 4 }} />
-                    </Container>
+                    {/* </Container> */}
                 </Box>
             </Box>
         </ThemeProvider>
