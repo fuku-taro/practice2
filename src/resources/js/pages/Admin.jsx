@@ -18,6 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "../components/ListItems";
+import { ListTable } from "../components/ListTable";
 import InfoCardAdmin from "../components/InfoCardAdmin";
 import { Button } from "@mui/material";
 import styles from "../../sass/Admin.module.scss";
@@ -95,8 +96,193 @@ export default function Admin() {
     const toggleDrawer = () => {
         setOpen(!open);
     };
+    const [isEdit, setIsEdit] = useState(false);
+    const [rows, setRows] = useState([]);
+    const [isValid, setIsValid] = useState(false);
+    const [isDistinctError, setIsDistinctError] = useState(false);
+    const [ispAccountList, setIspAccountList] = useState([]);
+    const [successEditName, setSuccessEditName] = useState(false);
+
+    const getIspAccountList = async () => {
+        const response = await callApi("GET", "/api/getIspAccountList");
+
+        // 一覧の要素に削除フラグのis_deletedを付与
+        if (response) {
+            const resultArray = response.data;
+            resultArray.map((element) => {
+                // eslint-disable-next-line no-param-reassign
+                element.is_deleted = false;
+                return element;
+            });
+            setIspAccountList(resultArray);
+        }
+    };
+
     useEffect(() => {
-        fetchData();
+        getIspAccountList();
+    }, []);
+
+    // 更新ボタンがクリックされた時に実行される関数
+    const handleUpdateAgree = async () => {
+        // 入力した行をまとめる
+        const updateIspAccountList = [...ispAccountList, ...rows];
+
+        // ここでAPIにデータを送信
+        await callApi("POST", "/api/updateIspAccount", {
+            updateIspAccountList,
+        });
+
+        getIspAccountList();
+
+        setIsEdit(false);
+
+        setSuccessEditName(true);
+    };
+
+    const handleSuccessEditName = () => {
+        setSuccessEditName(false);
+    };
+
+    // 更新ボタン押下時のバリデーションをチェックする関数
+    const handleAlert = () => {
+        // 入力した行をまとめる
+        const updatedList = [...ispAccountList, ...rows];
+
+        // isp_user_idとisp_global_ipが空白のステータスを探す。見つけたらtrue。
+        const hasEmptyIspFields = updatedList.find(
+            (item) => item.isp_user_id === "" || item.isp_global_ip === ""
+        );
+
+        // isp_user_idとisp_global_ipの値をそれぞれのキーの配列に入れていく
+        const ispUserIdList = updatedList.map((item) => item.isp_user_id);
+        const ispGlobalIpList = updatedList.map((item) => item.isp_global_ip);
+
+        // Setで重複を削除し、元の配列の差を調べる
+        const hasDuplicateIspUserId =
+            new Set(ispUserIdList).size !== ispUserIdList.length;
+        const hasDuplicateIspGlobalIp =
+            new Set(ispGlobalIpList).size !== ispGlobalIpList.length;
+
+        // どちらかがtrueならtrueを返して、重複の差でフラグを立てる
+        const hasDistinctError =
+            hasDuplicateIspUserId || hasDuplicateIspGlobalIp;
+
+        if (hasDistinctError) {
+            setIsDistinctError(true);
+        } else {
+            setIsDistinctError(false);
+        }
+
+        if (hasEmptyIspFields) {
+            setIsValid(true);
+        } else {
+            setIsValid(false);
+        }
+    };
+
+    const handlePlusButton = () => {
+        handleAlert();
+        // 新しい行のデータを初期化
+        const newRow = {
+            isp_status: false,
+            isp_user_id: "",
+            isp_password: "",
+            plan: "",
+            isp_global_ip: "",
+            location_name: "",
+            is_deleted: false,
+        };
+        setIspAccountList([...ispAccountList, newRow]);
+    };
+
+    const handleDeleteButton = (rowIndex) => {
+        // 指定された行を削除するための関数
+        const newispAccountList = [...ispAccountList];
+        newispAccountList[rowIndex].is_deleted = true;
+
+        // isp_global_ip、isp_user_idが空文字かつ、is_deletedがtrueの場合は物理的に入れるの要素を消す
+        if (
+            newispAccountList[rowIndex].isp_global_ip === "" &&
+            newispAccountList[rowIndex].isp_user_id === "" &&
+            newispAccountList[rowIndex].is_deleted
+        ) {
+            newispAccountList.splice(rowIndex, 1);
+        }
+
+        setIspAccountList(newispAccountList);
+    };
+
+    // 右上のボタン
+    let headerButtons;
+
+    // 編集モード、かつ、空白のバリデーションがあるか
+    if (isEdit && isValid) {
+        headerButtons = [
+            {
+                text: "更新",
+                color: "blue",
+                dialog: IspAccountValidationTemplate,
+                event: handleAlert,
+            },
+            {
+                text: "キャンセル",
+                event: () => {
+                    setIsEdit(false);
+                    setRows([]);
+                },
+                color: "red",
+            },
+        ];
+        // 編集モード、かつ、重複のバリデーションがあるか
+    } else if (isEdit && isDistinctError) {
+        headerButtons = [
+            {
+                text: "更新",
+                color: "blue",
+                dialog: IspAccountIsDistinctTemplate,
+                event: handleAlert,
+            },
+            {
+                text: "キャンセル",
+                event: () => {
+                    setIsEdit(false);
+                    setRows([]);
+                },
+                color: "red",
+            },
+        ];
+        // 編集モードか
+    } else if (isEdit) {
+        headerButtons = [
+            {
+                text: "更新",
+                color: "blue",
+                dialog: IspAccountUpdateTemplate,
+                agreeEvent: handleUpdateAgree,
+                event: handleAlert,
+            },
+            {
+                text: "キャンセル",
+                event: () => {
+                    setIsEdit(false);
+                    setRows([]);
+                },
+                color: "red",
+            },
+        ];
+    } else {
+        headerButtons = [
+            {
+                text: "編集",
+                event: () => {
+                    setIsEdit(true);
+                },
+                color: "blue",
+            },
+        ];
+    }
+    useEffect(() => {
+        // fetchData();
     }, []); // パラメーターの変更時に再度データを取得
 
     console.log(data);
@@ -180,27 +366,23 @@ export default function Admin() {
                     }}
                 >
                     <Toolbar />
+
                     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                         <Grid container spacing={3}>
+                        <ListTable
+        rows={rows}
+        setRows={setRows}
+        ispAccountList={ispAccountList}
+        setIspAccountList={setIspAccountList}
+        handlePlusButton={handlePlusButton}
+        handleDeleteButton={handleDeleteButton}
+        handleSuccessEditName={handleSuccessEditName}
+        isEdit={isEdit}
+        handleAlert={handleAlert}
+        successEditName={successEditName}
+      />
                             {/* Recent Orders */}
-                            <Grid item xs={12}>
-                                <Paper
-                                    sx={{
-                                        p: 2,
-                                        display: "flex",
-                                        flexDirection: "column",
-                                    }}
-                                >
-                                    <div className={styles.btnDiv}>
-                                <div className={styles.btn}>
-                                    <Button variant="outlined">新規登録</Button>
-                                </div>
-                        </div>
-                                    {/* <Orders /> */}
-
-                                    <InfoCardAdmin currentData={data} />
-                                </Paper>
-                            </Grid>
+                            <Grid item xs={12}></Grid>
                         </Grid>
                         <Copyright sx={{ pt: 4 }} />
                     </Container>
