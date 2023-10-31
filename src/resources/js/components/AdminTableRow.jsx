@@ -8,11 +8,6 @@ export const AdminTableRow = ({
   handleChangeLocationName, index, setRows, setIspAccountList,
 }) => (
   <>
-    {row.isp_status ? (
-      <TableCell sx={{ minWidth: '100px', textAlign: 'center', color: 'limegreen' }}>使用中</TableCell>
-    ) : (
-      <TableCell sx={{ minWidth: '100px', textAlign: 'center', color: 'red' }}>未使用</TableCell>
-    )}
     {isEdit ? (
       <>
         <TableCell sx={{ p: 0, minWidth: '100px', textAlign: 'center' }}>
@@ -33,11 +28,12 @@ export const AdminTableRow = ({
       </>
     ) : (
       <>
-        <TableCell sx={{ p: 0, minWidth: '100px', textAlign: 'center' }}>{row.isp_user_id}</TableCell>
-        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.isp_password}</TableCell>
-        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.plan}</TableCell>
-        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.isp_global_ip}</TableCell>
-        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.location_name}</TableCell>
+        <TableCell sx={{ p: 0, minWidth: '100px', textAlign: 'center' }}>{row.estate_id}</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.register_at}</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.location1}{row.location2}{row.address}</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.floor_plan}</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.build_year}年{row.build_mounth}月</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.price}万円</TableCell>
       </>
     )}
   </>

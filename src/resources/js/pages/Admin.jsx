@@ -282,19 +282,19 @@ export default function Admin() {
         ];
     }
     useEffect(() => {
-        // fetchData();
+        fetchData();
     }, []); // パラメーターの変更時に再度データを取得
 
-    console.log(data);
+    // console.log(data);
     const fetchData = async () => {
         try {
             const response = await axios.get("/api/getAllEstateInfos");
-            setData(response.data.data);
+            setIspAccountList(response.data.data);
         } catch (error) {
             console.error(error);
         }
     };
-
+console.log(ispAccountList);
     return (
         <ThemeProvider theme={defaultTheme}>
             <Box sx={{ display: "flex" }}>

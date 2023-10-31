@@ -34,7 +34,7 @@ export const ListTable = ({
   const minHeight = '20px'; // minHeightを定義
 
   let columns = [{ label: '物件番号' }, { label: '成約日' }, { label: '所在地' }, { label: '間取り' },
-    { label: '築年月' }, { label: '建物建造' }];
+    { label: '築年月' }, { label: '価格' }];
   if (isEdit) { columns = [...columns, { label: '' }]; }
 
   return (
