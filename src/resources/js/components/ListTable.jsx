@@ -33,8 +33,8 @@ export const ListTable = ({
 }) => {
   const minHeight = '20px'; // minHeightを定義
 
-  let columns = [{ label: '使用状況' }, { label: 'ユーザID' }, { label: 'パスワード' }, { label: '契約コース' },
-    { label: '固定IPアドレス' }, { label: '設置先' }];
+  let columns = [{ label: '物件番号' }, { label: '成約日' }, { label: '所在地' }, { label: '間取り' },
+    { label: '築年月' }, { label: '建物建造' }];
   if (isEdit) { columns = [...columns, { label: '' }]; }
 
   return (
