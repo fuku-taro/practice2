@@ -324,7 +324,7 @@ console.log(ispAccountList);
                             noWrap
                             sx={{ flexGrow: 1 }}
                         >
-                            ダッシュボード
+                            成約物件情報
                         </Typography>
                         <IconButton color="inherit">
                             <Badge badgeContent={4} color="secondary">
