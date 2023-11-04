@@ -10,29 +10,57 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
+// icons
+import HomeIcon from '@mui/icons-material/Home';
+import AddHomeIcon from '@mui/icons-material/AddHome';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import LogoutIcon from '@mui/icons-material/Logout';
+
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton>
       <ListItemIcon>
-        <DashboardIcon />
+        <HomeIcon />
       </ListItemIcon>
-      <ListItemText primary="最初の画面" />
+      <ListItemText primary="物件一覧" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <AddHomeIcon />
       </ListItemIcon>
       <ListItemText primary="物件登録" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <PeopleIcon />
+        <HomeWorkIcon />
+      </ListItemIcon>
+      <ListItemText primary="成約物件一覧" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <AddHomeWorkIcon />
       </ListItemIcon>
       <ListItemText primary="成約物件登録" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <BarChartIcon />
+        <LocationOnIcon />
+      </ListItemIcon>
+      <ListItemText primary="参考物件一覧" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <AddLocationAltIcon />
+      </ListItemIcon>
+      <ListItemText primary="参考物件登録" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <NotificationsIcon />
       </ListItemIcon>
       <ListItemText primary="お問い合わせ情報" />
     </ListItemButton>
@@ -55,6 +83,12 @@ export const secondaryListItems = (
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="設定" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <LogoutIcon />
+      </ListItemIcon>
+      <ListItemText primary="ログアウト" />
     </ListItemButton>
   </React.Fragment>
 );

@@ -42,7 +42,7 @@ export const ListTable = ({
 
       {ispAccountList ? (
         <Paper elevation={3} sx={{ width: '100%', overflow: 'hidden', borderRadius: '10px' }}>
-          <TableContainer sx={{ height: 'calc(100vh - 90px)', display: 'flex', flexDirection: 'column' }}>
+          <TableContainer sx={{ display: 'flex', flexDirection: 'column' }}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>
