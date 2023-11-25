@@ -99,7 +99,6 @@ export default function Estate() {
         ),
         createData("間取り", `${data[0].floor_plan}`),
         createData("間取り内訳", `${data[0].floor_plan_kind}`),
-        createData("サービスルーム数", ``),
         createData(
             "土地面積",
             `${data[0].measurement_method}${data[0].land_area}㎡`
@@ -113,7 +112,6 @@ export default function Estate() {
         createData("借地代", `${data[0].lease_fee}`),
         createData("借地期間", ``),
         createData("その他一時金", ``),
-        createData("施設費用", ``),
         createData("その他費用", ``),
       ];
 
@@ -125,11 +123,9 @@ export default function Estate() {
             `${data[0].build_year}年${data[0].build_mounth}月`
         ),
         createData("建物建造", `${data[0].building_const}`),
-        createData("建物工法", ``),
         createData("駐車場", `${data[0].parking}`),
         createData("駐車場・形式", ``),
         createData("駐車場・状況", ``),
-        createData("駐車場備考", ``),
         createData("都市計画", `${data[0].city_plan}`),
         createData("用途地域", `${data[0].use_area}`),
         createData("地目", `${data[0].landmark}`),
