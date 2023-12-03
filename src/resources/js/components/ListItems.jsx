@@ -1,12 +1,9 @@
-import * as React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
@@ -20,56 +17,80 @@ import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LogoutIcon from '@mui/icons-material/Logout';
 
+// const navigateTo = useNavigate();
 export const mainListItems = (
   <React.Fragment>
+<Link to={'/Admin'}>
     <ListItemButton>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="物件一覧" />
     </ListItemButton>
+</Link>
+
+<Link to={'/AdminRegistration'}>
     <ListItemButton>
       <ListItemIcon>
         <AddHomeIcon />
       </ListItemIcon>
       <ListItemText primary="物件登録" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <HomeWorkIcon />
       </ListItemIcon>
       <ListItemText primary="成約物件一覧" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <AddHomeWorkIcon />
       </ListItemIcon>
       <ListItemText primary="成約物件登録" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <LocationOnIcon />
       </ListItemIcon>
       <ListItemText primary="参考物件一覧" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <AddLocationAltIcon />
       </ListItemIcon>
       <ListItemText primary="参考物件登録" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <NotificationsIcon />
       </ListItemIcon>
       <ListItemText primary="お問い合わせ情報" />
     </ListItemButton>
+</Link>
+
+<Link>
     <ListItemButton>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="顧客管理" />
     </ListItemButton>
+</Link>
   </React.Fragment>
 );
 

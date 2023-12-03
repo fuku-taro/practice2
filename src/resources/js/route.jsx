@@ -12,6 +12,7 @@ import Seiyaku from './pages/Seiyaku';
 import SeiyakuSearch from './pages/SeiyakuSearch';
 import Done from './pages/Done';
 import Admin from './pages/Admin';
+import AdminRegistration from './pages/AdminRegistration';
 import AdminLogin from './pages/AdminLogin';
 import Assessment from './pages/Assessment';
 import AssessmentContact from './pages/AssessmentContact';
@@ -30,6 +31,7 @@ function App() {
       <Route path="/SeiyakuSearch" element={<SeiyakuSearch />} />
       <Route path="/Done" element={<Done />} />
       <Route path="/Admin" element={<Admin />} />
+      <Route path="/AdminRegistration" element={<AdminRegistration />} />
       <Route path="/AdminLogin" element={<AdminLogin />} />
       <Route path="/Assessment" element={<Assessment />} />
       <Route path="/AssessmentContact" element={<AssessmentContact />} />

@@ -90,7 +90,7 @@ const Drawer = styled(MuiDrawer, {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Admin() {
+export default function AdminRegistration() {
     const [open, setOpen] = React.useState(true);
     const [data, setData] = useState([]);
     const toggleDrawer = () => {
@@ -119,7 +119,7 @@ export default function Admin() {
     };
 
     useEffect(() => {
-        getIspAccountList();
+        // getIspAccountList();
     }, []);
 
     // 更新ボタンがクリックされた時に実行される関数
