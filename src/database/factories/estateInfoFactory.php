@@ -120,6 +120,7 @@ class estateInfoFactory extends Factory
             'event'=>"売一戸建て住宅等　中古一戸建",
             'current_situation'=>"空家",
             'delivery_time'=>"相談",
+            'build_date'=>fake()->date(),
             'build_year'=>fake()->numberBetween($min=1900,$max=2023),
             'build_mounth'=>fake()->numberBetween($min=0,$max=80),
             'floor_plan'=>"2SDK",

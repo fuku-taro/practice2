@@ -27,7 +27,13 @@ return new class extends Migration
             // $table->string('location1', 255)->default('');
             // $table->string('location2', 255)->default('');
             // $table->string('address', 255)->default('');
-            $table->string('location_code', 30)->nullable()->comment('所在地コード');
+            $table->string('front_direction', 30)->nullable()->comment('間口方角');
+            $table->string('front_direction_way', 30)->nullable()->comment('間口から接道までの距離');
+            $table->enum('topography', ['rectangle', 'square', 'trapezoid', 'hill_higher', 'hill_lower'])->default('rectangle')->comment("地勢情報\nrectangle：長方形\nsquare：正方形\ntrapezoid：台形\nhill_higher：高台　高い\nhill_lower：高台　低い");
+            $table->enum('vehicle', ['bus', 'monorail', 'train'])->default('bus')->comment("沿線・駅・交通");
+            $table->timestamp('build_date')->comment('日付');
+            $table->string('land_extention', 30)->nullable()->comment('敷地延長');
+            
             $table->string('location1', 255)->comment('所在地名1');
             $table->string('location2', 255)->comment('所在地名2');
             $table->string('address', 255)->comment('番地');

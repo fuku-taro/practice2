@@ -93,9 +93,29 @@ const Drawer = styled(MuiDrawer, {
 const defaultTheme = createTheme();
 
 export default function AdminRegistration() {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = useState(true);
     const [data, setData] = useState([]);
+    const newRow = {
+        location1: '',
+        location2: '',
+        address: '',
+        vehicle: 'バス',
+        station: '',
+        walk_time: '',
+        floor_plan: '',
+        front_direction: '',
+        front_direction_way: '',
+        land_area: '',
+        driveway_area: '',
+        building_ex_area: '',
+        land_rights: '',
+        build_date: '',
+        land_extention: '',
+        topography: '長方形',
+      };
+    const [estate, setEstate] = useState([newRow]);
     const [isLoading, setIsLoading] = useState(true); // ローディング状態を管理
+    
     const toggleDrawer = () => {
         setOpen(!open);
     };
@@ -118,64 +138,59 @@ export default function AdminRegistration() {
 
 
   const column1 =[
-    "物件番号",
-    "情報更新日",
-    "次回更新予定日",
-    "所在地",
-    "沿線・駅・交通",
-    "間取り",
-    "間取り内訳",
-    "土地面積",
-    "私道面積",
-    "建物面積",
-    "小学校区",
-    "中学校区",
-    "階建",
-    "土地権利",
-    "借地代",
-    "借地期間",
-    "その他一時金",
-    "その他費用",
+    { label: '所在地(市村島)' }, 
+    { label: '所在地(町)' }, 
+    { label: '近隣モノレール駅' }, 
+    { label: '近隣バス停' }, 
+    { label: '間取り' }, 
+    { label: '間取り内訳' }, 
+    { label: '土地面積' }, 
+    { label: '私道面積' }, 
+    { label: '建物面積' }, 
+    { label: '小学校区' }, 
+    { label: '中学校区' }, 
+    { label: '階建' }, 
+    { label: '土地権利' }, 
+    { label: '借地代' }, 
+    { label: '借地期間' }, 
+    { label: '保証金(万円)' }, 
+    { label: '権利金' }, 
+    { label: '築年月(年)' }, 
+    { label: '建物建造' }, 
+    { label: '駐車場' }, 
+    { label: '駐車場料金' }, 
+    { label: '都市計画' }, 
+    { label: '地目' }, 
   ];
   const column2 =[
-    "保証金",
-    "権利金",
-    "築年月",
-    "建物建造",
-    "駐車場",
-    "駐車場・形式",
-    "駐車場・状況",
-    "都市計画",
-    "用途地域",
-    "地目",
-    "建・容率",
-    "地勢",
-    "地域地区",
-    "傾斜地面積",
-    "接道状況詳細",
-    "建築確認・建築確認番号",
-    "国土法",
-    "法令制限等",
-    "現況",
-    "条件等",
-    "再建築",
-    "土地形状",
-    "敷地延長",
-    "付帯権利",
-    "引渡し可能時期",
+    { label: '建・容率' }, 
+    { label: '地勢' }, 
+    { label: '傾斜地面積' }, 
+    { label: '接道状況詳細' }, 
+    { label: '建築確認・建築確認番号' }, 
+    { label: '国土法' }, 
+    { label: '法令制限等' }, 
+    { label: '現況' }, 
+    { label: '条件等' }, 
+    { label: '再建築' }, 
+    { label: '土地形状' }, 
+    { label: '敷地延長' }, 
+    { label: '付帯権利' }, 
+    { label: '引渡し可能時期' }, 
   ];
   const column3 =[
-    "分譲概要",
-    "設備",
-    "特記事項",
-    "備考",
-    "取引態様",
-    "担当者",
-    "担当者連絡先",
-
+    { label: '分譲概要' }, 
+    { label: '設備' }, 
+    { label: '特記事項' }, 
+    { label: '取引態様' }, 
+    { label: '担当者' }, 
+    { label: '担当者連絡先' }, 
+    { label: 'その他一時金' }, 
+    { label: 'その他費用' }, 
+    { label: '備考' }, 
   ];
 
-
+console.log(estate);
     return (
         <ThemeProvider theme={defaultTheme}>
             <Box sx={{ display: "flex" }}>
@@ -250,13 +265,19 @@ export default function AdminRegistration() {
 
                     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                                 <div>
+                                    
+                        <div>
+                        <Grid container sx={{ mb:  1, justifyContent: 'right'}} >
+                        <Button variant="contained">登録</Button>
+                        </Grid>
+                        </div>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} md={6}>
-                                            <TableRegister rows={column1} />
+                                            <TableRegister columns={column1} setEstate={setEstate}/>
                                         </Grid>
                                         <Grid item xs={12} md={6}>
-                                            <TableRegister rows={column2} />
-                                            <TableRegister rows={column3}/>
+                                            <TableRegister columns={column2} setEstate={setEstate}/>
+                                            <TableRegister columns={column3} setEstate={setEstate}/>
                                         </Grid>
                                     </Grid>
                                 </div>
