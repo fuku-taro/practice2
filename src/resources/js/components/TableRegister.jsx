@@ -24,6 +24,7 @@ export default function TableRegister(props) {
         story: '',
         land_rights: '',
         lease_fee: '',
+        topography: '',
         lease_span: '',
         deposit_price: '',
         key_money: '',
@@ -35,7 +36,6 @@ export default function TableRegister(props) {
         use_area: '',
         
         building_ratio: '',
-        topography: '長方形',
 
         // front_direction: '',
         // front_direction_way: '',
@@ -62,7 +62,9 @@ export default function TableRegister(props) {
             return updatedRow;
         });
     };
-    
+    const handleChange = (event) => {
+        props.setEstate(event.target.value);
+      };
     return (
         <TableContainer component={Paper}>
             <Table size="small" aria-label="a dense table">
@@ -98,7 +100,9 @@ export default function TableRegister(props) {
                                 <AdminVpsTableRow
                                         index={index}
                                         handleInputChange={handleInputChange}
+                                        handleChange={handleChange}
                                         newRow={newRow}
+                                        estate={props.estate}
                                     />
                                 </TableCell>
                             </>

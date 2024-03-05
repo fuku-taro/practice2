@@ -128,6 +128,20 @@ return new class extends Migration
             $table->string('commission_per', 30)->nullable()->comment('手数料(率)');
             $table->string('commission_price', 30)->nullable()->comment('手数料(金額)');
             $table->string('contract_period', 30)->nullable()->comment('契約期間');
+            $table->string('slope_area', 30)->nullable()->comment('傾斜地面積');
+            $table->string('building_number', 30)->nullable()->comment('建築番号');
+            $table->string('law_limit', 30)->nullable()->comment('法令制限');
+            $table->string('re_building', 30)->nullable()->comment('再構築');
+            $table->string('land_shape', 30)->nullable()->comment('土地形状');
+            $table->string('incidental_rights', 30)->nullable()->comment('付帯権利');
+            $table->string('possible_delivery_date', 30)->nullable()->comment('引渡し可能時期');
+            $table->string('sale_overview', 30)->nullable()->comment('分譲概要');
+            $table->string('facility', 30)->nullable()->comment('設備');
+            $table->string('special_features', 30)->nullable()->comment('特記態様');
+            $table->string('salesman', 30)->nullable()->comment('担当者');
+            $table->string('salesman_tel', 30)->nullable()->comment('担当者連絡先');
+            $table->string('other_lump_payments', 30)->nullable()->comment('その他一時金');
+            $table->string('other_expenses', 30)->nullable()->comment('その他費用');
             $table->timestamp('closing_date')->nullable()->comment('成約日');
             $table->string('closing_price', 30)->nullable()->comment('成約価格');
             

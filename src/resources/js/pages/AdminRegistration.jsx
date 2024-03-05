@@ -190,7 +190,7 @@ export default function AdminRegistration() {
     { label: '備考' }, 
   ];
 
-console.log(estate);
+console.log(estate["topography"]);
     return (
         <ThemeProvider theme={defaultTheme}>
             <Box sx={{ display: "flex" }}>
@@ -273,7 +273,7 @@ console.log(estate);
                         </div>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} md={6}>
-                                            <TableRegister columns={column1} setEstate={setEstate}/>
+                                            <TableRegister columns={column1} setEstate={setEstate} estate={estate}/>
                                         </Grid>
                                         <Grid item xs={12} md={6}>
                                             <TableRegister columns={column2} setEstate={setEstate}/>
