@@ -7,7 +7,8 @@ import TableRow from "@mui/material/TableRow";
 import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
 import AdminVpsTableRow from "./AdminVpsTableRow";
-export default function TableRegister(props) {
+export default function TableRegister2(props) {
+
     const handleInputChange = (value, objKey) => {
         props.setEstate(prevState => {
             // Create a new row object by copying the previous state
