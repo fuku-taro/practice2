@@ -136,7 +136,16 @@ export default function AdminRegistration() {
             setIsLoading(false); // データの取得が完了したことを示す
         }
     };
-
+    const postData = async () => {
+        try{
+            setIsLoading(true); // データの取得が始まったことを示す
+            await axios.post('/api/createEstateInfos',{ estate });
+        }catch(e){
+            console.error(e);
+        } finally {
+            setIsLoading(false); // データの取得が完了したことを示す
+        }
+    };
 
   const column1 =[
     { label: '成約日' }, 
@@ -323,7 +332,7 @@ console.log(estate);
                                     
                         <div>
                         <Grid container sx={{ mb:  1, justifyContent: 'right'}} >
-                        <Button variant="contained">登録</Button>
+                        <Button onClick={postData} variant="contained">登録</Button>
                         </Grid>
                         </div>
                                     <Grid container spacing={2}>

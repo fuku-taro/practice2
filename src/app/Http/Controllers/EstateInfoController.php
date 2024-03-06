@@ -87,4 +87,14 @@ class EstateInfoController extends Controller
             $value
         );
     }
+    public function createEstateInfos(Request $request)
+    {
+        $params = $request->all();
+
+        // モデルを使ってデータを登録
+        $estateInfo = EstateInfo::create($params);
+
+        // 登録が成功した場合の処理
+        return response()->json(['message' => '登録が成功しました', 'data' => $estateInfo], 201);
+    }
 }
