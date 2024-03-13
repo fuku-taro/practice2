@@ -197,7 +197,7 @@ export default function AdminRegistration() {
 
   const objKeys1 = [
     "closing_date",// 成約日
-    "closing_price",// 成約価格
+    "price",// 成約価格
     "location1",// 所在地
     "location2",// 所在地
     "station",// 所在地モノレール

@@ -32,7 +32,7 @@ export const AdminTableRow = ({
         <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.created_at}</TableCell>
         <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.location1}{row.location2}{row.address}</TableCell>
         <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.floor_plan}</TableCell>
-        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.build_year}年{row.build_mounth}月</TableCell>
+        <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.build_year}年</TableCell>
         <TableCell sx={{ minWidth: '100px', textAlign: 'center' }}>{row.price}万円</TableCell>
       </>
     )}
