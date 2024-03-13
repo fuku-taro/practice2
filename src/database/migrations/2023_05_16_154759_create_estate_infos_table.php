@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('estate_infos', function (Blueprint $table) {
             $table->id();
-            $table->uuid('estate_id')->default(\Illuminate\Support\Str::uuid())->comment('物件番号');
-            $table->timestamp('register_at')->default(now())->comment('登録日');
+            $table->timestamp('register_at')->nullable()->comment('登録日');
             $table->string('corporation', 30)->nullable()->comment('会員商号');
             $table->string('corp_tel', 30)->nullable()->unique()->comment('会員電話番号');
             $table->string('event', 30)->nullable()->comment('種目');
@@ -69,6 +68,7 @@ return new class extends Migration
             $table->string('common_service_fee', 30)->nullable()->comment('共益費');
             $table->string('sundry', 30)->nullable()->comment('雑費');
             $table->string('lease_fee', 30)->nullable()->comment('借地料');
+            $table->string('lease_span', 30)->nullable()->comment('借地期間');
             $table->double('tsubo_price',8,4)->nullable()->comment('坪単価(万円)');
             $table->string('land_rights', 30)->nullable()->comment('土地権利');
             $table->double('land_area', 8,2)->nullable()->comment('土地面積');
