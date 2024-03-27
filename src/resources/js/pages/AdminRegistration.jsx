@@ -26,6 +26,7 @@ import Table from "../components/Table";
 import TableRegister from "../components/TableRegister";
 import TableRegister2 from "../components/TableRegister2";
 import { SuccessSnacbar } from "../components/SuccessSnacbar";
+import ImgUpload from "../components/ImgUpload";
 
 function Copyright(props) {
     return (
@@ -388,7 +389,8 @@ console.log(estate);
                                             <TableRegister2 columns={column2} setEstate={setEstate} estate={estate} objKeys={objKeys2}/>
                                         </Grid>
                                     </Grid>
-                                </div>
+                                    <ImgUpload />
+                        </div>
                     <Copyright sx={{ pt: 4 }} />
                     </Container>
                     <SuccessSnacbar open={successEditName} onClose={handleSuccessEditName}>
